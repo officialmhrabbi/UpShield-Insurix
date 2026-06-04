@@ -983,6 +983,96 @@ img { display: block; max-width: 100%; }
 .read-more:hover { color: #009499; }
 
 
+/* footer */
+.footer {
+  background: #FAFDFD;
+  padding-top: 70px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.4fr;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+
+.brand-text {
+  font-size: 22px;
+  font-weight: 800;
+  color: #00B8BE;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.copy {
+  font-size: 14px;
+  color: #6B7A8D;
+  margin-bottom: 20px;
+}
+
+.foot-stores {
+  display: flex;
+  gap: 10px;
+}
+.foot-stores a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: #D6F5F5;
+  color: #0F2547;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.foot-stores a:hover { background: #00B8BE; color: #fff; }
+
+.footer h5 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0F2547;
+  margin-bottom: 18px;
+}
+
+.footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer ul li a,
+.footer ul li span {
+  font-size: 14px;
+  color: #6B7A8D;
+}
+.footer ul li a:hover { color: #00B8BE; }
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #6B7A8D;
+}
+.contact-info li svg { color: #00B8BE; flex-shrink: 0; }
+
+.footer-bottom {
+  border-top: 1px solid rgba(15,37,71,.08);
+  padding: 20px 0;
+}
+.footer-bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-bottom span,
+.footer-bottom a {
+  font-size: 13px;
+  color: #6B7A8D;
+}
+.footer-bottom div { display: flex; gap: 28px; }
+.footer-bottom a:hover { color: #00B8BE; }
+
+
 /* responsive */
 @media (max-width: 960px) {
   .hero-grid,
@@ -1046,4 +1136,11 @@ img { display: block; max-width: 100%; }
 
 @media (min-width: 769px) and (max-width: 960px) {
   .news-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .footer { padding-top: 50px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; padding-bottom: 32px; }
+  .footer-bottom .container { flex-direction: column; gap: 12px; text-align: center; }
 }
