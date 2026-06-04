@@ -791,6 +791,68 @@ img { display: block; max-width: 100%; }
 }
 
 
+/* partners */
+.partners {
+  background: #fff;
+  padding: 80px 0 90px;
+  overflow: hidden;
+}
+
+.partners h2 {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #0F2547;
+  margin-bottom: 48px;
+}
+
+.marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: slide 30s linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.logo-box {
+  flex-shrink: 0;
+  width: 220px;
+  height: 110px;
+  background: #fff;
+  border: 1px solid #EDF2F5;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #4A5468;
+  letter-spacing: -0.01em;
+  transition: 0.25s;
+}
+.logo-box:hover {
+  border-color: #00B8BE;
+  color: #00B8BE;
+  box-shadow: 0 6px 18px rgba(0,184,190,.12);
+}
+
+@keyframes slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 12px)); }
+}
+
+
 /* responsive */
 @media (max-width: 960px) {
   .hero-grid,
@@ -838,4 +900,10 @@ img { display: block; max-width: 100%; }
 
 @media (min-width: 769px) and (max-width: 960px) {
   .why-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .partners { padding: 60px 0 70px; }
+  .partners h2 { font-size: 24px; margin-bottom: 32px; }
+  .logo-box { width: 170px; height: 90px; font-size: 16px; }
 }
