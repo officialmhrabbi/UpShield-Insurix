@@ -883,6 +883,125 @@ p { color: var(--clr-text-muted); line-height: var(--lh-relaxed); }
 }
 
 /* ═══════════════════════════════════════════════════════════════
+   FEATURED POLICIES
+   ═══════════════════════════════════════════════════════════════ */
+.policies {
+  background: var(--clr-white);
+  padding-block: 80px;
+}
+
+.policies__title {
+  font-size: 32px;
+  font-weight: var(--fw-extrabold);
+  letter-spacing: var(--ls-tighter);
+  color: var(--clr-navy);
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.policies__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.policy-card {
+  background: var(--clr-white);
+  border: 1px solid var(--clr-border-soft);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--dur-base) var(--ease),
+              box-shadow var(--dur-base) var(--ease),
+              transform var(--dur-fast) var(--ease);
+}
+.policy-card:hover {
+  border-color: var(--clr-primary);
+  box-shadow: 0 12px 32px rgba(15, 37, 71, .10);
+  transform: translateY(-4px);
+}
+
+.policy-card__media {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: var(--clr-bg);
+}
+.policy-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-slow) var(--ease);
+}
+.policy-card:hover .policy-card__media img {
+  transform: scale(1.05);
+}
+
+.policy-card__body {
+  padding: 22px 22px 26px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.policy-card__title {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  color: var(--clr-navy);
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.policy-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.policy-card__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: var(--fs-sm);
+  color: var(--clr-text-muted);
+  line-height: 1.5;
+}
+
+.policy-card__check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.btn--policy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 20px;
+  background: var(--clr-white);
+  color: var(--clr-primary);
+  border: 1.5px solid var(--clr-primary);
+  border-radius: 8px;
+  font-family: var(--font-family);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  cursor: pointer;
+  transition: background var(--dur-base) var(--ease),
+              color var(--dur-base) var(--ease);
+}
+.btn--policy:hover {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+}
+
+/* ═══════════════════════════════════════════════════════════════
    RESPONSIVE
    ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 1100px) {
@@ -922,4 +1041,13 @@ p { color: var(--clr-text-muted); line-height: var(--lh-relaxed); }
   .app__inner       { grid-template-columns: 1fr; gap: 40px; }
   .app__title       { font-size: 24px; }
   .app__phone-card  { width: 260px; height: 400px; }
+
+  .policies         { padding-block: 60px; }
+  .policies__title  { font-size: 24px; margin-bottom: 32px; }
+  .policies__grid   { grid-template-columns: 1fr; gap: 20px; }
+  .policy-card__media { height: 180px; }
+}
+
+@media (min-width: 769px) and (max-width: 960px) {
+  .policies__grid   { grid-template-columns: repeat(2, 1fr); }
 }
