@@ -1430,13 +1430,31 @@ img { display: block; max-width: 100%; }
 }
 
 @media (max-width: 768px) {
+  .nav-wrap {
+    height: auto;
+    flex-wrap: wrap;
+    padding-block: 10px;
+    gap: 12px;
+  }
+  .logo img { height: 60px; margin-block: -4px; }
   .nav-links { display: none; }
+  .nav-actions { gap: 8px; margin-left: auto; }
+  .login-btn { padding: 9px 14px; font-size: 13px; }
+  .login-btn svg { display: none; }
+  .quote-btn { padding: 9px 16px; font-size: 13px; }
+
+  .page-header { padding: 14px 0; }
+  .page-header-wrap { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .page-title { font-size: 18px; }
+  .breadcrumb { font-size: 13px; }
 
   .hero { padding: 40px 0 60px; }
   .hero h1 { font-size: 32px; }
   .cat-list { grid-template-columns: repeat(2, 1fr); }
 
-  .prod-grid { grid-template-columns: repeat(2, 1fr); }
+  .prod-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .prod-card { padding: 22px 12px 18px; }
+  .prod-icon { width: 56px; height: 56px; }
   .corp-grid { grid-template-columns: 1fr; max-width: 340px; }
   .corporate-policies h2 { font-size: 24px; }
   .individual-policies { padding: 40px 0; }
