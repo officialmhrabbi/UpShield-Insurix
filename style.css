@@ -1413,6 +1413,217 @@ img { display: block; max-width: 100%; }
 }
 
 
+/* blog page */
+.blog-hero {
+  background: linear-gradient(135deg, #E8F6F7 0%, #D6F0F1 100%);
+  padding: 70px 0 60px;
+  text-align: center;
+}
+
+.blog-hero h1 {
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #0F2547;
+  margin-bottom: 14px;
+}
+
+.blog-hero p {
+  font-size: 15px;
+  color: #6B7A8D;
+  max-width: 560px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+.blog-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid #E2EAF0;
+  border-radius: 9999px;
+  padding: 12px 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 4px 14px rgba(15,37,71,.06);
+}
+
+.blog-search svg { color: #9AAABB; flex-shrink: 0; }
+
+.blog-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 15px;
+  color: #0F2547;
+  background: transparent;
+}
+
+.blog-search input::placeholder { color: #9AAABB; }
+
+.blog-filters {
+  background: #fff;
+  border-bottom: 1px solid #EDF2F5;
+  padding: 20px 0;
+  position: sticky;
+  top: 68px;
+  z-index: 50;
+}
+
+.filter-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  border: 1.5px solid #E2EAF0;
+  background: #fff;
+  color: #6B7A8D;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filter-btn:hover {
+  border-color: #00B8BE;
+  color: #00B8BE;
+}
+
+.filter-btn.active {
+  background: #00B8BE;
+  border-color: #00B8BE;
+  color: #fff;
+}
+
+.sort-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid #E2EAF0;
+  border-radius: 9999px;
+  padding: 8px 16px;
+  color: #6B7A8D;
+}
+
+.sort-wrap svg { flex-shrink: 0; }
+
+.sort-wrap select {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0F2547;
+  background: transparent;
+  cursor: pointer;
+}
+
+.blog-articles {
+  background: #fff;
+  padding: 60px 0 80px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.blog-card {
+  background: #fff;
+  border: 1px solid #EDF2F5;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: 0.25s;
+}
+
+.blog-card:hover {
+  border-color: #00B8BE;
+  box-shadow: 0 12px 32px rgba(15,37,71,.10);
+  transform: translateY(-4px);
+}
+
+.blog-img {
+  height: 220px;
+  overflow: hidden;
+}
+
+.blog-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.blog-card:hover .blog-img img { transform: scale(1.05); }
+
+.blog-body {
+  padding: 22px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.blog-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.tag-car        { background: #FEF3C7; color: #D97706; }
+.tag-motorcycle { background: #EDE9FE; color: #7C3AED; }
+.tag-corporate  { background: #DBEAFE; color: #1D4ED8; }
+
+.blog-body h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0F2547;
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+.blog-body p {
+  font-size: 14px;
+  color: #6B7A8D;
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 18px;
+}
+
+.blog-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid #EDF2F5;
+}
+
+.no-results {
+  text-align: center;
+  color: #6B7A8D;
+  font-size: 15px;
+  padding: 60px 0;
+}
+
+
 /* map section */
 .map-section {
   background: #fff;
@@ -1798,6 +2009,16 @@ img { display: block; max-width: 100%; }
 }
 
 @media (max-width: 768px) {
+  .blog-hero { padding: 50px 0 40px; }
+  .blog-hero h1 { font-size: 26px; }
+  .blog-filters { top: 0; padding: 14px 0; }
+  .filter-wrap { flex-direction: column; align-items: flex-start; }
+  .filter-tabs { gap: 6px; }
+  .filter-btn { padding: 6px 14px; font-size: 13px; }
+  .blog-articles { padding: 40px 0 60px; }
+  .blog-grid { grid-template-columns: 1fr; gap: 20px; }
+  .blog-img { height: 200px; }
+
   .map-section { padding: 0 0 50px; }
   .map-wrap { border-radius: 12px; }
   .map-wrap iframe { height: 280px; }
