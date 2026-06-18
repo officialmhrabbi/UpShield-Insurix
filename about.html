@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — UpShield Insurix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- navbar -->
+<header class="navbar">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="UpShield">
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="product.html">Products</a>
+      <a href="get-quote.html">Get Quote</a>
+      <a href="#">Claims</a>
+
+      <div class="support-wrap">
+        <button class="support-btn" id="supportBtn">
+          Support
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="support-menu" id="supportMenu">
+          <ul class="menu-links">
+            <li><a href="blog.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Blog</a></li>
+            <li><a href="about.html" style="color:#00B8BE;background:#E6F9F9;border-radius:6px"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> About Us</a></li>
+            <li><a href="#"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> F.A.Q</a></li>
+            <li><a href="contact.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Contact Us</a></li>
+          </ul>
+
+          <hr>
+
+          <p class="menu-label">Socials</p>
+          <div class="socials">
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          </div>
+
+          <hr>
+
+          <p class="menu-label">Contact</p>
+          <div class="contacts">
+            <a href="#"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span> Connect on WhatsApp</a>
+            <a href="mailto:support@upshieldinsurix.com"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span> Write to us</a>
+            <a href="tel:+8801234567890"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span> Helpline +880-1234-567890</a>
+            <a href="mailto:support@upshieldinsurix.com"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span> support@upshieldinsurix.com</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="#" class="login-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+          <polyline points="10 17 15 12 10 7"/>
+          <line x1="15" y1="12" x2="3" y2="12"/>
+        </svg>
+        Login
+      </a>
+      <a href="get-quote.html" class="quote-btn">Get a Quote</a>
+    </div>
+  </div>
+</header>
+
+<!-- page header / breadcrumb -->
+<div class="page-header">
+  <div class="container page-header-wrap">
+    <h1 class="page-title">About Us</h1>
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-current">About Us</span>
+    </nav>
+  </div>
+</div>
+
+<!-- about hero -->
+<section class="about-hero">
+  <div class="about-hero-pattern" aria-hidden="true"></div>
+  <div class="container">
+    <div class="about-hero-content">
+      <h1>All your <span class="green">insurance needs</span>,<br>right at your fingertips</h1>
+      <p class="about-hero-sub">The complete digital platform for personal insurance and<br>embedded solutions, empowering individuals and businesses with<br>seamless protection.</p>
+    </div>
+
+    <div class="about-stats-wrap">
+      <p class="about-stats-label"><span class="green">Your Reason</span> to Choose UpShield Insurix</p>
+      <div class="about-stats">
+        <div class="about-stat">
+          <span class="about-stat-num">10</span>
+          <span class="about-stat-label">Top Rated Insurance<br>Companies</span>
+        </div>
+        <div class="about-stat">
+          <span class="about-stat-num">550k+</span>
+          <span class="about-stat-label">Satisfied Users</span>
+        </div>
+        <div class="about-stat">
+          <span class="about-stat-num">1.5k+</span>
+          <span class="about-stat-label">Claim Assistance</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- embedded insurance solutions -->
+<section class="about-embed">
+  <div class="container">
+    <h2 class="about-embed-title"><span>Embedded</span> <span class="green">Insurance Solutions</span></h2>
+    <p class="about-embed-sub">Integrate insurance directly into your platform or service</p>
+
+    <div class="about-embed-grid">
+
+      <!-- Online Travel Solutions -->
+      <div class="about-embed-card">
+        <div class="about-embed-icon-wrap">
+          <div class="about-embed-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="about-embed-body">
+          <h4>Online Travel Solutions</h4>
+          <p>Embed solutions from travel health and safety coverage to trip cancellation protection, enhancing traveler confidence.</p>
+        </div>
+      </div>
+
+      <!-- Consumer Products -->
+      <div class="about-embed-card">
+        <div class="about-embed-icon-wrap">
+          <div class="about-embed-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+          </div>
+        </div>
+        <div class="about-embed-body">
+          <h4>Consumer Products</h4>
+          <p>Bundle protection with essentials—like helmets with accident coverage—boosting customer confidence while giving sellers deeper insights into user behavior and engagement.</p>
+        </div>
+      </div>
+
+      <!-- Your Next Solution -->
+      <div class="about-embed-card">
+        <div class="about-embed-icon-wrap">
+          <div class="about-embed-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
+          </div>
+        </div>
+        <div class="about-embed-body">
+          <h4>Your Next Solution</h4>
+          <p>Have a different use case in mind? We're open to partnerships and can craft custom embedded solutions—as we already do for others like smartphones, riders, and employees.</p>
+          <a href="contact.html" class="about-contact-btn">Contact us</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="about-embed-divider">
+    <p>Let <span class="green">UpShield Insurix</span> become your trusted insurance solutions provider</p>
+  </div>
+</section>
+
+<!-- insurance partners -->
+<section class="partners">
+  <div class="container">
+    <h2 class="center">Our Insurance Partners</h2>
+  </div>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <div class="logo-box">Guardian Life</div>
+      <div class="logo-box">GreenDelta</div>
+      <div class="logo-box">MetLife</div>
+      <div class="logo-box">SunLife</div>
+      <div class="logo-box">Prudential</div>
+      <div class="logo-box">AIG</div>
+      <div class="logo-box">Allianz</div>
+      <div class="logo-box">BrightLife</div>
+
+      <div class="logo-box">Guardian Life</div>
+      <div class="logo-box">GreenDelta</div>
+      <div class="logo-box">MetLife</div>
+      <div class="logo-box">SunLife</div>
+      <div class="logo-box">Prudential</div>
+      <div class="logo-box">AIG</div>
+      <div class="logo-box">Allianz</div>
+      <div class="logo-box">BrightLife</div>
+    </div>
+  </div>
+</section>
+
+<!-- marketplace -->
+<section class="about-marketplace">
+  <div class="container">
+    <div class="about-marketplace-grid">
+      <div class="about-marketplace-text">
+        <p class="about-section-label">The Insurance</p>
+        <h2 class="about-marketplace-title"><em>Marketplace</em></h2>
+        <p class="about-marketplace-sub">Explore the largest and only digital insurance marketplace. Instantly compare and buy plans from top insurers.</p>
+      </div>
+      <div class="about-marketplace-img">
+        <img src="images/mobile-app.png" alt="Insurance Marketplace on mobile and desktop">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- manage on the go / app section -->
+<section class="about-app">
+  <div class="container">
+    <div class="about-app-grid">
+      <div class="about-app-phones">
+        <div class="about-phone-pair">
+          <div class="about-phone-card about-phone-back">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00B8BE" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div class="about-phone-row"><span class="about-phone-dot"></span><span>Compare Policies</span></div>
+            <div class="about-phone-row"><span class="about-phone-dot"></span><span>Mng Policy</span></div>
+            <div class="about-phone-row"><span class="about-phone-dot"></span><span>Subt claims</span></div>
+            <div class="about-phone-btn-bar"></div>
+          </div>
+          <div class="about-phone-card about-phone-front">
+            <div class="about-phone-header">Inst Insurex</div>
+            <div class="about-phone-row-sm"><span class="about-phone-ic"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#00B8BE" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></span><span>Cape Sites</span></div>
+            <div class="about-phone-row-sm"><span class="about-phone-ic"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#00B8BE" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><span>Earnt Policy</span></div>
+            <div class="about-phone-row-sm"><span class="about-phone-ic"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#00B8BE" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><span>Sube Profits</span></div>
+            <div class="about-phone-row-sm"><span class="about-phone-ic"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#00B8BE" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span><span>Extra Benefits</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-app-text">
+        <p class="about-section-label green">Manage <span style="color:#0F2547">Your Insurance</span></p>
+        <h2 class="about-app-title"><em>On The Go</em></h2>
+        <p class="about-app-sub">Get the UpShield Insurix app for instant access to your policies, easy claims, and exclusive features.</p>
+        <ul class="about-app-features">
+          <li>
+            <span class="about-feat-ic">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </span>
+            Compare and buy policies in minutes
+          </li>
+          <li>
+            <span class="about-feat-ic">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </span>
+            Submit and track claims easily
+          </li>
+          <li>
+            <span class="about-feat-ic">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </span>
+            Enjoy unlimited lifestyle benefits
+          </li>
+        </ul>
+        <p class="about-dl-label">Click here to download our app</p>
+        <div class="about-app-stores">
+          <a href="#">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Google Play
+          </a>
+          <a href="#">App Store</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- goal -->
+<section class="about-goal">
+  <div class="container">
+    <div class="about-goal-grid">
+      <div class="about-goal-text">
+        <h2><span class="green">UpShield Insurix's</span> <em>Goal</em></h2>
+        <p>Our goal is to make insurance simple, affordable, and accessible—driving financial inclusion and protecting everyday lives through digital solutions.</p>
+      </div>
+      <div class="about-goal-img">
+        <svg width="280" height="180" viewBox="0 0 280 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Road -->
+          <rect x="0" y="130" width="280" height="50" rx="0" fill="#E8EEF2"/>
+          <rect x="0" y="128" width="280" height="4" fill="#CBD5E0"/>
+          <!-- Car body -->
+          <rect x="120" y="90" width="110" height="44" rx="8" fill="#F6A623"/>
+          <!-- Car roof -->
+          <path d="M140 90 L155 68 L205 68 L220 90 Z" fill="#E8942A"/>
+          <!-- Car windows -->
+          <rect x="158" y="72" width="24" height="16" rx="3" fill="#B8E4F9"/>
+          <rect x="186" y="72" width="24" height="16" rx="3" fill="#B8E4F9"/>
+          <!-- Car wheels -->
+          <circle cx="148" cy="134" r="13" fill="#2D3748"/>
+          <circle cx="148" cy="134" r="6" fill="#718096"/>
+          <circle cx="212" cy="134" r="13" fill="#2D3748"/>
+          <circle cx="212" cy="134" r="6" fill="#718096"/>
+          <!-- Car door line -->
+          <line x1="178" y1="90" x2="178" y2="134" stroke="#D48A1A" stroke-width="1.5"/>
+          <!-- Car headlight -->
+          <rect x="226" y="104" width="8" height="6" rx="2" fill="#FFF9C4"/>
+          <!-- Motorcycle -->
+          <circle cx="52" cy="134" r="13" fill="#2D3748"/>
+          <circle cx="52" cy="134" r="6" fill="#718096"/>
+          <circle cx="90" cy="134" r="13" fill="#2D3748"/>
+          <circle cx="90" cy="134" r="6" fill="#718096"/>
+          <!-- Moto frame -->
+          <path d="M52 134 L65 108 L80 108 L90 120 L90 134" stroke="#4A5568" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M65 108 L90 108" stroke="#4A5568" stroke-width="4" stroke-linecap="round"/>
+          <!-- Moto seat -->
+          <rect x="62" y="102" width="22" height="8" rx="4" fill="#4A5568"/>
+          <!-- Rider person -->
+          <circle cx="75" cy="92" r="8" fill="#F6AD55"/>
+          <rect x="68" y="100" width="16" height="18" rx="4" fill="#E53E3E"/>
+          <!-- Rider arms -->
+          <line x1="68" y1="108" x2="58" y2="116" stroke="#F6AD55" stroke-width="3" stroke-linecap="round"/>
+          <line x1="84" y1="108" x2="90" y2="112" stroke="#F6AD55" stroke-width="3" stroke-linecap="round"/>
+          <!-- Standing person near car -->
+          <circle cx="110" cy="92" r="8" fill="#F6AD55"/>
+          <rect x="103" y="100" width="14" height="20" rx="4" fill="#667EEA"/>
+          <!-- Person arms -->
+          <line x1="103" y1="108" x2="96" y2="112" stroke="#F6AD55" stroke-width="3" stroke-linecap="round"/>
+          <line x1="117" y1="108" x2="122" y2="112" stroke="#F6AD55" stroke-width="3" stroke-linecap="round"/>
+          <!-- Person legs -->
+          <line x1="107" y1="120" x2="105" y2="134" stroke="#667EEA" stroke-width="3" stroke-linecap="round"/>
+          <line x1="113" y1="120" x2="115" y2="134" stroke="#667EEA" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- regulatory approval -->
+<section class="about-regulatory">
+  <div class="container">
+    <div class="about-regulatory-content">
+      <div class="about-regulatory-shield">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00B8BE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <p class="about-reg-approved">Approved by</p>
+      <p class="about-reg-authority">INSURANCE DEVELOPMENT AND REGULATORY AUTHORITY</p>
+      <p class="about-reg-details">Trade License Number: <span class="green">TRAD/DNCC/047076/2024</span></p>
+      <p class="about-reg-details">BASIS Membership ID: <span class="green">B1-42-G4140-07</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3 class="brand-text">UpShield Insurix</h3>
+      <p class="copy">© 2026 UpShield Insurix. All rights reserved.</p>
+      <div class="foot-stores">
+        <a href="#"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Google Play</a>
+        <a href="#">App Store</a>
+      </div>
+    </div>
+
+    <div>
+      <h5>Products</h5>
+      <ul>
+        <li><a href="#">Health Insurance</a></li>
+        <li><a href="#">Travel Insurance</a></li>
+        <li><a href="#">Accident Insurance</a></li>
+        <li><a href="#">Car Insurance</a></li>
+        <li><a href="#">Life Insurance</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>Company</h5>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#">Claims</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>Contact Us</h5>
+      <ul class="contact-info">
+        <li>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:support@upshieldinsurix.com">support@upshieldinsurix.com</a>
+        </li>
+        <li>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+8801234567890">+880-1234-567890</a>
+        </li>
+        <li>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Dhaka, Bangladesh</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2026 UpShield Insurix. All rights reserved.</span>
+      <div>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var btn = document.getElementById('supportBtn');
+  var menu = document.getElementById('supportMenu');
+
+  btn.onclick = function(e) {
+    e.stopPropagation();
+    menu.classList.toggle('open');
+  };
+
+  document.addEventListener('click', function() {
+    menu.classList.remove('open');
+  });
+
+  menu.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+
+  var navToggle = document.getElementById('navToggle');
+  var navLinks = document.getElementById('navLinks');
+  if (navToggle) {
+    navToggle.onclick = function() {
+      navLinks.classList.toggle('open');
+    };
+  }
+</script>
+
+</body>
+</html>
