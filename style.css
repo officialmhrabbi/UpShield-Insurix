@@ -2065,6 +2065,127 @@ img { display: block; max-width: 100%; }
 }
 
 
+/* ── faq page ──────────────────────────────────────────── */
+
+.faq-section {
+  background: #fff;
+  padding: 70px 0 90px;
+}
+
+.faq-title {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #0F2547;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.faq-lang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 52px;
+}
+
+.faq-lang-btn {
+  padding: 9px 28px;
+  border-radius: 9999px;
+  border: 1.5px solid transparent;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  color: #6B7A8D;
+  transition: 0.2s;
+}
+.faq-lang-btn.active {
+  background: #00B8BE;
+  color: #fff;
+  border-color: #00B8BE;
+}
+.faq-lang-btn:not(.active):hover {
+  border-color: #00B8BE;
+  color: #00B8BE;
+}
+
+.faq-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.faq-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  border: 1px solid #EDF2F5;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.faq-item.open {
+  border-color: #D6F5F5;
+  box-shadow: 0 4px 18px rgba(0,184,190,.08);
+}
+
+.faq-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: #00B8BE;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.faq-q:hover { background: #F0FAFA; }
+
+.faq-chevron {
+  flex-shrink: 0;
+  color: #00B8BE;
+  transition: transform 0.25s;
+}
+
+.faq-a {
+  display: none;
+  padding: 0 20px 20px;
+  border-top: 1px solid #EDF2F5;
+}
+.faq-item.open .faq-a { display: block; }
+
+.faq-a p {
+  font-size: 14px;
+  color: #4A5568;
+  line-height: 1.7;
+  margin-top: 14px;
+}
+.faq-a p + p { margin-top: 12px; }
+
+
+@media (max-width: 768px) {
+  .faq-section { padding: 50px 0 70px; }
+  .faq-title { font-size: 24px; margin-bottom: 22px; }
+  .faq-content { grid-template-columns: 1fr; gap: 12px; }
+  .faq-lang { margin-bottom: 36px; }
+  .faq-q { font-size: 14px; padding: 15px 16px; }
+  .faq-a { padding: 0 16px 16px; }
+}
+
+
 /* ── about page ────────────────────────────────────────── */
 
 /* hero */

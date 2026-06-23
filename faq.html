@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — UpShield Insurix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- navbar -->
+<header class="navbar">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="UpShield">
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="product.html">Products</a>
+      <a href="get-quote.html">Get Quote</a>
+      <a href="#">Claims</a>
+
+      <div class="support-wrap">
+        <button class="support-btn" id="supportBtn">
+          Support
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="support-menu" id="supportMenu">
+          <ul class="menu-links">
+            <li><a href="blog.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Blog</a></li>
+            <li><a href="about.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> About Us</a></li>
+            <li><a href="faq.html" style="color:#00B8BE;background:#E6F9F9;border-radius:6px"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> F.A.Q</a></li>
+            <li><a href="contact.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Contact Us</a></li>
+          </ul>
+
+          <hr>
+
+          <p class="menu-label">Socials</p>
+          <div class="socials">
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          </div>
+
+          <hr>
+
+          <p class="menu-label">Contact</p>
+          <div class="contacts">
+            <a href="#"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span> Connect on WhatsApp</a>
+            <a href="mailto:support@upshieldinsurix.com"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span> Write to us</a>
+            <a href="tel:+8801234567890"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span> Helpline +880-1234-567890</a>
+            <a href="mailto:support@upshieldinsurix.com"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span> support@upshieldinsurix.com</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="#" class="login-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+          <polyline points="10 17 15 12 10 7"/>
+          <line x1="15" y1="12" x2="3" y2="12"/>
+        </svg>
+        Login
+      </a>
+      <a href="get-quote.html" class="quote-btn">Get a Quote</a>
+    </div>
+  </div>
+</header>
+
+<!-- page header / breadcrumb -->
+<div class="page-header">
+  <div class="container page-header-wrap">
+    <h1 class="page-title">FAQ</h1>
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-current">FAQ</span>
+    </nav>
+  </div>
+</div>
+
+<!-- faq section -->
+<section class="faq-section">
+  <div class="container">
+
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+
+    <!-- language toggle -->
+    <div class="faq-lang">
+      <button class="faq-lang-btn active" data-lang="en">English</button>
+      <button class="faq-lang-btn" data-lang="bn">Bangla</button>
+    </div>
+
+    <!-- english faqs -->
+    <div class="faq-content" id="faq-en">
+      <div class="faq-col">
+
+        <div class="faq-item open">
+          <button class="faq-q">
+            What is UpShield Insurix?
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>UpShield Insurix is a digital insurance platform where you can view and compare insurance policies and premiums from different reputed insurance companies. You can also purchase an insurance policy and submit claims digitally using UpShield Insurix. UpShield Insurix is not an insurance company. It is a platform to avail different insurance products and services digitally.</p>
+          </div>
+        </div>
+
+        <div class="faq-item open">
+          <button class="faq-q">
+            What are the benefits of using UpShield Insurix?
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>As UpShield Insurix is a digital insurance platform and aggregator, you can find all types of insurance policies in a single place. You do not need to physically visit an insurance company or meet an agent to buy an insurance policy. UpShield Insurix provides the best insurance policies in one place with easy explanations of the policy features, coverages, and claim process. You can easily view, understand, and compare different insurance policies from different insurance companies using the UpShield Insurix website and mobile app. You can also order your required insurance policy online and get doorstep delivery of the policy certificate anywhere in Bangladesh.</p>
+            <p>UpShield Insurix also provides claim assistance to its customers free of cost. That means you do not need to worry about claiming insurance benefits, as the UpShield Insurix team will assist you in submitting an insurance claim and follow up with the respective insurance company to settle your claim as fast as possible.</p>
+          </div>
+        </div>
+
+        <div class="faq-item open">
+          <button class="faq-q">
+            How can I buy a car or motorcycle insurance online?
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>You can easily buy a motor insurance policy for your car or motorcycle using the UpShield Insurix website and mobile app. Visit the website or app, and click on the car or motorcycle insurance icon. Then, provide the required information such as CC, Price, and Desired Coverage to check different policy prices from various insurance companies. Select your preferred insurance company to order online. Provide your details during checkout and make payment using your preferred method. We will get the insurance policy issued immediately and deliver it to your address within the next working day.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            How can I get a Health Insurance Policy using UpShield Insurix?
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>Getting a health insurance policy through UpShield Insurix is simple. Visit the website or app, click on the Health Insurance section, and fill in your details including age, coverage amount, and the number of family members. Compare plans from top insurers and choose the one that fits your needs. Complete the checkout process and your health insurance certificate will be delivered digitally and physically to your address.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            How do I submit a claim through UpShield Insurix?
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>To submit a claim, log in to your UpShield Insurix account and go to the Claims section. Select the relevant policy and fill in the claim details including the incident description and upload supporting documents. Our claims assistance team will review your submission and coordinate with the insurance company on your behalf. You will receive updates via SMS and email throughout the claim process.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="faq-col">
+
+        <div class="faq-item">
+          <button class="faq-q">
+            How can I get a Travel Insurance Policy using UpShield Insurix?
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>To get a travel insurance policy, visit UpShield Insurix and click on the Travel Insurance option. Enter your travel details such as destination, travel dates, and the number of travellers. You can compare multiple travel insurance plans and choose the one that best fits your trip. After completing the purchase, your policy document will be emailed to you instantly and a physical copy will be delivered to your address.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            How and when will I get the insurance policy documents?
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>Once your payment is confirmed, you will receive a digital copy of your insurance policy document via email and SMS immediately. A physical copy of the policy certificate will be delivered to your provided address within 1–3 working days depending on your location. You can also access and download your policy documents anytime from your UpShield Insurix account dashboard.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            Can I get delivery at my hometown?
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>Yes! UpShield Insurix provides doorstep delivery of insurance policy certificates anywhere in Bangladesh, including your hometown. We partner with reliable courier services to ensure your policy documents reach you safely. Delivery typically takes 1–3 working days within Dhaka and 3–5 working days for other areas. You can track your delivery status from your account.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            Is UpShield Insurix safe and trustworthy?
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>Absolutely. UpShield Insurix is a regulated platform approved by the Insurance Development and Regulatory Authority (IDRA) of Bangladesh. We only partner with reputed and licensed insurance companies. All transactions are secured with industry-standard encryption. Your personal and financial data is protected under our strict privacy policy, and we are committed to full transparency in all our services.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            Can I renew my existing insurance policy through UpShield Insurix?
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>Yes, you can easily renew your existing insurance policy through UpShield Insurix. Log in to your account, navigate to My Policies, and click Renew on the policy you wish to extend. You can also switch to a different insurer at renewal time. We will send you a reminder before your policy expires so you never miss a renewal date.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- bangla faqs -->
+    <div class="faq-content" id="faq-bn" style="display:none">
+      <div class="faq-col">
+
+        <div class="faq-item open">
+          <button class="faq-q">
+            আপশিল্ড ইন্স্যুরিক্স কী?
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>আপশিল্ড ইন্স্যুরিক্স একটি ডিজিটাল বীমা প্ল্যাটফর্ম যেখানে আপনি বিভিন্ন স্বনামধন্য বীমা কোম্পানির বীমা পলিসি এবং প্রিমিয়াম দেখতে ও তুলনা করতে পারবেন। আপনি এই প্ল্যাটফর্মের মাধ্যমে বীমা পলিসি কিনতে এবং ডিজিটালভাবে দাবি দাখিল করতে পারবেন। আপশিল্ড ইন্স্যুরিক্স কোনো বীমা কোম্পানি নয়। এটি ডিজিটালভাবে বিভিন্ন বীমা পণ্য ও সেবা গ্রহণের একটি প্ল্যাটফর্ম।</p>
+          </div>
+        </div>
+
+        <div class="faq-item open">
+          <button class="faq-q">
+            আপশিল্ড ইন্স্যুরিক্স ব্যবহারের সুবিধা কী?
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>আপশিল্ড ইন্স্যুরিক্স একটি ডিজিটাল বীমা প্ল্যাটফর্ম হওয়ায় আপনি এক জায়গায় সব ধরনের বীমা পলিসি খুঁজে পাবেন। বীমা পলিসি কিনতে আপনাকে বীমা কোম্পানিতে সশরীরে যেতে বা এজেন্টের সাথে দেখা করতে হবে না। আপশিল্ড ইন্স্যুরিক্স এক জায়গায় সেরা বীমা পলিসি সহজ ব্যাখ্যা সহ প্রদান করে। আপনি ওয়েবসাইট ও মোবাইল অ্যাপ থেকে সহজেই বিভিন্ন বীমা পলিসি তুলনা করতে এবং অনলাইনে পলিসি অর্ডার করতে পারবেন।</p>
+            <p>আপশিল্ড ইন্স্যুরিক্স তার গ্রাহকদের বিনামূল্যে দাবি সহায়তাও প্রদান করে। অর্থাৎ বীমা সুবিধা দাবি করার বিষয়ে আপনাকে চিন্তা করতে হবে না, কারণ আমাদের দল দাবি দাখিল এবং নিষ্পত্তিতে আপনাকে সহায়তা করবে।</p>
+          </div>
+        </div>
+
+        <div class="faq-item open">
+          <button class="faq-q">
+            কীভাবে অনলাইনে গাড়ি বা মোটরসাইকেলের বীমা কিনব?
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>আপশিল্ড ইন্স্যুরিক্স ওয়েবসাইট বা মোবাইল অ্যাপ ব্যবহার করে সহজেই আপনার গাড়ি বা মোটরসাইকেলের মোটর বীমা পলিসি কিনতে পারবেন। ওয়েবসাইট বা অ্যাপে গিয়ে গাড়ি বা মোটরসাইকেল বীমা আইকনে ক্লিক করুন। তারপর সিসি, মূল্য এবং পছন্দসই কভারেজ প্রদান করুন এবং পছন্দের বীমা কোম্পানি বেছে নিন। চেকআউটে তথ্য প্রদান করুন এবং পেমেন্ট করুন। পলিসি অবিলম্বে ইস্যু করা হবে এবং পরবর্তী কার্যদিবসের মধ্যে ডেলিভারি দেওয়া হবে।</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            কীভাবে স্বাস্থ্য বীমা পলিসি পাব?
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>আপশিল্ড ইন্স্যুরিক্সের মাধ্যমে স্বাস্থ্য বীমা পলিসি পাওয়া সহজ। স্বাস্থ্য বীমা বিভাগে ক্লিক করুন এবং বয়স, কভারেজ পরিমাণ ও পরিবারের সদস্য সংখ্যা পূরণ করুন। শীর্ষ বীমাকারীদের পরিকল্পনা তুলনা করুন এবং আপনার প্রয়োজন অনুযায়ী বেছে নিন।</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            আপশিল্ড ইন্স্যুরিক্সের মাধ্যমে দাবি কীভাবে দাখিল করব?
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>দাবি দাখিল করতে আপনার আপশিল্ড ইন্স্যুরিক্স অ্যাকাউন্টে লগইন করুন এবং দাবি বিভাগে যান। সংশ্লিষ্ট পলিসি নির্বাচন করুন এবং ঘটনার বিবরণ পূরণ করে সহায়ক কাগজপত্র আপলোড করুন। আমাদের দাবি সহায়তা দল আপনার পক্ষে বীমা কোম্পানির সাথে সমন্বয় করবে এবং এসএমএস ও ইমেইলের মাধ্যমে আপডেট জানাবে।</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="faq-col">
+
+        <div class="faq-item">
+          <button class="faq-q">
+            কীভাবে ট্র্যাভেল ইন্স্যুরেন্স পলিসি পাব?
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>ট্র্যাভেল ইন্স্যুরেন্স পেতে আপশিল্ড ইন্স্যুরিক্সে ট্র্যাভেল ইন্স্যুরেন্স বিভাগে যান। গন্তব্য, ভ্রমণের তারিখ ও যাত্রীর সংখ্যা দিন। একাধিক পরিকল্পনা তুলনা করুন এবং সবচেয়ে উপযুক্তটি বেছে নিন। কেনার পরপরই পলিসি ডকুমেন্ট ইমেইলে পাঠানো হবে এবং ফিজিক্যাল কপি ডেলিভারি দেওয়া হবে।</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            বীমা পলিসি ডকুমেন্ট কখন এবং কীভাবে পাব?
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>পেমেন্ট নিশ্চিত হওয়ার সাথে সাথে আপনি ইমেইল ও এসএমএসে ডিজিটাল পলিসি ডকুমেন্ট পাবেন। ফিজিক্যাল কপি ১–৩ কার্যদিবসের মধ্যে আপনার ঠিকানায় পৌঁছে যাবে। আপনার আপশিল্ড ইন্স্যুরিক্স অ্যাকাউন্ট ড্যাশবোর্ড থেকেও যেকোনো সময় পলিসি ডাউনলোড করা যাবে।</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            গ্রামের বাড়িতে কি ডেলিভারি পাওয়া যাবে?
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>হ্যাঁ! আপশিল্ড ইন্স্যুরিক্স বাংলাদেশের যেকোনো জায়গায় ডোরস্টেপ ডেলিভারি প্রদান করে। ঢাকায় ১–৩ কার্যদিবস এবং অন্যান্য এলাকায় ৩–৫ কার্যদিবসের মধ্যে ডেলিভারি দেওয়া হয়। আপনি অ্যাকাউন্ট থেকে ডেলিভারি ট্র্যাক করতে পারবেন।</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            আপশিল্ড ইন্স্যুরিক্স কি নিরাপদ ও বিশ্বাসযোগ্য?
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>অবশ্যই। আপশিল্ড ইন্স্যুরিক্স বাংলাদেশের বীমা উন্নয়ন ও নিয়ন্ত্রণ কর্তৃপক্ষ (আইডিআরএ) কর্তৃক অনুমোদিত একটি প্ল্যাটফর্ম। আমরা শুধুমাত্র স্বনামধন্য ও লাইসেন্সপ্রাপ্ত বীমা কোম্পানির সাথে অংশীদারিত্ব করি। সমস্ত লেনদেন শিল্প-মানের এনক্রিপশন দ্বারা সুরক্ষিত।</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">
+            বিদ্যমান পলিসি নবায়ন করা যাবে কি?
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <p>হ্যাঁ, আপশিল্ড ইন্স্যুরিক্সের মাধ্যমে সহজেই আপনার বিদ্যমান পলিসি নবায়ন করতে পারবেন। আপনার অ্যাকাউন্টে লগইন করুন, আমার পলিসিতে যান এবং নবায়নে ক্লিক করুন। পলিসির মেয়াদ শেষ হওয়ার আগে আমরা আপনাকে রিমাইন্ডার পাঠাব।</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3 class="brand-text">UpShield Insurix</h3>
+      <p class="copy">© 2026 UpShield Insurix. All rights reserved.</p>
+      <div class="foot-stores">
+        <a href="#"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Google Play</a>
+        <a href="#">App Store</a>
+      </div>
+    </div>
+
+    <div>
+      <h5>Products</h5>
+      <ul>
+        <li><a href="#">Health Insurance</a></li>
+        <li><a href="#">Travel Insurance</a></li>
+        <li><a href="#">Accident Insurance</a></li>
+        <li><a href="#">Car Insurance</a></li>
+        <li><a href="#">Life Insurance</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>Company</h5>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#">Claims</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>Contact Us</h5>
+      <ul class="contact-info">
+        <li>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:support@upshieldinsurix.com">support@upshieldinsurix.com</a>
+        </li>
+        <li>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+8801234567890">+880-1234-567890</a>
+        </li>
+        <li>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Dhaka, Bangladesh</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2026 UpShield Insurix. All rights reserved.</span>
+      <div>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* support dropdown */
+  var btn = document.getElementById('supportBtn');
+  var menu = document.getElementById('supportMenu');
+  btn.onclick = function(e) { e.stopPropagation(); menu.classList.toggle('open'); };
+  document.addEventListener('click', function() { menu.classList.remove('open'); });
+  menu.addEventListener('click', function(e) { e.stopPropagation(); });
+
+  /* mobile nav */
+  var navToggle = document.getElementById('navToggle');
+  var navLinks = document.getElementById('navLinks');
+  if (navToggle) { navToggle.onclick = function() { navLinks.classList.toggle('open'); }; }
+
+  /* language toggle */
+  var langBtns = document.querySelectorAll('.faq-lang-btn');
+  langBtns.forEach(function(b) {
+    b.addEventListener('click', function() {
+      langBtns.forEach(function(x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      document.getElementById('faq-en').style.display = b.dataset.lang === 'en' ? '' : 'none';
+      document.getElementById('faq-bn').style.display = b.dataset.lang === 'bn' ? '' : 'none';
+    });
+  });
+
+  /* accordion */
+  document.querySelectorAll('.faq-q').forEach(function(q) {
+    q.addEventListener('click', function() {
+      var item = q.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      item.classList.toggle('open', !isOpen);
+      /* swap chevron direction */
+      var path = q.querySelector('.faq-chevron svg path');
+      path.setAttribute('d', isOpen ? 'M6 9l6 6 6-6' : 'M18 15l-6-6-6 6');
+    });
+  });
+</script>
+
+</body>
+</html>
