@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Insurance — UpShield Insurix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-wrap">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="UpShield">
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Home</a>
+      <a href="../product.html">Products</a>
+      <a href="../get-quote.html">Get Quote</a>
+      <a href="#">Claims</a>
+
+      <div class="support-wrap">
+        <button class="support-btn" id="supportBtn">
+          Support
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="support-menu" id="supportMenu">
+          <ul class="menu-links">
+            <li><a href="../blog.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Blog</a></li>
+            <li><a href="../about.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> About Us</a></li>
+            <li><a href="../faq.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> F.A.Q</a></li>
+          </ul>
+
+          <hr>
+
+          <p class="menu-label">Socials</p>
+          <div class="socials">
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          </div>
+
+          <hr>
+
+          <p class="menu-label">Contact</p>
+          <div class="contacts">
+            <a href="#"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span> Connect on WhatsApp</a>
+            <a href="mailto:cs@upshieldinsur.com"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span> Write to us</a>
+            <a href="tel:+8809606991991"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span> Helpline +8809606991991</a>
+            <a href="mailto:cs@upshieldinsur.com"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span> cs@upshieldinsur.com</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="../login.html" class="login-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+          <polyline points="10 17 15 12 10 7"/>
+          <line x1="15" y1="12" x2="3" y2="12"/>
+        </svg>
+        Login
+      </a>
+      <a href="../get-quote.html" class="quote-btn">Get a Quote</a>
+    </div>
+  </div>
+</header>
+
+<div class="hi-crumb">
+  <div class="container hi-crumb-wrap">
+    <h1>Health Insurance</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <span>›</span>
+      <span>Health Insurance</span>
+    </nav>
+  </div>
+</div>
+
+<section class="hi-hero">
+  <div class="container hi-hero-grid">
+
+    <div class="hi-hero-left">
+      <div class="hi-hero-img">
+        <img src="../images/health-insurance-hero.jpg" alt="Health Insurance">
+      </div>
+      <h2 class="hi-hero-title">Choose the best Health Insurance Plan</h2>
+      <p class="hi-hero-sub">for Yourself and your Family</p>
+    </div>
+
+    <div class="hi-hero-right">
+      <div class="hi-who">
+        <button class="hi-who-card active" data-who="self">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          <span>Self</span>
+          <svg class="hi-who-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"/>
+            <polyline points="19 12 12 19 5 12"/>
+          </svg>
+        </button>
+        <button class="hi-who-card" data-who="couple">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          <span>Couple</span>
+        </button>
+        <button class="hi-who-card" data-who="family">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          <span>Family</span>
+        </button>
+        <button class="hi-who-card" data-who="parents">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <line x1="19" y1="8" x2="19" y2="14"/>
+            <line x1="22" y1="11" x2="16" y2="11"/>
+          </svg>
+          <span>Parents</span>
+        </button>
+      </div>
+
+      <div class="hi-form-card">
+        <label class="hi-label">Your Age</label>
+        <select class="hi-select">
+          <option>Select</option>
+          <option>18 - 25</option>
+          <option>26 - 35</option>
+          <option>36 - 45</option>
+          <option>46 - 55</option>
+          <option>56 - 65</option>
+          <option>65+</option>
+        </select>
+
+        <label class="hi-label">Health Coverage Amount (৳)</label>
+        <div class="hi-amounts">
+          <button class="hi-amount active">Show All Plans</button>
+          <button class="hi-amount">Upto 1 Lac</button>
+          <button class="hi-amount">1 Lac to 5 Lac</button>
+          <button class="hi-amount">5 Lac to 10 Lac</button>
+        </div>
+
+        <button class="hi-see-btn">See Plans →</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="container hi-share-wrap">
+  <button class="hi-share">
+    SHARE
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="18" cy="5" r="3"/>
+      <circle cx="6" cy="12" r="3"/>
+      <circle cx="18" cy="19" r="3"/>
+      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+      <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+    </svg>
+  </button>
+</div>
+
+<section class="hi-faq">
+  <div class="container hi-faq-wrap">
+
+    <div class="hi-faq-item open">
+      <button class="hi-faq-q">
+        What is Health Insurance?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+      </button>
+      <div class="hi-faq-a">
+        <p>Health insurance is a type of insurance policy that provides financial coverage against illness, diseases, and accident-related treatments. That means you can get financial benefit against your medical expenses if you have a health insurance policy. All you have to do is buy a good health insurance policy and renew it every year because you never know when an accident may happen or you get sick.</p>
+        <p>UpShield Insurix offers various health insurance plans on its website and mobile app from where you can easily understand the terms and conditions and purchase online and get claims.</p>
+      </div>
+    </div>
+
+    <div class="hi-faq-item">
+      <button class="hi-faq-q">
+        Why do you need a Health Insurance?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="hi-faq-a">
+        <p>Medical treatment costs are rising every year. A single hospital stay can wipe out years of savings. Health insurance protects you from these unexpected expenses so you can focus on recovery instead of bills. It also covers preventive check-ups, prescription drugs, and emergency care depending on the plan you choose.</p>
+      </div>
+    </div>
+
+    <div class="hi-faq-item">
+      <button class="hi-faq-q">
+        Which Health Insurance policies are available now?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="hi-faq-a">
+        <p>UpShield Insurix offers individual health plans, family floater plans, senior citizen plans, critical illness plans, and group health insurance from top insurers including Guardian Life, MetLife, GreenDelta, and Prudential. You can compare premiums, sum insured options, and benefits side by side before you buy.</p>
+      </div>
+    </div>
+
+    <div class="hi-faq-item">
+      <button class="hi-faq-q">
+        Individual Plan vs Family Floater Plan, what is the difference?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="hi-faq-a">
+        <p>An Individual Plan covers one person with a dedicated sum insured. A Family Floater Plan covers your whole family under one shared sum insured at a lower combined premium. Floaters work well for young families where claims are less frequent, while individual plans suit older members who may need higher dedicated coverage.</p>
+      </div>
+    </div>
+
+    <div class="hi-faq-item">
+      <button class="hi-faq-q">
+        How to claim for Health Insurance coverage?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="hi-faq-a">
+        <p>You can claim in two ways. Cashless: get treatment at a network hospital and the insurer pays the bill directly. Reimbursement: pay first, then submit the bills, discharge summary, and reports to UpShield Insurix. Our claims team forwards everything to the insurer and follows up until your payment is processed.</p>
+      </div>
+    </div>
+
+    <div class="hi-faq-item">
+      <button class="hi-faq-q">
+        What happens after claiming Health Insurance coverage?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="hi-faq-a">
+        <p>The insurer reviews your documents and approves the claim if everything is in order. Cashless claims are usually settled within hours. Reimbursement claims take 7 to 15 working days depending on the case. Your sum insured reduces by the claim amount and resets when you renew the policy for the next year.</p>
+      </div>
+    </div>
+
+    <div class="hi-faq-item">
+      <button class="hi-faq-q">
+        Why is UpShield Insurix the best place to buy Health Insurance policies?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="hi-faq-a">
+        <p>You get plans from every major insurer in one place with side-by-side comparisons, plain-language explanations, and an instant digital policy. Renewals, claims, and doorstep document delivery are all handled for you free of cost. No agent visits, no hidden charges.</p>
+      </div>
+    </div>
+
+    <div class="hi-faq-item">
+      <button class="hi-faq-q">
+        How to contact UpShield Insurix?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="hi-faq-a">
+        <p>Call our helpline at +8809606991991, email cs@upshieldinsur.com, or message us on WhatsApp anytime. You can also reach us through the in-app chat or visit our office at Level 5, House 13, Road 11, Lake View, Uttar Badda, Dhaka - 1212.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="partners">
+  <div class="container">
+    <h2 class="center">Our Insurance Partners</h2>
+  </div>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <div class="logo-box">Guardian Life</div>
+      <div class="logo-box">GreenDelta</div>
+      <div class="logo-box">MetLife</div>
+      <div class="logo-box">SunLife</div>
+      <div class="logo-box">Prudential</div>
+      <div class="logo-box">AIG</div>
+      <div class="logo-box">Allianz</div>
+      <div class="logo-box">AXA</div>
+
+      <div class="logo-box">Guardian Life</div>
+      <div class="logo-box">GreenDelta</div>
+      <div class="logo-box">MetLife</div>
+      <div class="logo-box">SunLife</div>
+      <div class="logo-box">Prudential</div>
+      <div class="logo-box">AIG</div>
+      <div class="logo-box">Allianz</div>
+      <div class="logo-box">AXA</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3 class="brand-text">UpShield Insurix</h3>
+      <p class="copy">Simply compare, order and get covered.<br>Reliable digital insurance solutions for you.</p>
+      <div class="foot-stores">
+        <a href="#"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Google Play</a>
+        <a href="#">App Store</a>
+      </div>
+    </div>
+
+    <div>
+      <h5>Products</h5>
+      <ul>
+        <li><a href="health-insurance.html">Health Insurance</a></li>
+        <li><a href="#">Travel Insurance</a></li>
+        <li><a href="#">Accident Insurance</a></li>
+        <li><a href="#">Car Insurance</a></li>
+        <li><a href="#">Life Insurance</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>Company</h5>
+      <ul>
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="#">Claims</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>Contact Us</h5>
+      <ul class="contact-info">
+        <li>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:cs@upshieldinsur.com">cs@upshieldinsur.com</a>
+        </li>
+        <li>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+8809606991991">+8809606991991</a>
+        </li>
+        <li>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Dhaka, Bangladesh</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2026 UpShield Insurix. All rights reserved.</span>
+      <div>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var btn = document.getElementById('supportBtn');
+  var menu = document.getElementById('supportMenu');
+  btn.onclick = function(e) { e.stopPropagation(); menu.classList.toggle('open'); };
+  document.addEventListener('click', function() { menu.classList.remove('open'); });
+  menu.addEventListener('click', function(e) { e.stopPropagation(); });
+
+  var navToggle = document.getElementById('navToggle');
+  var navLinks = document.getElementById('navLinks');
+  if (navToggle) { navToggle.onclick = function() { navLinks.classList.toggle('open'); }; }
+
+  document.querySelectorAll('.hi-who-card').forEach(function(c) {
+    c.addEventListener('click', function() {
+      document.querySelectorAll('.hi-who-card').forEach(function(x) {
+        x.classList.remove('active');
+        var arr = x.querySelector('.hi-who-arrow');
+        if (arr) arr.remove();
+      });
+      c.classList.add('active');
+      var svgNS = 'http://www.w3.org/2000/svg';
+      var arrow = document.createElementNS(svgNS, 'svg');
+      arrow.setAttribute('class', 'hi-who-arrow');
+      arrow.setAttribute('width', '14');
+      arrow.setAttribute('height', '14');
+      arrow.setAttribute('viewBox', '0 0 24 24');
+      arrow.setAttribute('fill', 'none');
+      arrow.setAttribute('stroke', 'currentColor');
+      arrow.setAttribute('stroke-width', '2.2');
+      arrow.setAttribute('stroke-linecap', 'round');
+      arrow.setAttribute('stroke-linejoin', 'round');
+      arrow.innerHTML = '<line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/>';
+      c.appendChild(arrow);
+    });
+  });
+
+  document.querySelectorAll('.hi-amount').forEach(function(b) {
+    b.addEventListener('click', function() {
+      document.querySelectorAll('.hi-amount').forEach(function(x) { x.classList.remove('active'); });
+      b.classList.add('active');
+    });
+  });
+
+  document.querySelectorAll('.hi-faq-q').forEach(function(q) {
+    q.addEventListener('click', function() {
+      var item = q.closest('.hi-faq-item');
+      var isOpen = item.classList.contains('open');
+      item.classList.toggle('open', !isOpen);
+      var path = q.querySelector('svg path');
+      path.setAttribute('d', isOpen ? 'M6 9l6 6 6-6' : 'M18 15l-6-6-6 6');
+    });
+  });
+</script>
+
+</body>
+</html>
