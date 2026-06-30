@@ -2066,7 +2066,7 @@ img { display: block; max-width: 100%; }
 
 
 .hi-crumb {
-  background: #00B8BE;
+  background: #00A897;
   padding: 16px 0;
 }
 .hi-crumb-wrap {
@@ -2162,13 +2162,13 @@ img { display: block; max-width: 100%; }
   transition: 0.2s;
 }
 .hi-who-card svg { color: #6B7A8D; }
-.hi-who-card:hover { border-color: #00B8BE; }
+.hi-who-card:hover { border-color: #00A897; }
 .hi-who-card.active {
-  border-color: #00B8BE;
+  border-color: #00A897;
   background: #F0FAFA;
-  color: #00B8BE;
+  color: #00A897;
 }
-.hi-who-card.active svg { color: #00B8BE; }
+.hi-who-card.active svg { color: #00A897; }
 
 .hi-who-arrow { margin-top: 2px; }
 
@@ -2204,7 +2204,7 @@ img { display: block; max-width: 100%; }
   background-position: right 14px center;
   padding-right: 36px;
 }
-.hi-select:focus { outline: none; border-color: #00B8BE; }
+.hi-select:focus { outline: none; border-color: #00A897; }
 
 .hi-amounts {
   display: flex;
@@ -2224,16 +2224,16 @@ img { display: block; max-width: 100%; }
   cursor: pointer;
   transition: 0.2s;
 }
-.hi-amount:hover { border-color: #00B8BE; }
+.hi-amount:hover { border-color: #00A897; }
 .hi-amount.active {
-  border-color: #00B8BE;
-  color: #00B8BE;
+  border-color: #00A897;
+  color: #00A897;
   background: #F0FAFA;
 }
 
 .hi-see-btn {
   width: 100%;
-  background: #00B8BE;
+  background: #00A897;
   color: #fff;
   border: none;
   padding: 13px;
@@ -2272,7 +2272,7 @@ img { display: block; max-width: 100%; }
   gap: 8px;
   transition: 0.2s;
 }
-.hi-share:hover { border-color: #00B8BE; color: #00B8BE; }
+.hi-share:hover { border-color: #00A897; color: #00A897; }
 
 .hi-faq {
   background: #fff;
@@ -2293,7 +2293,7 @@ img { display: block; max-width: 100%; }
 
 .hi-faq-q {
   width: 100%;
-  background: #00B8BE;
+  background: #00A897;
   color: #fff;
   border: none;
   padding: 16px 22px;
