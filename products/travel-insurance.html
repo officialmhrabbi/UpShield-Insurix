@@ -104,50 +104,111 @@
       <div class="ti-form-card">
 
         <div class="ti-steps">
-          <div class="ti-step active">1</div>
-          <div class="ti-step-line"></div>
-          <div class="ti-step">2</div>
-          <div class="ti-step-line"></div>
-          <div class="ti-step">3</div>
+          <div class="ti-step active" data-step="1">1</div>
+          <div class="ti-step-line" data-line="1-2"></div>
+          <div class="ti-step" data-step="2">2</div>
+          <div class="ti-step-line" data-line="2-3"></div>
+          <div class="ti-step" data-step="3">3</div>
         </div>
 
-        <h3 class="ti-form-title">Please Select the Purpose of Your Travel</h3>
+        <!-- STEP 1 : purpose -->
+        <div class="ti-panel active" data-panel="1">
+          <h3 class="ti-form-title">Please Select the Purpose of Your Travel</h3>
 
-        <div class="ti-purpose">
-          <button class="ti-purpose-card active" data-purpose="business">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-            </svg>
-            <span>Business/Holiday</span>
-          </button>
-          <button class="ti-purpose-card" data-purpose="study">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-            </svg>
-            <span>Study</span>
-          </button>
-          <button class="ti-purpose-card" data-purpose="employment">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 21h18"/>
-              <path d="M5 21V7l7-4 7 4v14"/>
-              <path d="M9 9h2M9 13h2M9 17h2M13 9h2M13 13h2M13 17h2"/>
-            </svg>
-            <span>Employment</span>
-          </button>
-          <button class="ti-purpose-card" data-purpose="frequent">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="17 1 21 5 17 9"/>
-              <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
-              <polyline points="7 23 3 19 7 15"/>
-              <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
-            </svg>
-            <span>Frequent Traveler</span>
-          </button>
+          <div class="ti-purpose">
+            <button class="ti-purpose-card active" data-purpose="Business/Holiday">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+              <span>Business/Holiday</span>
+            </button>
+            <button class="ti-purpose-card" data-purpose="Study">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+              <span>Study</span>
+            </button>
+            <button class="ti-purpose-card" data-purpose="Employment">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18"/>
+                <path d="M5 21V7l7-4 7 4v14"/>
+                <path d="M9 9h2M9 13h2M9 17h2M13 9h2M13 13h2M13 17h2"/>
+              </svg>
+              <span>Employment</span>
+            </button>
+            <button class="ti-purpose-card" data-purpose="Frequent Traveler">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="17 1 21 5 17 9"/>
+                <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+                <polyline points="7 23 3 19 7 15"/>
+                <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+              </svg>
+              <span>Frequent Traveler</span>
+            </button>
+          </div>
+
+          <div class="ti-actions">
+            <button class="ti-next-btn" data-next="2">NEXT →</button>
+          </div>
         </div>
 
-        <button class="ti-next-btn">NEXT →</button>
+        <!-- STEP 2 : travelers + DOBs -->
+        <div class="ti-panel" data-panel="2">
+          <h3 class="ti-form-title">How many travelers?</h3>
+
+          <div class="ti-counter">
+            <button class="ti-count-btn" data-count="-1" aria-label="Decrease">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="ti-count-val" id="tiCountVal">1</div>
+            <button class="ti-count-btn" data-count="1" aria-label="Increase">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><line x1="12" y1="5" x2="12" y2="19"/></svg>
+            </button>
+          </div>
+
+          <p class="ti-hint">Enter the date of birth of travelers (as per passport)</p>
+
+          <div class="ti-dobs" id="tiDobs">
+            <div class="ti-dob-row">
+              <label>Traveler 1</label>
+              <input type="date" class="ti-input">
+            </div>
+          </div>
+
+          <div class="ti-actions">
+            <button class="ti-back-btn" data-next="1">BACK</button>
+            <button class="ti-next-btn" data-next="3">NEXT →</button>
+          </div>
+        </div>
+
+        <!-- STEP 3 : destination + dates -->
+        <div class="ti-panel" data-panel="3">
+          <div class="ti-field">
+            <label class="ti-field-label">
+              Country/Countries
+              <span class="ti-hint-inline">You can select multiple countries</span>
+            </label>
+            <input type="text" class="ti-input" id="tiCountry" placeholder="e.g. UK, Turkey, Thailand">
+          </div>
+
+          <div class="ti-two-col">
+            <div class="ti-field">
+              <label class="ti-field-label">Date of Travel</label>
+              <input type="date" class="ti-input" id="tiTravelDate">
+            </div>
+            <div class="ti-field">
+              <label class="ti-field-label">Policy Duration (Days)</label>
+              <input type="number" min="1" class="ti-input" id="tiDuration" placeholder="Policy Duration (Days)">
+            </div>
+          </div>
+
+          <div class="ti-actions">
+            <button class="ti-back-btn" data-next="2">BACK</button>
+            <button class="ti-see-btn" id="tiSeePlans">SEE PLANS →</button>
+          </div>
+        </div>
 
       </div>
     </div>
@@ -364,6 +425,72 @@
       document.querySelectorAll('.ti-purpose-card').forEach(function(x) { x.classList.remove('active'); });
       c.classList.add('active');
     });
+  });
+
+  function goToStep(n) {
+    document.querySelectorAll('.ti-panel').forEach(function(p) {
+      p.classList.toggle('active', p.getAttribute('data-panel') === String(n));
+    });
+    document.querySelectorAll('.ti-step').forEach(function(s) {
+      var num = parseInt(s.getAttribute('data-step'), 10);
+      s.classList.toggle('active', num <= n);
+    });
+    document.querySelectorAll('.ti-step-line').forEach(function(l) {
+      var pair = l.getAttribute('data-line').split('-');
+      var from = parseInt(pair[0], 10);
+      l.classList.toggle('active', from < n);
+    });
+  }
+
+  document.querySelectorAll('[data-next]').forEach(function(b) {
+    b.addEventListener('click', function() {
+      goToStep(parseInt(b.getAttribute('data-next'), 10));
+    });
+  });
+
+  var countVal = document.getElementById('tiCountVal');
+  var dobsWrap = document.getElementById('tiDobs');
+  function renderDobs(n) {
+    var current = dobsWrap.querySelectorAll('.ti-dob-row').length;
+    if (n > current) {
+      for (var i = current + 1; i <= n; i++) {
+        var row = document.createElement('div');
+        row.className = 'ti-dob-row';
+        row.innerHTML = '<label>Traveler ' + i + '</label><input type="date" class="ti-input">';
+        dobsWrap.appendChild(row);
+      }
+    } else if (n < current) {
+      var rows = dobsWrap.querySelectorAll('.ti-dob-row');
+      for (var j = current - 1; j >= n; j--) { rows[j].remove(); }
+    }
+  }
+
+  document.querySelectorAll('[data-count]').forEach(function(b) {
+    b.addEventListener('click', function() {
+      var delta = parseInt(b.getAttribute('data-count'), 10);
+      var cur = parseInt(countVal.textContent, 10) || 1;
+      var next = Math.max(1, Math.min(6, cur + delta));
+      countVal.textContent = next;
+      renderDobs(next);
+    });
+  });
+
+  document.getElementById('tiSeePlans').addEventListener('click', function() {
+    var purpose = (document.querySelector('.ti-purpose-card.active') || {}).getAttribute
+      ? document.querySelector('.ti-purpose-card.active').getAttribute('data-purpose')
+      : 'Business/Holiday';
+    var travelers = countVal.textContent;
+    var country = document.getElementById('tiCountry').value || 'Thailand';
+    var travelDate = document.getElementById('tiTravelDate').value || '';
+    var duration = document.getElementById('tiDuration').value || '';
+    var params = new URLSearchParams({
+      purpose: purpose,
+      travelers: travelers,
+      destination: country,
+      date: travelDate,
+      duration: duration
+    });
+    window.location.href = 'travel-insurance-plans.html?' + params.toString();
   });
 
   document.querySelectorAll('.hi-faq-q').forEach(function(q) {
