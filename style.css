@@ -2344,6 +2344,113 @@ img { display: block; max-width: 100%; }
   .hi-faq-a { padding: 14px 16px 18px; }
 }
 
+.ti-form-card {
+  background: #fff;
+  border: 1.5px solid #B7E6E6;
+  border-radius: 14px;
+  padding: 28px 30px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.ti-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 4px 20px 0;
+}
+
+.ti-step {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1.5px solid #E2EAF0;
+  color: #B0BCC9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.ti-step.active {
+  background: #00A897;
+  border-color: #00A897;
+  color: #fff;
+}
+
+.ti-step-line {
+  flex: 1;
+  height: 1.5px;
+  background: #E2EAF0;
+  max-width: 140px;
+}
+
+.ti-form-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0F2547;
+  text-align: center;
+  margin: 0;
+}
+
+.ti-purpose {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.ti-purpose-card {
+  background: #fff;
+  border: 1.5px solid #E2EAF0;
+  border-radius: 10px;
+  padding: 22px 12px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6B7A8D;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.ti-purpose-card svg { color: #6B7A8D; }
+.ti-purpose-card:hover { border-color: #00A897; }
+.ti-purpose-card.active {
+  border-color: #00A897;
+  background: #F0FAFA;
+  color: #00A897;
+}
+.ti-purpose-card.active svg { color: #00A897; }
+
+.ti-next-btn {
+  align-self: center;
+  min-width: 160px;
+  background: #7FD4CE;
+  color: #fff;
+  border: none;
+  padding: 11px 28px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.ti-next-btn:hover { background: #00A897; }
+
+@media (max-width: 768px) {
+  .ti-form-card { padding: 22px 18px; }
+  .ti-purpose { gap: 10px; }
+  .ti-purpose-card { padding: 18px 8px 14px; }
+}
+
 
 .hp-section {
   background: #fff;
