@@ -2659,6 +2659,7 @@ img { display: block; max-width: 100%; }
 
 .hp-grid {
   display: grid;
+  margin-top:20px;
   grid-template-columns: 1fr 340px;
   gap: 28px;
   align-items: flex-start;
@@ -2959,6 +2960,216 @@ img { display: block; max-width: 100%; }
   .hp-plan-stat-value { font-size: 15px; }
   .hp-plan-foot { flex-direction: column; align-items: stretch; gap: 10px; }
   .hp-plan-buy { text-align: center; }
+}
+
+
+.tp-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.tp-search {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.tp-search svg {
+  position: absolute;
+  left: 14px;
+  color: #B0BCC9;
+  pointer-events: none;
+}
+.tp-search input {
+  width: 100%;
+  border: 1px solid #E2EAF0;
+  border-radius: 10px;
+  padding: 11px 14px 11px 40px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #0F2547;
+  background: #fff;
+}
+.tp-search input:focus { outline: none; border-color: #00A897; }
+.tp-search input::placeholder { color: #B0BCC9; }
+
+.tp-filters-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #E2EAF0;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0F2547;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.tp-filters-btn:hover { border-color: #00A897; color: #00A897; }
+
+.tp-plans {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tp-compare {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6B7A8D;
+  padding: 8px 4px 4px;
+  cursor: pointer;
+}
+.tp-compare input {
+  width: 14px;
+  height: 14px;
+  accent-color: #00A897;
+  cursor: pointer;
+}
+
+.tp-plan {
+  background: #fff;
+  border: 1px solid #E2EAF0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.tp-plan-main {
+  display: grid;
+  grid-template-columns: 110px 1fr 1.1fr 1.3fr 130px;
+  gap: 20px;
+  align-items: center;
+  padding: 18px 20px;
+}
+
+.tp-plan-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 14px 8px;
+  border-radius: 8px;
+  min-height: 62px;
+}
+.tp-badge-green { background: #1EAE9F; }
+
+.tp-plan-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0F2547;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.tp-plan-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+
+.tp-col-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #6B7A8D;
+}
+.tp-col-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0F2547;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  justify-content: center;
+}
+.tp-per {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6B7A8D;
+}
+.tp-col-sub {
+  font-size: 11px;
+  font-weight: 500;
+  color: #6B7A8D;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
+}
+
+.tp-plan-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+}
+
+.tp-buy {
+  display: block;
+  background: #F26E37;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+.tp-buy:hover { background: #DD5D28; }
+
+.tp-more {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: #6B7A8D;
+}
+.tp-more:hover { color: #00A897; }
+
+.tp-plan-feature,
+.tp-plan-extras {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-top: 1px solid #EDF2F5;
+  font-size: 12.5px;
+  color: #0F2547;
+  background: #FAFCFD;
+  text-align: center;
+  justify-content: center;
+}
+.tp-plan-feature strong,
+.tp-plan-extras strong {
+  color: #6B7A8D;
+  font-weight: 600;
+  margin-right: 2px;
+}
+
+@media (max-width: 960px) {
+  .tp-plan-main { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .tp-plan-badge { grid-column: 1 / -1; min-height: 44px; }
+  .tp-plan-name { grid-column: 1 / -1; text-align: center; }
+  .tp-plan-cta { grid-column: 1 / -1; flex-direction: row; }
+  .tp-buy, .tp-more { flex: 1; }
+}
+
+@media (max-width: 640px) {
+  .tp-toolbar { flex-direction: column; align-items: stretch; }
+  .tp-plan-feature, .tp-plan-extras { flex-wrap: wrap; padding: 10px 14px; text-align: left; justify-content: flex-start; }
 }
 
 
