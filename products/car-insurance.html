@@ -101,7 +101,7 @@
     </div>
 
     <div class="hi-hero-right">
-      <div class="ci-coverage-card">
+      <div class="ci-coverage-card" id="ciCoverageStep">
         <h3 class="ci-coverage-title">Please Select Your Coverage Type</h3>
 
         <div class="ci-coverage-options">
@@ -133,7 +133,151 @@
           </button>
         </div>
 
-        <a href="../get-quote.html" class="ci-coverage-continue" id="ciContinue">Continue →</a>
+        <button type="button" class="ci-coverage-continue" id="ciContinue">Continue →</button>
+      </div>
+
+      <div class="ti-form-card" id="ciWizard" style="display:none">
+
+        <div class="ti-steps">
+          <div class="ti-step active" data-step="1">1</div>
+          <div class="ti-step-line" data-line="1-2"></div>
+          <div class="ti-step" data-step="2">2</div>
+          <div class="ti-step-line" data-line="2-3"></div>
+          <div class="ti-step" data-step="3">3</div>
+          <div class="ti-step-line" data-line="3-4"></div>
+          <div class="ti-step" data-step="4">4</div>
+        </div>
+
+        <!-- STEP 1 : cubic capacity + seating -->
+        <div class="ti-panel active" data-panel="1">
+          <h3 class="ti-form-title">Select your car's Cubic Capacity (CC)</h3>
+
+          <div class="ci-cc-grid">
+            <button class="ci-cc-option" data-cc="800 CC to 1300 CC">800 CC to 1300 CC</button>
+            <button class="ci-cc-option" data-cc="1301 CC to 1800 CC">1301 CC to 1800 CC</button>
+            <button class="ci-cc-option" data-cc="1801 CC to 3000 CC">1801 CC to 3000 CC</button>
+            <button class="ci-cc-option" data-cc="Over 3000 CC">Over 3000 CC</button>
+          </div>
+
+          <div>
+            <p class="ci-seat-title">Seating Capacity</p>
+            <p class="ci-seat-hint">(as per registration)</p>
+
+            <div class="ci-seat-row">
+              <span>1 DRIVER +</span>
+              <div class="ti-counter">
+                <button class="ti-count-btn" data-seat="-1" aria-label="Decrease">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="ti-count-val" id="ciSeatVal">4</div>
+                <button class="ti-count-btn" data-seat="1" aria-label="Increase">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><line x1="12" y1="5" x2="12" y2="19"/></svg>
+                </button>
+              </div>
+              <span>PASSENGERS = <span id="ciSeatTotal">5</span> SEATS</span>
+            </div>
+          </div>
+
+          <div class="ti-actions">
+            <button class="ti-back-btn" id="ciBackToCoverage">BACK</button>
+            <button class="ti-next-btn" data-next="2">NEXT →</button>
+          </div>
+        </div>
+
+        <!-- STEP 2 : price + GPS -->
+        <div class="ti-panel" data-panel="2">
+          <div class="ti-field">
+            <label class="ti-field-label">Provide the price of your car</label>
+            <p class="ci-seat-hint" style="margin-top:-6px">(as per original purchase invoice)</p>
+            <input type="number" min="0" class="ti-input" id="ciPrice" placeholder="e.g. 1500000">
+          </div>
+
+          <div>
+            <p class="ci-seat-title">Any GPS Tracker installed in the car?</p>
+            <div class="ci-toggle-grid">
+              <button class="ci-toggle-option active" data-gps="no">
+                No
+                <svg class="ci-toggle-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </button>
+              <button class="ci-toggle-option" data-gps="yes">
+                Yes
+                <svg class="ci-toggle-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="ti-actions">
+            <button class="ti-back-btn" data-next="1">BACK</button>
+            <button class="ti-next-btn" data-next="3">NEXT →</button>
+          </div>
+        </div>
+
+        <!-- STEP 3 : prior insurance -->
+        <div class="ti-panel" data-panel="3">
+          <h3 class="ti-form-title">Has this car ever been insured before?</h3>
+
+          <div class="ci-toggle-grid">
+            <button class="ci-toggle-option active" data-prior="no">
+              No
+              <svg class="ci-toggle-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </button>
+            <button class="ci-toggle-option" data-prior="yes">
+              Yes
+              <svg class="ci-toggle-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </button>
+          </div>
+
+          <div class="ti-actions">
+            <button class="ti-back-btn" data-next="2">BACK</button>
+            <button class="ti-next-btn" data-next="4">NEXT →</button>
+          </div>
+        </div>
+
+        <!-- STEP 4 : add-ons -->
+        <div class="ti-panel" data-panel="4">
+          <h3 class="ti-form-title">Select Add-ons to Protect Your Vehicle</h3>
+          <p class="ci-seat-hint">Click on the add-ons you want to include. You can skip if you don't need any.</p>
+
+          <div class="ci-addon-grid">
+            <button class="ci-addon-card active" data-addon="Riot & Strike Damage">
+              <span class="ci-addon-ribbon">Recommended</span>
+              <span class="ci-addon-check">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span class="ci-addon-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L20 5 V12 C20 17 16.5 21 12 22 C7.5 21 4 17 4 12 V5 Z"/></svg>
+              </span>
+              <span class="ci-addon-label">Riot &amp; Strike Damage</span>
+            </button>
+
+            <button class="ci-addon-card active" data-addon="Earthquake Damage">
+              <span class="ci-addon-ribbon">Recommended</span>
+              <span class="ci-addon-check">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span class="ci-addon-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L20 5 V12 C20 17 16.5 21 12 22 C7.5 21 4 17 4 12 V5 Z"/></svg>
+              </span>
+              <span class="ci-addon-label">Earthquake Damage</span>
+            </button>
+
+            <button class="ci-addon-card" data-addon="Flood & Cyclone Damage">
+              <span class="ci-addon-check">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span class="ci-addon-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L20 5 V12 C20 17 16.5 21 12 22 C7.5 21 4 17 4 12 V5 Z"/></svg>
+              </span>
+              <span class="ci-addon-label">Flood &amp; Cyclone Damage</span>
+            </button>
+          </div>
+
+          <div class="ti-actions">
+            <button class="ti-back-btn" data-next="3">BACK</button>
+            <button class="ti-see-btn" id="ciSeePlans">SEE PLANS →</button>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -341,13 +485,106 @@
   var navLinks = document.getElementById('navLinks');
   if (navToggle) { navToggle.onclick = function() { navLinks.classList.toggle('open'); }; }
 
-  var ciContinue = document.getElementById('ciContinue');
+  var selectedCoverage = 'comprehensive';
   document.querySelectorAll('.ci-coverage-option').forEach(function(c) {
     c.addEventListener('click', function() {
       document.querySelectorAll('.ci-coverage-option').forEach(function(x) { x.classList.remove('active'); });
       c.classList.add('active');
-      ciContinue.href = '../get-quote.html?coverage=' + c.getAttribute('data-coverage') + '&product=car';
+      selectedCoverage = c.getAttribute('data-coverage');
     });
+  });
+
+  var ciCoverageStep = document.getElementById('ciCoverageStep');
+  var ciWizard = document.getElementById('ciWizard');
+
+  document.getElementById('ciContinue').addEventListener('click', function() {
+    ciCoverageStep.style.display = 'none';
+    ciWizard.style.display = 'flex';
+    goToCiStep(1);
+  });
+
+  document.getElementById('ciBackToCoverage').addEventListener('click', function() {
+    ciWizard.style.display = 'none';
+    ciCoverageStep.style.display = 'block';
+  });
+
+  function goToCiStep(n) {
+    ciWizard.querySelectorAll('.ti-panel').forEach(function(p) {
+      p.classList.toggle('active', p.getAttribute('data-panel') === String(n));
+    });
+    ciWizard.querySelectorAll('.ti-step').forEach(function(s) {
+      var num = parseInt(s.getAttribute('data-step'), 10);
+      s.classList.toggle('active', num <= n);
+    });
+    ciWizard.querySelectorAll('.ti-step-line').forEach(function(l) {
+      var pair = l.getAttribute('data-line').split('-');
+      var from = parseInt(pair[0], 10);
+      l.classList.toggle('active', from < n);
+    });
+  }
+
+  ciWizard.querySelectorAll('[data-next]').forEach(function(b) {
+    b.addEventListener('click', function() {
+      goToCiStep(parseInt(b.getAttribute('data-next'), 10));
+    });
+  });
+
+  document.querySelectorAll('.ci-cc-option').forEach(function(c) {
+    c.addEventListener('click', function() {
+      document.querySelectorAll('.ci-cc-option').forEach(function(x) { x.classList.remove('active'); });
+      c.classList.add('active');
+    });
+  });
+
+  var ciSeatVal = document.getElementById('ciSeatVal');
+  var ciSeatTotal = document.getElementById('ciSeatTotal');
+  document.querySelectorAll('[data-seat]').forEach(function(b) {
+    b.addEventListener('click', function() {
+      var delta = parseInt(b.getAttribute('data-seat'), 10);
+      var cur = parseInt(ciSeatVal.textContent, 10) || 1;
+      var next = Math.max(1, Math.min(9, cur + delta));
+      ciSeatVal.textContent = next;
+      ciSeatTotal.textContent = next + 1;
+    });
+  });
+
+  document.querySelectorAll('.ci-toggle-grid').forEach(function(group) {
+    group.querySelectorAll('.ci-toggle-option').forEach(function(opt) {
+      opt.addEventListener('click', function() {
+        group.querySelectorAll('.ci-toggle-option').forEach(function(x) { x.classList.remove('active'); });
+        opt.classList.add('active');
+      });
+    });
+  });
+
+  document.querySelectorAll('.ci-addon-card').forEach(function(card) {
+    card.addEventListener('click', function() {
+      card.classList.toggle('active');
+    });
+  });
+
+  document.getElementById('ciSeePlans').addEventListener('click', function() {
+    var cc = (document.querySelector('.ci-cc-option.active') || {}).getAttribute
+      ? document.querySelector('.ci-cc-option.active').getAttribute('data-cc')
+      : '';
+    var seats = ciSeatTotal.textContent;
+    var price = document.getElementById('ciPrice').value || '';
+    var gps = document.querySelector('[data-gps].active').getAttribute('data-gps');
+    var prior = document.querySelector('[data-prior].active').getAttribute('data-prior');
+    var addons = Array.prototype.map.call(document.querySelectorAll('.ci-addon-card.active'), function(a) {
+      return a.getAttribute('data-addon');
+    }).join(',');
+    var params = new URLSearchParams({
+      product: 'car',
+      coverage: selectedCoverage,
+      cc: cc,
+      seats: seats,
+      price: price,
+      gps: gps,
+      priorInsurance: prior,
+      addons: addons
+    });
+    window.location.href = '../get-quote.html?' + params.toString();
   });
 
   document.querySelectorAll('.hi-faq-q').forEach(function(q) {
