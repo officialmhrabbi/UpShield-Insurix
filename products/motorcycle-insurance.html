@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motorcycle Insurance — UpShield Insurix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-wrap">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="UpShield">
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Home</a>
+      <a href="../product.html" style="color:#00A897">Products</a>
+      <a href="../get-quote.html">Get Quote</a>
+      <a href="#">Claims</a>
+
+      <div class="support-wrap">
+        <button class="support-btn" id="supportBtn">
+          Support
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="support-menu" id="supportMenu">
+          <ul class="menu-links">
+            <li><a href="../blog.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Blog</a></li>
+            <li><a href="../about.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> About Us</a></li>
+            <li><a href="../faq.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> F.A.Q</a></li>
+          </ul>
+
+          <hr>
+
+          <p class="menu-label">Socials</p>
+          <div class="socials">
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          </div>
+
+          <hr>
+
+          <p class="menu-label">Contact</p>
+          <div class="contacts">
+            <a href="#"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span> Connect on WhatsApp</a>
+            <a href="mailto:cs@upshieldinsur.com"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span> Write to us</a>
+            <a href="tel:+8809606991991"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span> Helpline +8809606991991</a>
+            <a href="mailto:cs@upshieldinsur.com"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span> cs@upshieldinsur.com</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="../login.html" class="login-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+          <polyline points="10 17 15 12 10 7"/>
+          <line x1="15" y1="12" x2="3" y2="12"/>
+        </svg>
+        Login
+      </a>
+      <a href="../get-quote.html" class="quote-btn">Get a Quote</a>
+    </div>
+  </div>
+</header>
+
+<div class="hi-crumb">
+  <div class="container hi-crumb-wrap">
+    <h1>Motorcycle Insurance</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <span>›</span>
+      <span>Motorcycle Insurance</span>
+    </nav>
+  </div>
+</div>
+
+<section class="hi-hero">
+  <div class="container hi-hero-grid">
+
+    <div class="hi-hero-left">
+      <div class="hi-hero-img">
+        <img src="../images/motorcycle-insurance-hero-MRMaw0_G.jpg" alt="Motorcycle Insurance">
+      </div>
+      <h2 class="hi-hero-title">Ride with confidence with</h2>
+      <p class="hi-hero-sub">Motorcycle Insurance</p>
+    </div>
+
+    <div class="hi-hero-right">
+      <div class="ci-coverage-card" id="miCoverageStep">
+        <h3 class="ci-coverage-title">Please Select Your Coverage Type</h3>
+
+        <div class="ci-coverage-options">
+          <button class="ci-coverage-option active" data-coverage="comprehensive">
+            <span class="ci-coverage-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2 L20 5 V12 C20 17 16.5 21 12 22 C7.5 21 4 17 4 12 V5 Z"/>
+              </svg>
+            </span>
+            <span>
+              <span class="ci-coverage-name">Comprehensive (Full) Coverage</span>
+              <span class="ci-coverage-desc">Vehicle Damage &amp; Theft Coverage, with Motor Liability Coverage</span>
+            </span>
+          </button>
+
+          <button class="ci-coverage-option" data-coverage="liability">
+            <span class="ci-coverage-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="8" y1="13" x2="16" y2="13"/>
+                <line x1="8" y1="17" x2="16" y2="17"/>
+              </svg>
+            </span>
+            <span>
+              <span class="ci-coverage-name">Motor Liability Coverage Only</span>
+              <span class="ci-coverage-desc">Lower Premium, Covers Third Party Liability Only</span>
+            </span>
+          </button>
+        </div>
+
+        <a href="../get-quote.html" class="ci-coverage-continue" id="miContinue">Continue →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="container hi-share-wrap">
+  <button class="hi-share">
+    SHARE
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="18" cy="5" r="3"/>
+      <circle cx="6" cy="12" r="3"/>
+      <circle cx="18" cy="19" r="3"/>
+      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+      <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+    </svg>
+  </button>
+</div>
+
+<section class="hi-faq">
+  <div class="container hi-faq-wrap">
+
+    <div class="hi-faq-item open">
+      <button class="hi-faq-q">
+        Motorcycle Insurance in Bangladesh – Buy online at UpShield Insurix
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+      </button>
+      <div class="hi-faq-a">
+        <p>You can buy motorcycle insurance online easily using UpShield Insurix website and mobile app. UpShield Insurix offers motorcycle insurance policy from the most reputed insurance companies who are committed to ensure financial protection in case your motorcycle gets damaged or you cause a damage to someone else while riding. You can pay the insurance premium using any bank card or mobile financial services as per your convenience.</p>
+      </div>
+    </div>
+
+    <div class="hi-faq-item">
+      <button class="hi-faq-q">
+        Types of Motorcycle Insurance
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="hi-faq-a">
+        <p>There are two main types of motorcycle insurance: Comprehensive (Full) Coverage which covers vehicle damage, theft, and third-party liability; and Motor Liability Coverage Only which covers third-party liability at a lower premium. Comprehensive coverage is recommended for newer motorcycles.</p>
+      </div>
+    </div>
+
+    <div class="hi-faq-item">
+      <button class="hi-faq-q">
+        Motorcycle Insurance Purchasing Guide – Which policy suits me best?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="hi-faq-a">
+        <p>If your motorcycle is relatively new or high-value, Comprehensive coverage is recommended as it protects against theft, accidents, and natural disasters. For older motorcycles, Motor Liability Coverage may suffice as it covers damages to third parties at a lower cost.</p>
+      </div>
+    </div>
+
+    <div class="hi-faq-item">
+      <button class="hi-faq-q">
+        Price (or Premium) of Motorcycle Insurance Policy
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="hi-faq-a">
+        <p>The premium depends on your motorcycle's cubic capacity (CC), market value, and whether you opt for add-ons like riot &amp; strike damage, earthquake, or flood coverage. Comprehensive policies have higher premiums than liability-only policies.</p>
+      </div>
+    </div>
+
+    <div class="hi-faq-item">
+      <button class="hi-faq-q">
+        Coverage Exclusions of Motorcycle Insurance
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="hi-faq-a">
+        <p>Common exclusions include wear and tear, mechanical or electrical breakdown, damage while driving under the influence, using the vehicle for racing, and damage caused by war or nuclear risks. Always read your policy document carefully.</p>
+      </div>
+    </div>
+
+    <div class="hi-faq-item">
+      <button class="hi-faq-q">
+        Claim Process
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="hi-faq-a">
+        <p>In case of an accident: 1) Ensure safety first, 2) File an FIR/GD at the nearest police station, 3) Notify UpShield Insurix within 24 hours, 4) Submit required documents including photos and repair estimates, 5) Our team will assess and process your claim promptly.</p>
+      </div>
+    </div>
+
+    <div class="hi-faq-item">
+      <button class="hi-faq-q">
+        How to contact UpShield Insurix for Motorcycle Insurance?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="hi-faq-a">
+        <p>You can reach us at cs@upshieldinsurix.com, call our hotline, or visit our office. Our support team is available to help you choose the right plan, file claims, or answer any questions about your motorcycle insurance policy.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="partners">
+  <div class="container">
+    <h2 class="center">Our Insurance Partners</h2>
+  </div>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <div class="logo-box">Guardian Life</div>
+      <div class="logo-box">GreenDelta</div>
+      <div class="logo-box">MetLife</div>
+      <div class="logo-box">SunLife</div>
+      <div class="logo-box">Prudential</div>
+      <div class="logo-box">AIG</div>
+      <div class="logo-box">Allianz</div>
+      <div class="logo-box">AXA</div>
+
+      <div class="logo-box">Guardian Life</div>
+      <div class="logo-box">GreenDelta</div>
+      <div class="logo-box">MetLife</div>
+      <div class="logo-box">SunLife</div>
+      <div class="logo-box">Prudential</div>
+      <div class="logo-box">AIG</div>
+      <div class="logo-box">Allianz</div>
+      <div class="logo-box">AXA</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3 class="brand-text">UpShield Insurix</h3>
+      <p class="copy">Simply compare, order and get covered.<br>Reliable digital insurance solutions for you.</p>
+      <div class="foot-stores">
+        <a href="#"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Google Play</a>
+        <a href="#">App Store</a>
+      </div>
+    </div>
+
+    <div>
+      <h5>Products</h5>
+      <ul>
+        <li><a href="health-insurance.html">Health Insurance</a></li>
+        <li><a href="travel-insurance.html">Travel Insurance</a></li>
+        <li><a href="#">Accident Insurance</a></li>
+        <li><a href="car-insurance.html">Car Insurance</a></li>
+        <li><a href="#">Life Insurance</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>Company</h5>
+      <ul>
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="#">Claims</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>Contact Us</h5>
+      <ul class="contact-info">
+        <li>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:cs@upshieldinsur.com">cs@upshieldinsur.com</a>
+        </li>
+        <li>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+8809606991991">+8809606991991</a>
+        </li>
+        <li>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Dhaka, Bangladesh</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2026 UpShield Insurix. All rights reserved.</span>
+      <div>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var btn = document.getElementById('supportBtn');
+  var menu = document.getElementById('supportMenu');
+  btn.onclick = function(e) { e.stopPropagation(); menu.classList.toggle('open'); };
+  document.addEventListener('click', function() { menu.classList.remove('open'); });
+  menu.addEventListener('click', function(e) { e.stopPropagation(); });
+
+  var navToggle = document.getElementById('navToggle');
+  var navLinks = document.getElementById('navLinks');
+  if (navToggle) { navToggle.onclick = function() { navLinks.classList.toggle('open'); }; }
+
+  var miContinue = document.getElementById('miContinue');
+  document.querySelectorAll('.ci-coverage-option').forEach(function(c) {
+    c.addEventListener('click', function() {
+      document.querySelectorAll('.ci-coverage-option').forEach(function(x) { x.classList.remove('active'); });
+      c.classList.add('active');
+      miContinue.href = '../get-quote.html?coverage=' + c.getAttribute('data-coverage') + '&product=motorcycle';
+    });
+  });
+
+  document.querySelectorAll('.hi-faq-q').forEach(function(q) {
+    q.addEventListener('click', function() {
+      var item = q.closest('.hi-faq-item');
+      var isOpen = item.classList.contains('open');
+      item.classList.toggle('open', !isOpen);
+      var path = q.querySelector('svg path');
+      path.setAttribute('d', isOpen ? 'M6 9l6 6 6-6' : 'M18 15l-6-6-6 6');
+    });
+  });
+</script>
+
+</body>
+</html>
