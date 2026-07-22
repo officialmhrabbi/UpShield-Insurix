@@ -133,7 +133,158 @@
           </button>
         </div>
 
-        <a href="../get-quote.html" class="ci-coverage-continue" id="miContinue">Continue →</a>
+        <button type="button" class="ci-coverage-continue" id="miContinue">Continue →</button>
+      </div>
+
+      <div class="ti-form-card" id="miWizardComprehensive" style="display:none">
+
+        <div class="ti-steps">
+          <div class="ti-step active" data-step="1">1</div>
+          <div class="ti-step-line" data-line="1-2"></div>
+          <div class="ti-step" data-step="2">2</div>
+          <div class="ti-step-line" data-line="2-3"></div>
+          <div class="ti-step" data-step="3">3</div>
+          <div class="ti-step-line" data-line="3-4"></div>
+          <div class="ti-step" data-step="4">4</div>
+        </div>
+
+        <!-- STEP 1 : cubic capacity -->
+        <div class="ti-panel active" data-panel="1">
+          <h3 class="ti-form-title">Select your motorcycle's Cubic Capacity (CC)</h3>
+
+          <div class="ci-cc-grid">
+            <button class="ci-cc-option active" data-cc="50 CC to 150 CC">50 CC to 150 CC</button>
+            <button class="ci-cc-option" data-cc="151 CC to 250 CC">151 CC to 250 CC</button>
+          </div>
+          <div class="ci-cc-single">
+            <button class="ci-cc-option" data-cc="251 CC to 350 CC">251 CC to 350 CC</button>
+          </div>
+
+          <div class="ti-actions">
+            <button class="ti-back-btn" id="miBackToCoverage1">BACK</button>
+            <button class="ti-next-btn" data-next="2">NEXT →</button>
+          </div>
+        </div>
+
+        <!-- STEP 2 : price + GPS -->
+        <div class="ti-panel" data-panel="2">
+          <div class="ti-field">
+            <label class="ti-field-label">Provide the price of your motorcycle</label>
+            <p class="ci-seat-hint" style="margin-top:-6px">(as per original purchase invoice)</p>
+            <input type="number" min="0" class="ti-input" id="miPrice" placeholder="Vehicle Price">
+          </div>
+
+          <div>
+            <p class="ci-seat-title">Any GPS Tracker installed in the motorcycle?</p>
+            <div class="ci-toggle-grid">
+              <button class="ci-toggle-option active" data-gps="no">
+                No
+                <svg class="ci-toggle-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </button>
+              <button class="ci-toggle-option" data-gps="yes">
+                Yes
+                <svg class="ci-toggle-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="ti-actions">
+            <button class="ti-back-btn" data-next="1">BACK</button>
+            <button class="ti-next-btn" data-next="3">NEXT →</button>
+          </div>
+        </div>
+
+        <!-- STEP 3 : prior insurance -->
+        <div class="ti-panel" data-panel="3">
+          <h3 class="ti-form-title">Has this motorcycle ever been insured before?</h3>
+
+          <div class="ci-toggle-grid">
+            <button class="ci-toggle-option active" data-prior="no">
+              No
+              <svg class="ci-toggle-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </button>
+            <button class="ci-toggle-option" data-prior="yes">
+              Yes
+              <svg class="ci-toggle-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </button>
+          </div>
+
+          <div class="ti-actions">
+            <button class="ti-back-btn" data-next="2">BACK</button>
+            <button class="ti-next-btn" data-next="4">NEXT →</button>
+          </div>
+        </div>
+
+        <!-- STEP 4 : add-ons -->
+        <div class="ti-panel" data-panel="4">
+          <h3 class="ti-form-title">Select Add-ons to Protect Your Vehicle</h3>
+          <p class="ci-seat-hint">Click on the add-ons you want to include. You can skip if you don't need any.</p>
+
+          <div class="ci-addon-grid">
+            <button class="ci-addon-card active" data-addon="Riot & Strike Damage">
+              <span class="ci-addon-ribbon">Recommended</span>
+              <span class="ci-addon-check">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span class="ci-addon-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L20 5 V12 C20 17 16.5 21 12 22 C7.5 21 4 17 4 12 V5 Z"/></svg>
+              </span>
+              <span class="ci-addon-label">Riot &amp; Strike Damage</span>
+            </button>
+
+            <button class="ci-addon-card" data-addon="Earthquake Damage">
+              <span class="ci-addon-ribbon">Recommended</span>
+              <span class="ci-addon-check">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span class="ci-addon-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L20 5 V12 C20 17 16.5 21 12 22 C7.5 21 4 17 4 12 V5 Z"/></svg>
+              </span>
+              <span class="ci-addon-label">Earthquake Damage</span>
+            </button>
+
+            <button class="ci-addon-card" data-addon="Flood & Cyclone Damage">
+              <span class="ci-addon-check">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span class="ci-addon-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L20 5 V12 C20 17 16.5 21 12 22 C7.5 21 4 17 4 12 V5 Z"/></svg>
+              </span>
+              <span class="ci-addon-label">Flood &amp; Cyclone Damage</span>
+            </button>
+          </div>
+
+          <div class="ti-actions">
+            <button class="ti-back-btn" data-next="3">BACK</button>
+            <button class="ti-see-btn" id="miSeePlansComprehensive">SEE PLANS →</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="ti-form-card" id="miWizardLiability" style="display:none">
+
+        <div class="ti-steps">
+          <div class="ti-step active" data-step="1">1</div>
+        </div>
+
+        <div class="ti-panel active" data-panel="1">
+          <h3 class="ti-form-title">Select your motorcycle's Cubic Capacity (CC)</h3>
+
+          <div class="ci-cc-grid">
+            <button class="ci-cc-option active" data-cc="50 CC to 150 CC">50 CC to 150 CC</button>
+            <button class="ci-cc-option" data-cc="151 CC to 250 CC">151 CC to 250 CC</button>
+          </div>
+          <div class="ci-cc-single">
+            <button class="ci-cc-option" data-cc="251 CC to 350 CC">251 CC to 350 CC</button>
+          </div>
+
+          <div class="ti-actions">
+            <button class="ti-back-btn" id="miBackToCoverage2">BACK</button>
+            <button class="ti-see-btn" id="miSeePlansLiability">SEE PLANS →</button>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -331,13 +482,104 @@
   var navLinks = document.getElementById('navLinks');
   if (navToggle) { navToggle.onclick = function() { navLinks.classList.toggle('open'); }; }
 
-  var miContinue = document.getElementById('miContinue');
+  var miSelectedCoverage = 'comprehensive';
   document.querySelectorAll('.ci-coverage-option').forEach(function(c) {
     c.addEventListener('click', function() {
       document.querySelectorAll('.ci-coverage-option').forEach(function(x) { x.classList.remove('active'); });
       c.classList.add('active');
-      miContinue.href = '../get-quote.html?coverage=' + c.getAttribute('data-coverage') + '&product=motorcycle';
+      miSelectedCoverage = c.getAttribute('data-coverage');
     });
+  });
+
+  var miCoverageStep = document.getElementById('miCoverageStep');
+  var miWizardComprehensive = document.getElementById('miWizardComprehensive');
+  var miWizardLiability = document.getElementById('miWizardLiability');
+
+  document.getElementById('miContinue').addEventListener('click', function() {
+    miCoverageStep.style.display = 'none';
+    if (miSelectedCoverage === 'liability') {
+      miWizardLiability.style.display = 'flex';
+    } else {
+      miWizardComprehensive.style.display = 'flex';
+      goToMiStep(1);
+    }
+  });
+
+  function backToMiCoverage() {
+    miWizardComprehensive.style.display = 'none';
+    miWizardLiability.style.display = 'none';
+    miCoverageStep.style.display = 'block';
+  }
+  document.getElementById('miBackToCoverage1').addEventListener('click', backToMiCoverage);
+  document.getElementById('miBackToCoverage2').addEventListener('click', backToMiCoverage);
+
+  function goToMiStep(n) {
+    miWizardComprehensive.querySelectorAll('.ti-panel').forEach(function(p) {
+      p.classList.toggle('active', p.getAttribute('data-panel') === String(n));
+    });
+    miWizardComprehensive.querySelectorAll('.ti-step').forEach(function(s) {
+      var num = parseInt(s.getAttribute('data-step'), 10);
+      s.classList.toggle('active', num <= n);
+    });
+    miWizardComprehensive.querySelectorAll('.ti-step-line').forEach(function(l) {
+      var pair = l.getAttribute('data-line').split('-');
+      var from = parseInt(pair[0], 10);
+      l.classList.toggle('active', from < n);
+    });
+  }
+
+  miWizardComprehensive.querySelectorAll('[data-next]').forEach(function(b) {
+    b.addEventListener('click', function() {
+      goToMiStep(parseInt(b.getAttribute('data-next'), 10));
+    });
+  });
+
+  document.querySelectorAll('.ci-cc-option').forEach(function(c) {
+    c.addEventListener('click', function() {
+      var group = c.closest('.ti-form-card');
+      group.querySelectorAll('.ci-cc-option').forEach(function(x) { x.classList.remove('active'); });
+      c.classList.add('active');
+    });
+  });
+
+  document.querySelectorAll('.ci-toggle-grid').forEach(function(group) {
+    group.querySelectorAll('.ci-toggle-option').forEach(function(opt) {
+      opt.addEventListener('click', function() {
+        group.querySelectorAll('.ci-toggle-option').forEach(function(x) { x.classList.remove('active'); });
+        opt.classList.add('active');
+      });
+    });
+  });
+
+  document.querySelectorAll('.ci-addon-card').forEach(function(card) {
+    card.addEventListener('click', function() {
+      card.classList.toggle('active');
+    });
+  });
+
+  function buildMiQuery(extra) {
+    var params = Object.assign({ product: 'motorcycle', coverage: miSelectedCoverage }, extra);
+    return new URLSearchParams(params).toString();
+  }
+
+  document.getElementById('miSeePlansLiability').addEventListener('click', function() {
+    var cc = (miWizardLiability.querySelector('.ci-cc-option.active') || {}).getAttribute
+      ? miWizardLiability.querySelector('.ci-cc-option.active').getAttribute('data-cc')
+      : '';
+    window.location.href = '../get-quote.html?' + buildMiQuery({ cc: cc });
+  });
+
+  document.getElementById('miSeePlansComprehensive').addEventListener('click', function() {
+    var cc = (miWizardComprehensive.querySelector('.ci-cc-option.active') || {}).getAttribute
+      ? miWizardComprehensive.querySelector('.ci-cc-option.active').getAttribute('data-cc')
+      : '';
+    var price = document.getElementById('miPrice').value || '';
+    var gps = miWizardComprehensive.querySelector('[data-gps].active').getAttribute('data-gps');
+    var prior = miWizardComprehensive.querySelector('[data-prior].active').getAttribute('data-prior');
+    var addons = Array.prototype.map.call(miWizardComprehensive.querySelectorAll('.ci-addon-card.active'), function(a) {
+      return a.getAttribute('data-addon');
+    }).join(',');
+    window.location.href = '../get-quote.html?' + buildMiQuery({ cc: cc, price: price, gps: gps, priorInsurance: prior, addons: addons });
   });
 
   document.querySelectorAll('.hi-faq-q').forEach(function(q) {

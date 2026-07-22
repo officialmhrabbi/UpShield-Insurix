@@ -4660,6 +4660,13 @@ img { display: block; max-width: 100%; }
   color: #00A897;
 }
 
+.ci-cc-single {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+.ci-cc-single .ci-cc-option { width: calc(50% - 6px); }
+
 .ci-seat-title {
   text-align: center;
   font-size: 15px;
@@ -4800,4 +4807,5 @@ img { display: block; max-width: 100%; }
 @media (max-width: 768px) {
   .ci-addon-grid { grid-template-columns: 1fr; }
   .ci-toggle-grid { grid-template-columns: 1fr; }
+  .ci-cc-single .ci-cc-option { width: 100%; }
 }
