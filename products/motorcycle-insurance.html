@@ -566,7 +566,7 @@
     var cc = (miWizardLiability.querySelector('.ci-cc-option.active') || {}).getAttribute
       ? miWizardLiability.querySelector('.ci-cc-option.active').getAttribute('data-cc')
       : '';
-    window.location.href = '../get-quote.html?' + buildMiQuery({ cc: cc });
+    window.location.href = 'motorcycle-insurance-plans.html?' + buildMiQuery({ cc: cc });
   });
 
   document.getElementById('miSeePlansComprehensive').addEventListener('click', function() {
@@ -579,7 +579,7 @@
     var addons = Array.prototype.map.call(miWizardComprehensive.querySelectorAll('.ci-addon-card.active'), function(a) {
       return a.getAttribute('data-addon');
     }).join(',');
-    window.location.href = '../get-quote.html?' + buildMiQuery({ cc: cc, price: price, gps: gps, priorInsurance: prior, addons: addons });
+    window.location.href = 'motorcycle-insurance-plans.html?' + buildMiQuery({ cc: cc, price: price, gps: gps, priorInsurance: prior, addons: addons });
   });
 
   document.querySelectorAll('.hi-faq-q').forEach(function(q) {
