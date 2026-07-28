@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insured Details — UpShield Insurix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-wrap">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="UpShield">
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html">Home</a>
+      <a href="../product.html">Products</a>
+      <a href="../get-quote.html">Get Quote</a>
+      <a href="#">Claims</a>
+
+      <div class="support-wrap">
+        <button class="support-btn" id="supportBtn">
+          Support
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="support-menu" id="supportMenu">
+          <ul class="menu-links">
+            <li><a href="../blog.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Blog</a></li>
+            <li><a href="../about.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> About Us</a></li>
+            <li><a href="../faq.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> F.A.Q</a></li>
+          </ul>
+
+          <hr>
+
+          <p class="menu-label">Socials</p>
+          <div class="socials">
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          </div>
+
+          <hr>
+
+          <p class="menu-label">Contact</p>
+          <div class="contacts">
+            <a href="#"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span> Connect on WhatsApp</a>
+            <a href="mailto:cs@upshieldinsur.com"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span> Write to us</a>
+            <a href="tel:+8809606991991"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span> Helpline +8809606991991</a>
+            <a href="mailto:cs@upshieldinsur.com"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span> cs@upshieldinsur.com</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="../login.html" class="login-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+          <polyline points="10 17 15 12 10 7"/>
+          <line x1="15" y1="12" x2="3" y2="12"/>
+        </svg>
+        Login
+      </a>
+      <a href="../get-quote.html" class="quote-btn">Get a Quote</a>
+    </div>
+  </div>
+</header>
+
+<div class="hi-crumb">
+  <div class="container hi-crumb-wrap">
+    <h1 id="idProductLabel">Motorcycle Insurance</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <span>›</span>
+      <span>Insured Details</span>
+    </nav>
+  </div>
+</div>
+
+<section class="hp-section">
+  <div class="container">
+
+    <a href="#" class="hp-back" id="idBackLink">← Back to Motorcycle Insurance Plans</a>
+
+    <div class="hp-summary">
+      <div class="hp-summary-cols">
+        <div class="hp-sum-item">
+          <span class="hp-sum-label">Selected Plan</span>
+          <span class="hp-sum-value" id="idPlanName">Bike Shield Basic</span>
+          <span class="id-summary-company" id="idCompany">Green Delta Insurance</span>
+        </div>
+      </div>
+      <div class="id-summary-premium">
+        <span class="hp-sum-label">Premium</span>
+        <span class="hp-sum-value" id="idPremium">৳13,200/year</span>
+      </div>
+    </div>
+
+    <div class="id-form-card" id="idFormWrap">
+
+      <h2 class="id-form-title">Insured Details</h2>
+
+      <div class="id-steps">
+        <div class="id-step-wrap">
+          <div class="id-step active" data-step="1">1</div>
+          <span class="id-step-label active" data-label="1">Owner Details</span>
+        </div>
+        <div class="id-step-line" data-line="1-2"></div>
+        <div class="id-step-wrap">
+          <div class="id-step" data-step="2">2</div>
+          <span class="id-step-label" data-label="2">Vehicle/Item Details</span>
+        </div>
+        <div class="id-step-line" data-line="2-3"></div>
+        <div class="id-step-wrap">
+          <div class="id-step" data-step="3">3</div>
+          <span class="id-step-label" data-label="3">Nominee Information</span>
+        </div>
+        <div class="id-step-line" data-line="3-4"></div>
+        <div class="id-step-wrap">
+          <div class="id-step" data-step="4">4</div>
+          <span class="id-step-label" data-label="4">Declaration</span>
+        </div>
+      </div>
+
+      <!-- STEP 1 : owner details -->
+      <div class="ti-panel active" data-panel="1">
+        <div class="ti-two-col">
+          <div class="ti-field">
+            <label class="ti-field-label">Full Name <span class="id-req">*</span></label>
+            <input type="text" class="ti-input" id="idFullName" placeholder="Enter your full name">
+          </div>
+          <div class="ti-field">
+            <label class="ti-field-label">Date of Birth <span class="id-req">*</span></label>
+            <input type="date" class="ti-input" id="idDob">
+          </div>
+        </div>
+        <div class="ti-two-col">
+          <div class="ti-field">
+            <label class="ti-field-label">ID Type <span class="id-req">*</span></label>
+            <select class="hi-select" id="idType">
+              <option value="">Select</option>
+              <option>National ID (NID)</option>
+              <option>Passport</option>
+              <option>Birth Certificate</option>
+              <option>Driving License</option>
+            </select>
+          </div>
+          <div class="ti-field">
+            <label class="ti-field-label">ID Number <span class="id-req">*</span></label>
+            <input type="text" class="ti-input" id="idNumber" placeholder="Enter ID number">
+          </div>
+        </div>
+        <div class="ti-field">
+          <label class="ti-field-label">Mobile <span class="id-req">*</span></label>
+          <input type="tel" class="ti-input" id="idMobile" placeholder="Enter mobile number">
+        </div>
+
+        <div class="ti-actions" style="justify-content:flex-end">
+          <button class="ti-next-btn" data-next="2">NEXT</button>
+        </div>
+      </div>
+
+      <!-- STEP 2 : vehicle/item details -->
+      <div class="ti-panel" data-panel="2">
+        <p class="id-placeholder">Vehicle/item details will be collected based on the insurance type.</p>
+        <p class="id-placeholder">Click NEXT to proceed to nominee details.</p>
+
+        <div class="ti-actions">
+          <button class="ti-back-btn" data-next="1">← Previous</button>
+          <button class="ti-next-btn" data-next="3">NEXT</button>
+        </div>
+      </div>
+
+      <!-- STEP 3 : nominee information -->
+      <div class="ti-panel" data-panel="3">
+        <div class="ti-two-col">
+          <div class="ti-field">
+            <label class="ti-field-label">Nominee Full Name <span class="id-req">*</span></label>
+            <input type="text" class="ti-input" id="idNomineeName" placeholder="Enter nominee's full name">
+          </div>
+          <div class="ti-field">
+            <label class="ti-field-label">Relationship with Insured <span class="id-req">*</span></label>
+            <select class="hi-select" id="idNomineeRelation">
+              <option value="">Select</option>
+              <option>Spouse</option>
+              <option>Son</option>
+              <option>Daughter</option>
+              <option>Father</option>
+              <option>Mother</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="ti-two-col">
+          <div class="ti-field">
+            <label class="ti-field-label">Nominee Mobile Number <span class="id-req">*</span></label>
+            <input type="tel" class="ti-input" id="idNomineeMobile" placeholder="Enter nominee's mobile number">
+          </div>
+          <div class="ti-field">
+            <label class="ti-field-label">Nominee NID/Birth Certificate No.</label>
+            <input type="text" class="ti-input" id="idNomineeId" placeholder="Enter nominee's ID number">
+          </div>
+        </div>
+
+        <div class="ti-actions">
+          <button class="ti-back-btn" data-next="2">← Previous</button>
+          <button class="ti-next-btn" data-next="4">NEXT</button>
+        </div>
+      </div>
+
+      <!-- STEP 4 : declaration -->
+      <div class="ti-panel" data-panel="4">
+        <div class="id-declare-box">
+          <p>I hereby declare that the information provided is true and correct.</p>
+          <p>I understand false information may result in policy cancellation.</p>
+          <p>I agree to the terms and conditions of the insurance policy.</p>
+        </div>
+
+        <label class="id-checkbox-row">
+          <input type="checkbox" id="idAgree">
+          I agree to the declaration and <a href="#">Terms &amp; Conditions</a>.
+        </label>
+
+        <div class="ti-actions">
+          <button class="ti-back-btn" data-next="3">← Previous</button>
+          <button class="ti-see-btn" id="idSubmitBtn" disabled>Submit Order</button>
+        </div>
+      </div>
+
+      <!-- SUCCESS -->
+      <div class="id-success" id="idSuccess" style="display:none">
+        <div class="id-success-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <h2 class="id-success-title">Order Submitted Successfully!</h2>
+        <p class="id-success-sub">Your insurance application has been received.<br>Order Number: <strong id="idOrderNumber">INS-00000000-00000000</strong></p>
+
+        <div class="id-success-box">
+          <h3>What happens next?</h3>
+          <ol>
+            <li>Our team will review your application</li>
+            <li>You'll receive a confirmation email</li>
+            <li>Your policy will be activated after verification</li>
+          </ol>
+        </div>
+
+        <div class="id-success-actions">
+          <a href="#" class="ti-back-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            My Orders
+          </a>
+          <a href="../index.html" class="ti-see-btn" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:8px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9 9 9"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/></svg>
+            Home
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3 class="brand-text">UpShield Insurix</h3>
+      <p class="copy">Simply compare, order and get covered.<br>Reliable digital insurance solutions for you.</p>
+      <div class="foot-stores">
+        <a href="#"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Google Play</a>
+        <a href="#">App Store</a>
+      </div>
+    </div>
+
+    <div>
+      <h5>Products</h5>
+      <ul>
+        <li><a href="health-insurance.html">Health Insurance</a></li>
+        <li><a href="travel-insurance.html">Travel Insurance</a></li>
+        <li><a href="#">Accident Insurance</a></li>
+        <li><a href="car-insurance.html">Car Insurance</a></li>
+        <li><a href="#">Life Insurance</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>Company</h5>
+      <ul>
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="#">Claims</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>Contact Us</h5>
+      <ul class="contact-info">
+        <li>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:cs@upshieldinsur.com">cs@upshieldinsur.com</a>
+        </li>
+        <li>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.37a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+8809606991991">+8809606991991</a>
+        </li>
+        <li>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Dhaka, Bangladesh</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2026 UpShield Insurix. All rights reserved.</span>
+      <div>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var btn = document.getElementById('supportBtn');
+  var menu = document.getElementById('supportMenu');
+  btn.onclick = function(e) { e.stopPropagation(); menu.classList.toggle('open'); };
+  document.addEventListener('click', function() { menu.classList.remove('open'); });
+  menu.addEventListener('click', function(e) { e.stopPropagation(); });
+
+  var navToggle = document.getElementById('navToggle');
+  var navLinks = document.getElementById('navLinks');
+  if (navToggle) { navToggle.onclick = function() { navLinks.classList.toggle('open'); }; }
+
+  var params = new URLSearchParams(window.location.search);
+  var product = params.get('product') || 'motorcycle';
+  var productLabel = params.get('productLabel') ||
+    (product.charAt(0).toUpperCase() + product.slice(1)) + ' Insurance';
+  var plan = params.get('plan') || 'Bike Shield Basic';
+  var company = params.get('company') || 'Green Delta Insurance';
+  var premium = params.get('premium') || '13,200';
+  var period = params.get('period') || 'year';
+
+  document.getElementById('idProductLabel').textContent = productLabel;
+  document.getElementById('idPlanName').textContent = plan;
+  document.getElementById('idCompany').textContent = company;
+  document.getElementById('idPremium').textContent = '৳' + premium + '/' + period;
+
+  var backLink = document.getElementById('idBackLink');
+  backLink.textContent = '← Back to ' + productLabel + ' Plans';
+  backLink.href = product + '-insurance-plans.html';
+
+  var idFormWrap = document.getElementById('idFormWrap');
+  var idSteps = idFormWrap.querySelectorAll('.id-step');
+  var idStepLabels = idFormWrap.querySelectorAll('.id-step-label');
+  var idStepLines = idFormWrap.querySelectorAll('.id-step-line');
+  var idPanels = idFormWrap.querySelectorAll('.ti-panel');
+
+  function goToIdStep(n) {
+    idPanels.forEach(function(p) {
+      p.classList.toggle('active', p.getAttribute('data-panel') === String(n));
+    });
+    idSteps.forEach(function(s) {
+      var num = parseInt(s.getAttribute('data-step'), 10);
+      s.classList.toggle('active', num === n);
+      s.classList.toggle('done', num < n);
+      s.innerHTML = num < n
+        ? '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>'
+        : String(num);
+    });
+    idStepLabels.forEach(function(l) {
+      var num = parseInt(l.getAttribute('data-label'), 10);
+      l.classList.toggle('active', num === n);
+    });
+    idStepLines.forEach(function(l) {
+      var pair = l.getAttribute('data-line').split('-');
+      var from = parseInt(pair[0], 10);
+      l.classList.toggle('active', from < n);
+    });
+  }
+
+  idFormWrap.querySelectorAll('[data-next]').forEach(function(b) {
+    b.addEventListener('click', function() {
+      goToIdStep(parseInt(b.getAttribute('data-next'), 10));
+    });
+  });
+
+  var idAgree = document.getElementById('idAgree');
+  var idSubmitBtn = document.getElementById('idSubmitBtn');
+  idAgree.addEventListener('change', function() {
+    idSubmitBtn.disabled = !idAgree.checked;
+  });
+
+  idSubmitBtn.addEventListener('click', function() {
+    if (idSubmitBtn.disabled) return;
+    var now = new Date();
+    var y = now.getFullYear();
+    var m = String(now.getMonth() + 1).padStart(2, '0');
+    var d = String(now.getDate()).padStart(2, '0');
+    var rand = Math.random().toString(16).slice(2, 10);
+    document.getElementById('idOrderNumber').textContent = 'INS-' + y + m + d + '-' + rand;
+
+    idFormWrap.querySelectorAll('.id-form-title, .id-steps, .ti-panel').forEach(function(el) { el.style.display = 'none'; });
+    document.getElementById('idSuccess').style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
