@@ -5072,3 +5072,111 @@ img { display: block; max-width: 100%; }
   .id-step-line { margin-top: 18px; max-width: 40px; }
   .id-success-actions { flex-direction: column-reverse; }
 }
+
+/* profile page */
+.profile-welcome-bar {
+  background: #E6F9F9;
+  padding: 36px 0;
+}
+.profile-welcome-bar h1 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #0F2547;
+}
+
+.profile-tabs {
+  border-bottom: 1px solid #EDF2F5;
+}
+.profile-tabs .container {
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+}
+.profile-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #5B6B82;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+.profile-tab:hover { color: #0F2547; }
+.profile-tab.active {
+  color: #00A897;
+  border-bottom-color: #00A897;
+}
+
+.profile-content {
+  padding: 40px 0 60px;
+}
+.profile-card {
+  border: 1px solid #E2EAF0;
+  border-radius: 16px;
+  padding: 32px;
+}
+.profile-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.profile-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  background: #F3F6F9;
+  font-weight: 600;
+  font-size: 14px;
+  color: #0F2547;
+}
+.edit-profile-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 1.5px solid #E2EAF0;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0F2547;
+  cursor: pointer;
+  background: #fff;
+}
+.edit-profile-btn:hover { border-color: #00A897; color: #00A897; }
+
+.profile-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #00A897;
+  margin-bottom: 20px;
+}
+
+.info-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  padding: 14px 0;
+  border-bottom: 1px solid #F3F6F9;
+}
+.info-row:last-child { border-bottom: none; }
+.info-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0F2547;
+}
+.info-value {
+  font-size: 14px;
+  color: #5B6B82;
+}
+
+@media (max-width: 768px) {
+  .profile-welcome-bar { padding: 26px 0; }
+  .profile-welcome-bar h1 { font-size: 24px; }
+  .profile-card { padding: 22px 18px; }
+  .info-row { grid-template-columns: 1fr; gap: 4px; }
+}

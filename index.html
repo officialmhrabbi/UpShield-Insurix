@@ -84,7 +84,7 @@
         </button>
 
         <div class="profile-menu" id="profileMenu">
-          <a href="#">
+          <a href="profile.html">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
               <circle cx="12" cy="7" r="4"/>
@@ -615,22 +615,22 @@
 
   // logged-in navbar state
   (function() {
-    var name = localStorage.getItem('upshieldName');
+    var profile = JSON.parse(localStorage.getItem('upshieldProfile') || 'null');
     var loginBtn = document.getElementById('loginBtn');
     var profileWrap = document.getElementById('profileWrap');
     var profileName = document.getElementById('profileName');
     var heroHeading = document.getElementById('heroHeading');
     var heroSub = document.getElementById('heroSub');
 
-    if (name) {
+    if (profile) {
       loginBtn.style.display = 'none';
       profileWrap.style.display = '';
-      profileName.textContent = name;
+      profileName.textContent = profile.name;
 
       heroHeading.textContent = 'Welcome, ';
       var greenSpan = document.createElement('span');
       greenSpan.className = 'green';
-      greenSpan.textContent = name;
+      greenSpan.textContent = profile.name;
       heroHeading.appendChild(greenSpan);
       heroSub.textContent = 'Manage your policies and claims in one place';
     }
@@ -651,7 +651,7 @@
 
     document.getElementById('logoutBtn').onclick = function(e) {
       e.preventDefault();
-      localStorage.removeItem('upshieldName');
+      localStorage.removeItem('upshieldProfile');
       window.location.reload();
     };
   })();
