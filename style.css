@@ -5180,3 +5180,114 @@ img { display: block; max-width: 100%; }
   .profile-card { padding: 22px 18px; }
   .info-row { grid-template-columns: 1fr; gap: 4px; }
 }
+
+/* my orders */
+.orders-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  background: #0F2547;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  border: 1px solid #E2EAF0;
+  border-radius: 14px;
+  padding: 20px 24px;
+}
+
+.order-id {
+  font-family: monospace;
+  font-size: 12px;
+  color: #8A97A8;
+  margin-bottom: 6px;
+}
+.order-plan {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0F2547;
+}
+.order-company {
+  font-size: 13px;
+  color: #8A97A8;
+  margin-top: 2px;
+}
+
+.order-right {
+  text-align: right;
+}
+.order-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0F2547;
+}
+.order-status {
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+.order-status.status-pending { color: #D97706; }
+.order-status.status-approved { color: #16A34A; }
+.order-status.status-rejected { color: #DC2626; }
+.order-date {
+  font-size: 12px;
+  color: #8A97A8;
+  margin-top: 4px;
+}
+
+.orders-empty {
+  border: 1px dashed #E2EAF0;
+  border-radius: 14px;
+  padding: 40px;
+  text-align: center;
+  color: #8A97A8;
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .order-card { flex-direction: column; }
+  .order-right { text-align: left; }
+}
+
+/* my policies */
+.policy-subtabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.policy-subtab {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  border: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #F3F6F9;
+  color: #0F2547;
+}
+.policy-subtab.active {
+  background: #0F2547;
+  color: #fff;
+}
+
+.orders-empty-text {
+  color: #8A97A8;
+  font-size: 14px;
+}

@@ -117,15 +117,15 @@
 <!-- tabs -->
 <div class="profile-tabs">
   <div class="container">
-    <a href="profile.html" class="profile-tab active">
+    <a href="profile.html" class="profile-tab active" data-panel="profile">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
       Profile
     </a>
-    <a href="#" class="profile-tab">
+    <a href="#" class="profile-tab" data-panel="orders">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
       My Orders
     </a>
-    <a href="#" class="profile-tab">
+    <a href="#" class="profile-tab" data-panel="policies">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L20 5 V12 C20 17 16.5 21 12 22 C7.5 21 4 17 4 12 V5 Z"/></svg>
       My Policies
     </a>
@@ -143,52 +143,76 @@
 <!-- profile content -->
 <section class="profile-content">
   <div class="container">
-    <div class="profile-card">
-      <div class="profile-card-head">
-        <span class="profile-chip" id="chipName">Guest</span>
-        <button type="button" class="edit-profile-btn">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5z"/></svg>
-          Edit Profile
-        </button>
-      </div>
 
-      <h3 class="profile-section-title">Account Information</h3>
+    <div class="profile-panel active" data-panel="profile">
+      <div class="profile-card">
+        <div class="profile-card-head">
+          <span class="profile-chip" id="chipName">Guest</span>
+          <button type="button" class="edit-profile-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5z"/></svg>
+            Edit Profile
+          </button>
+        </div>
 
-      <div class="info-grid">
-        <div class="info-row">
-          <span class="info-label">Name</span>
-          <span class="info-value" id="infoName">—</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">Registered Mobile Number</span>
-          <span class="info-value" id="infoMobile">—</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">Email</span>
-          <span class="info-value" id="infoEmail">—</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">Address</span>
-          <span class="info-value" id="infoAddress">—</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">City</span>
-          <span class="info-value" id="infoCity">—</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">NID/Passport Number</span>
-          <span class="info-value" id="infoNid">—</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">Date of Birth</span>
-          <span class="info-value" id="infoDob">—</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">Gender</span>
-          <span class="info-value" id="infoGender">—</span>
+        <h3 class="profile-section-title">Account Information</h3>
+
+        <div class="info-grid">
+          <div class="info-row">
+            <span class="info-label">Name</span>
+            <span class="info-value" id="infoName">—</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Registered Mobile Number</span>
+            <span class="info-value" id="infoMobile">—</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Email</span>
+            <span class="info-value" id="infoEmail">—</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Address</span>
+            <span class="info-value" id="infoAddress">—</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">City</span>
+            <span class="info-value" id="infoCity">—</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">NID/Passport Number</span>
+            <span class="info-value" id="infoNid">—</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Date of Birth</span>
+            <span class="info-value" id="infoDob">—</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Gender</span>
+            <span class="info-value" id="infoGender">—</span>
+          </div>
         </div>
       </div>
     </div>
+
+    <div class="profile-panel" data-panel="orders" style="display:none">
+      <span class="orders-chip">My Orders</span>
+      <div class="orders-list" id="ordersList"></div>
+      <div class="orders-empty" id="ordersEmpty" style="display:none">No orders yet.</div>
+    </div>
+
+    <div class="profile-panel" data-panel="policies" style="display:none">
+      <div class="policy-subtabs">
+        <button type="button" class="policy-subtab active" data-subpanel="mine">My Policies</button>
+        <button type="button" class="policy-subtab" data-subpanel="nominated">Nominated Policies</button>
+      </div>
+
+      <div class="policy-subpanel active" data-subpanel="mine">
+        <p class="orders-empty-text">You don't have any active policy.</p>
+      </div>
+      <div class="policy-subpanel" data-subpanel="nominated" style="display:none">
+        <p class="orders-empty-text">You don't have any nominated policy.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -310,6 +334,88 @@
     localStorage.removeItem('upshieldProfile');
     window.location.href = 'index.html';
   };
+
+  // my orders
+  function renderOrders() {
+    var orders = JSON.parse(localStorage.getItem('upshieldOrders') || '[]');
+    var list = document.getElementById('ordersList');
+    var empty = document.getElementById('ordersEmpty');
+    list.innerHTML = '';
+
+    if (!orders.length) {
+      empty.style.display = '';
+      return;
+    }
+    empty.style.display = 'none';
+
+    orders.forEach(function(o) {
+      var card = document.createElement('div');
+      card.className = 'order-card';
+
+      var left = document.createElement('div');
+      var id = document.createElement('div');
+      id.className = 'order-id';
+      id.textContent = o.id;
+      var planEl = document.createElement('div');
+      planEl.className = 'order-plan';
+      planEl.textContent = o.plan;
+      var companyEl = document.createElement('div');
+      companyEl.className = 'order-company';
+      companyEl.textContent = o.company;
+      left.appendChild(id);
+      left.appendChild(planEl);
+      left.appendChild(companyEl);
+
+      var right = document.createElement('div');
+      right.className = 'order-right';
+      var priceEl = document.createElement('div');
+      priceEl.className = 'order-price';
+      priceEl.textContent = '৳' + o.premium;
+      var statusEl = document.createElement('div');
+      statusEl.className = 'order-status status-' + o.status;
+      statusEl.textContent = o.status;
+      var dateEl = document.createElement('div');
+      dateEl.className = 'order-date';
+      dateEl.textContent = o.date;
+      right.appendChild(priceEl);
+      right.appendChild(statusEl);
+      right.appendChild(dateEl);
+
+      card.appendChild(left);
+      card.appendChild(right);
+      list.appendChild(card);
+    });
+  }
+  renderOrders();
+
+  // tab switching
+  var profileTabs = document.querySelectorAll('.profile-tab[data-panel]');
+  var profilePanels = document.querySelectorAll('.profile-panel[data-panel]');
+  profileTabs.forEach(function(tab) {
+    tab.addEventListener('click', function(e) {
+      e.preventDefault();
+      var target = tab.getAttribute('data-panel');
+
+      profileTabs.forEach(function(t) { t.classList.toggle('active', t === tab); });
+      profilePanels.forEach(function(p) {
+        p.style.display = p.getAttribute('data-panel') === target ? '' : 'none';
+      });
+    });
+  });
+
+  // my policies sub-tabs
+  var policySubtabs = document.querySelectorAll('.policy-subtab');
+  var policySubpanels = document.querySelectorAll('.policy-subpanel');
+  policySubtabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      var target = tab.getAttribute('data-subpanel');
+
+      policySubtabs.forEach(function(t) { t.classList.toggle('active', t === tab); });
+      policySubpanels.forEach(function(p) {
+        p.style.display = p.getAttribute('data-subpanel') === target ? '' : 'none';
+      });
+    });
+  });
 </script>
 
 </body>

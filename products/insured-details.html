@@ -413,7 +413,19 @@
     var m = String(now.getMonth() + 1).padStart(2, '0');
     var d = String(now.getDate()).padStart(2, '0');
     var rand = Math.random().toString(16).slice(2, 10);
-    document.getElementById('idOrderNumber').textContent = 'INS-' + y + m + d + '-' + rand;
+    var orderId = 'INS-' + y + m + d + '-' + rand;
+    document.getElementById('idOrderNumber').textContent = orderId;
+
+    var orders = JSON.parse(localStorage.getItem('upshieldOrders') || '[]');
+    orders.unshift({
+      id: orderId,
+      plan: plan,
+      company: company,
+      premium: premium,
+      status: 'pending',
+      date: now.toLocaleDateString('en-US')
+    });
+    localStorage.setItem('upshieldOrders', JSON.stringify(orders));
 
     idFormWrap.querySelectorAll('.id-form-title, .id-steps, .ti-panel').forEach(function(el) { el.style.display = 'none'; });
     document.getElementById('idSuccess').style.display = 'block';
