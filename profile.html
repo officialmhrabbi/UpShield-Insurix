@@ -561,17 +561,25 @@
   // tab switching
   var profileTabs = document.querySelectorAll('.profile-tab[data-panel]');
   var profilePanels = document.querySelectorAll('.profile-panel[data-panel]');
+  function activateProfilePanel(target) {
+    var matchTab = document.querySelector('.profile-tab[data-panel="' + target + '"]');
+    if (!matchTab) return;
+    profileTabs.forEach(function(t) { t.classList.toggle('active', t === matchTab); });
+    profilePanels.forEach(function(p) {
+      p.style.display = p.getAttribute('data-panel') === target ? '' : 'none';
+    });
+  }
   profileTabs.forEach(function(tab) {
     tab.addEventListener('click', function(e) {
       e.preventDefault();
-      var target = tab.getAttribute('data-panel');
-
-      profileTabs.forEach(function(t) { t.classList.toggle('active', t === tab); });
-      profilePanels.forEach(function(p) {
-        p.style.display = p.getAttribute('data-panel') === target ? '' : 'none';
-      });
+      activateProfilePanel(tab.getAttribute('data-panel'));
     });
   });
+
+  // deep-link to a tab via URL hash, e.g. profile.html#orders
+  if (window.location.hash) {
+    activateProfilePanel(window.location.hash.slice(1));
+  }
 
   // my policies sub-tabs
   var policySubtabs = document.querySelectorAll('.policy-subtab');

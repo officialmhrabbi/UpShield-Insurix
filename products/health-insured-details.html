@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Insured Details — UpShield Insurix</title>
+  <title>Insured Person's Details — UpShield Insurix</title>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
 </head>
@@ -65,7 +65,7 @@
     </nav>
 
     <div class="nav-actions">
-      <a href="../login.html" class="login-btn">
+      <a href="../login.html" class="login-btn" id="loginBtn">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
           <polyline points="10 17 15 12 10 7"/>
@@ -73,6 +73,38 @@
         </svg>
         Login
       </a>
+
+      <div class="profile-wrap" id="profileWrap" style="display:none">
+        <button class="profile-btn" id="profileBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          <span id="profileName">Profile</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="profile-menu" id="profileMenu">
+          <a href="../profile.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            My Profile
+          </a>
+          <a href="#" class="logout-link" id="logoutBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+              <polyline points="16 17 21 12 16 7"/>
+              <line x1="21" y1="12" x2="9" y2="12"/>
+            </svg>
+            Logout
+          </a>
+        </div>
+      </div>
+
       <a href="../get-quote.html" class="quote-btn">Get a Quote</a>
     </div>
   </div>
@@ -80,11 +112,11 @@
 
 <div class="hi-crumb">
   <div class="container hi-crumb-wrap">
-    <h1 id="idProductLabel">Motorcycle Insurance</h1>
+    <h1>Insured Person's Details</h1>
     <nav>
       <a href="../index.html">Home</a>
       <span>›</span>
-      <span>Insured Details</span>
+      <span>Insured Person's Details</span>
     </nav>
   </div>
 </div>
@@ -92,40 +124,41 @@
 <section class="hp-section">
   <div class="container">
 
-    <a href="#" class="hp-back" id="idBackLink">← Back to Motorcycle Insurance Plans</a>
+    <a href="#" class="hp-back" id="idBackLink">← Back to Health Insurance Plans</a>
 
     <div class="hp-summary">
       <div class="hp-summary-cols">
         <div class="hp-sum-item">
           <span class="hp-sum-label">Selected Plan</span>
-          <span class="hp-sum-value" id="idPlanName">Bike Shield Basic</span>
-          <span class="id-summary-company" id="idCompany">Green Delta Insurance</span>
+          <span class="hp-sum-value" id="idPlanName">Guardian Health Shield Plus</span>
+          <span class="id-summary-company" id="idCompany">Guardian Life</span>
         </div>
       </div>
       <div class="id-summary-premium">
         <span class="hp-sum-label">Premium</span>
-        <span class="hp-sum-value" id="idPremium">৳13,200/year</span>
+        <span class="hp-sum-value" id="idPremium">৳4,250/year</span>
+        <span class="id-summary-coverage" id="idCoverage">Coverage: ৳1,00,000</span>
       </div>
     </div>
 
     <div class="id-form-card" id="idFormWrap">
 
-      <h2 class="id-form-title">Insured Details</h2>
+      <h2 class="id-form-title">Insured Person's Details</h2>
 
       <div class="id-steps">
         <div class="id-step-wrap">
           <div class="id-step active" data-step="1">1</div>
-          <span class="id-step-label active" data-label="1">Owner Details</span>
+          <span class="id-step-label active" data-label="1">Your Information<span class="id-step-sublabel">(Primary Insured)</span></span>
         </div>
         <div class="id-step-line" data-line="1-2"></div>
         <div class="id-step-wrap">
           <div class="id-step" data-step="2">2</div>
-          <span class="id-step-label" data-label="2">Vehicle/Item Details</span>
+          <span class="id-step-label" data-label="2">Spouse Information<span class="id-step-sublabel">(Secondary Insured)</span></span>
         </div>
         <div class="id-step-line" data-line="2-3"></div>
         <div class="id-step-wrap">
           <div class="id-step" data-step="3">3</div>
-          <span class="id-step-label" data-label="3">Nominee Information</span>
+          <span class="id-step-label" data-label="3">Nominee Information<span class="id-step-sublabel">(must be above 18 years of age)</span></span>
         </div>
         <div class="id-step-line" data-line="3-4"></div>
         <div class="id-step-wrap">
@@ -134,22 +167,37 @@
         </div>
       </div>
 
-      <!-- STEP 1 : owner details -->
+      <!-- STEP 1 : your information -->
       <div class="ti-panel active" data-panel="1">
         <div class="ti-two-col">
           <div class="ti-field">
-            <label class="ti-field-label">Full Name <span class="id-req">*</span></label>
-            <input type="text" class="ti-input" id="idFullName" placeholder="Enter your full name">
+            <label class="ti-field-label">Your Name <span class="id-req">*</span></label>
+            <input type="text" class="ti-input" id="hidFullName" placeholder="Enter your full name">
           </div>
           <div class="ti-field">
             <label class="ti-field-label">Date of Birth <span class="id-req">*</span></label>
-            <input type="date" class="ti-input" id="idDob">
+            <input type="date" class="ti-input" id="hidDob">
+          </div>
+        </div>
+        <div class="ti-field">
+          <label class="ti-field-label">Gender <span class="id-req">*</span></label>
+          <div class="ti-radio-row">
+            <label class="radio">
+              <input type="radio" name="hidGender" value="Male" checked>
+              <span class="radio-mark"></span>
+              Male
+            </label>
+            <label class="radio">
+              <input type="radio" name="hidGender" value="Female">
+              <span class="radio-mark"></span>
+              Female
+            </label>
           </div>
         </div>
         <div class="ti-two-col">
           <div class="ti-field">
-            <label class="ti-field-label">ID Type <span class="id-req">*</span></label>
-            <select class="hi-select" id="idType">
+            <label class="ti-field-label">Identification Type <span class="id-req">*</span></label>
+            <select class="hi-select" id="hidType">
               <option value="">Select</option>
               <option>National ID (NID)</option>
               <option>Passport</option>
@@ -158,13 +206,13 @@
             </select>
           </div>
           <div class="ti-field">
-            <label class="ti-field-label">ID Number <span class="id-req">*</span></label>
-            <input type="text" class="ti-input" id="idNumber" placeholder="Enter ID number">
+            <label class="ti-field-label">Document Number <span class="id-req">*</span></label>
+            <input type="text" class="ti-input" id="hidNumber" placeholder="Enter document number">
           </div>
         </div>
         <div class="ti-field">
-          <label class="ti-field-label">Mobile <span class="id-req">*</span></label>
-          <input type="tel" class="ti-input" id="idMobile" placeholder="Enter mobile number">
+          <label class="ti-field-label">Mobile Number <span class="id-req">*</span></label>
+          <input type="tel" class="ti-input" id="hidMobile" placeholder="Enter mobile number">
         </div>
 
         <div class="ti-actions" style="justify-content:flex-end">
@@ -172,10 +220,53 @@
         </div>
       </div>
 
-      <!-- STEP 2 : vehicle/item details -->
+      <!-- STEP 2 : spouse information -->
       <div class="ti-panel" data-panel="2">
-        <p class="id-placeholder">Vehicle/item details will be collected based on the insurance type.</p>
-        <p class="id-placeholder">Click NEXT to proceed to nominee details.</p>
+        <div class="ti-two-col">
+          <div class="ti-field">
+            <label class="ti-field-label">Spouse Name <span class="id-req">*</span></label>
+            <input type="text" class="ti-input" id="hidSpouseName" placeholder="Enter spouse's full name">
+          </div>
+          <div class="ti-field">
+            <label class="ti-field-label">Date of Birth <span class="id-req">*</span></label>
+            <input type="date" class="ti-input" id="hidSpouseDob">
+          </div>
+        </div>
+        <div class="ti-field">
+          <label class="ti-field-label">Gender <span class="id-req">*</span></label>
+          <div class="ti-radio-row">
+            <label class="radio">
+              <input type="radio" name="hidSpouseGender" value="Male">
+              <span class="radio-mark"></span>
+              Male
+            </label>
+            <label class="radio">
+              <input type="radio" name="hidSpouseGender" value="Female" checked>
+              <span class="radio-mark"></span>
+              Female
+            </label>
+          </div>
+        </div>
+        <div class="ti-two-col">
+          <div class="ti-field">
+            <label class="ti-field-label">Identification Type <span class="id-req">*</span></label>
+            <select class="hi-select" id="hidSpouseType">
+              <option value="">Select</option>
+              <option>National ID (NID)</option>
+              <option>Passport</option>
+              <option>Birth Certificate</option>
+              <option>Driving License</option>
+            </select>
+          </div>
+          <div class="ti-field">
+            <label class="ti-field-label">Document Number <span class="id-req">*</span></label>
+            <input type="text" class="ti-input" id="hidSpouseNumber" placeholder="Enter document number">
+          </div>
+        </div>
+        <div class="ti-field">
+          <label class="ti-field-label">Mobile Number <span class="id-req">*</span></label>
+          <input type="tel" class="ti-input" id="hidSpouseMobile" placeholder="Enter mobile number">
+        </div>
 
         <div class="ti-actions">
           <button class="ti-back-btn" data-next="1">← Previous</button>
@@ -187,31 +278,45 @@
       <div class="ti-panel" data-panel="3">
         <div class="ti-two-col">
           <div class="ti-field">
-            <label class="ti-field-label">Nominee Full Name <span class="id-req">*</span></label>
-            <input type="text" class="ti-input" id="idNomineeName" placeholder="Enter nominee's full name">
+            <label class="ti-field-label">Nominee Name <span class="id-req">*</span></label>
+            <input type="text" class="ti-input" id="hidNomineeName" placeholder="Enter nominee's full name">
           </div>
           <div class="ti-field">
-            <label class="ti-field-label">Relationship with Insured <span class="id-req">*</span></label>
-            <select class="hi-select" id="idNomineeRelation">
-              <option value="">Select</option>
-              <option>Spouse</option>
-              <option>Son</option>
-              <option>Daughter</option>
-              <option>Father</option>
-              <option>Mother</option>
-              <option>Other</option>
-            </select>
+            <label class="ti-field-label">Date of Birth <span class="id-req">*</span></label>
+            <input type="date" class="ti-input" id="hidNomineeDob">
           </div>
+        </div>
+        <div class="ti-field">
+          <label class="ti-field-label">Relationship <span class="id-req">*</span></label>
+          <select class="hi-select" id="hidNomineeRelation">
+            <option value="">Select relationship</option>
+            <option>Spouse</option>
+            <option>Son</option>
+            <option>Daughter</option>
+            <option>Father</option>
+            <option>Mother</option>
+            <option>Other</option>
+          </select>
         </div>
         <div class="ti-two-col">
           <div class="ti-field">
-            <label class="ti-field-label">Nominee Mobile Number <span class="id-req">*</span></label>
-            <input type="tel" class="ti-input" id="idNomineeMobile" placeholder="Enter nominee's mobile number">
+            <label class="ti-field-label">Identification Type <span class="id-req">*</span></label>
+            <select class="hi-select" id="hidNomineeType">
+              <option value="">Select</option>
+              <option>National ID (NID)</option>
+              <option>Passport</option>
+              <option>Birth Certificate</option>
+              <option>Driving License</option>
+            </select>
           </div>
           <div class="ti-field">
-            <label class="ti-field-label">Nominee NID/Birth Certificate No.</label>
-            <input type="text" class="ti-input" id="idNomineeId" placeholder="Enter nominee's ID number">
+            <label class="ti-field-label">Document Number <span class="id-req">*</span></label>
+            <input type="text" class="ti-input" id="hidNomineeNumber" placeholder="Enter document number">
           </div>
+        </div>
+        <div class="ti-field">
+          <label class="ti-field-label">Mobile Number <span class="id-req">*</span></label>
+          <input type="tel" class="ti-input" id="hidNomineeMobile" placeholder="Enter mobile number">
         </div>
 
         <div class="ti-actions">
@@ -223,14 +328,14 @@
       <!-- STEP 4 : declaration -->
       <div class="ti-panel" data-panel="4">
         <div class="id-declare-box">
-          <p>I hereby declare that the information provided is true and correct.</p>
-          <p>I understand false information may result in policy cancellation.</p>
-          <p>I agree to the terms and conditions of the insurance policy.</p>
+          <p>I hereby declare that the information provided above is true and correct to the best of my knowledge.</p>
+          <p>I understand that any false or misleading information may result in the cancellation of my insurance policy.</p>
+          <p>I agree to the terms and conditions of the insurance policy as outlined by the insurance provider.</p>
         </div>
 
         <label class="id-checkbox-row">
           <input type="checkbox" id="idAgree">
-          I agree to the declaration and <a href="#">Terms &amp; Conditions</a>.
+          I agree to the above declaration and the <a href="#">Terms &amp; Conditions</a>.
         </label>
 
         <div class="ti-actions">
@@ -310,7 +415,7 @@
       <h5>Contact Us</h5>
       <ul class="contact-info">
         <li>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           <a href="mailto:cs@upshieldinsur.com">cs@upshieldinsur.com</a>
         </li>
         <li>
@@ -347,23 +452,45 @@
   var navLinks = document.getElementById('navLinks');
   if (navToggle) { navToggle.onclick = function() { navLinks.classList.toggle('open'); }; }
 
-  var params = new URLSearchParams(window.location.search);
-  var product = params.get('product') || 'motorcycle';
-  var productLabel = params.get('productLabel') ||
-    (product.charAt(0).toUpperCase() + product.slice(1)) + ' Insurance';
-  var plan = params.get('plan') || 'Bike Shield Basic';
-  var company = params.get('company') || 'Green Delta Insurance';
-  var premium = params.get('premium') || '13,200';
-  var period = params.get('period') || 'year';
+  // logged-in navbar state
+  (function() {
+    var profile = JSON.parse(localStorage.getItem('upshieldProfile') || 'null');
+    var loginBtn = document.getElementById('loginBtn');
+    var profileWrap = document.getElementById('profileWrap');
+    var profileName = document.getElementById('profileName');
 
-  document.getElementById('idProductLabel').textContent = productLabel;
+    if (profile) {
+      loginBtn.style.display = 'none';
+      profileWrap.style.display = '';
+      profileName.textContent = profile.name;
+    }
+
+    var profileBtn = document.getElementById('profileBtn');
+    var profileMenu = document.getElementById('profileMenu');
+    profileBtn.onclick = function(e) { e.stopPropagation(); profileMenu.classList.toggle('open'); };
+    document.addEventListener('click', function() { profileMenu.classList.remove('open'); });
+    profileMenu.addEventListener('click', function(e) { e.stopPropagation(); });
+
+    document.getElementById('logoutBtn').onclick = function(e) {
+      e.preventDefault();
+      localStorage.removeItem('upshieldProfile');
+      window.location.href = '../index.html';
+    };
+  })();
+
+  var params = new URLSearchParams(window.location.search);
+  var plan = params.get('plan') || 'Guardian Health Shield Plus';
+  var company = params.get('company') || 'Guardian Life';
+  var premium = params.get('premium') || '4,250';
+  var period = params.get('period') || 'year';
+  var coverage = params.get('coverage') || '1,00,000';
+
   document.getElementById('idPlanName').textContent = plan;
   document.getElementById('idCompany').textContent = company;
   document.getElementById('idPremium').textContent = '৳' + premium + '/' + period;
+  document.getElementById('idCoverage').textContent = 'Coverage: ৳' + coverage;
 
-  var backLink = document.getElementById('idBackLink');
-  backLink.textContent = '← Back to ' + productLabel + ' Plans';
-  backLink.href = product + '-insurance-plans.html';
+  document.getElementById('idBackLink').href = 'health-insurance-plans.html';
 
   var idFormWrap = document.getElementById('idFormWrap');
   var idSteps = idFormWrap.querySelectorAll('.id-step');
@@ -392,6 +519,7 @@
       var from = parseInt(pair[0], 10);
       l.classList.toggle('active', from < n);
     });
+    idFormWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   idFormWrap.querySelectorAll('[data-next]').forEach(function(b) {
