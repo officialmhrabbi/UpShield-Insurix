@@ -129,11 +129,11 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L20 5 V12 C20 17 16.5 21 12 22 C7.5 21 4 17 4 12 V5 Z"/></svg>
       My Policies
     </a>
-    <a href="#" class="profile-tab">
+    <a href="#" class="profile-tab" data-panel="claims">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
       Claims
     </a>
-    <a href="#" class="profile-tab">
+    <a href="#" class="profile-tab" data-panel="settings">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
       Settings
     </a>
@@ -210,6 +210,176 @@
       </div>
       <div class="policy-subpanel" data-subpanel="nominated" style="display:none">
         <p class="orders-empty-text">You don't have any nominated policy.</p>
+      </div>
+    </div>
+
+    <div class="profile-panel" data-panel="claims" style="display:none">
+      <div class="claims-toolbar">
+        <span class="orders-chip">Claim History</span>
+
+        <div class="status-filter-wrap">
+          <button type="button" class="status-filter-btn" id="statusFilterBtn">
+            <span id="statusFilterLabel">All Statuses</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="status-filter-menu" id="statusFilterMenu">
+            <a href="#" class="status-filter-item active" data-status="all">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              All Statuses
+            </a>
+            <a href="#" class="status-filter-item" data-status="Submitted">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Submitted
+            </a>
+            <a href="#" class="status-filter-item" data-status="Under Review">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Under Review
+            </a>
+            <a href="#" class="status-filter-item" data-status="Approved">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Approved
+            </a>
+            <a href="#" class="status-filter-item" data-status="Rejected">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Rejected
+            </a>
+            <a href="#" class="status-filter-item" data-status="Settled">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Settled
+            </a>
+          </div>
+        </div>
+
+        <label class="date-filter-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span id="fromDateLabel">From</span>
+          <input type="date" id="claimFromDate">
+        </label>
+
+        <label class="date-filter-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span id="toDateLabel">To</span>
+          <input type="date" id="claimToDate">
+        </label>
+
+        <div class="claims-search-wrap">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+          <input type="text" id="claimsSearch" placeholder="Search claims...">
+        </div>
+
+        <button type="button" class="new-claim-btn" id="newClaimBtn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Submit a New Claim
+        </button>
+      </div>
+
+      <div class="claim-form-card" id="claimFormCard" style="display:none">
+        <div class="claim-form-head">
+          <h3>Submit New Claim</h3>
+          <button type="button" class="claim-form-close" id="claimFormClose">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+
+        <div class="claim-field ti-field">
+          <label class="ti-field-label">Related Order (Optional)</label>
+          <select class="hi-select" id="claimOrder">
+            <option value="">Select an order</option>
+          </select>
+        </div>
+
+        <div class="claim-field ti-field">
+          <label class="ti-field-label">Claim Type <span class="id-req">*</span></label>
+          <select class="hi-select" id="claimType">
+            <option value="">Select type</option>
+            <option>Accidental Damage</option>
+            <option>Theft</option>
+            <option>Medical Expense</option>
+            <option>Total Loss</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="claim-field ti-field">
+          <label class="ti-field-label">Description <span class="id-req">*</span></label>
+          <textarea class="ti-input" id="claimDescription" rows="4" placeholder="Describe the incident and what you're claiming for..."></textarea>
+        </div>
+
+        <div class="claim-field ti-field">
+          <label class="ti-field-label">Amount Claimed (৳)</label>
+          <input type="number" class="ti-input" id="claimAmount" placeholder="0.00" min="0" step="0.01">
+        </div>
+
+        <div class="claim-field ti-field">
+          <label class="ti-field-label">Supporting Documents</label>
+          <div class="claim-dropzone" id="claimDropzone">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <p>Drag &amp; drop files here, or <span class="claim-browse" id="claimBrowse">browse</span></p>
+            <span class="claim-dropzone-hint" id="claimDropzoneHint">JPG, PNG, PDF, DOC up to 10MB each</span>
+            <input type="file" id="claimFileInput" multiple hidden>
+          </div>
+        </div>
+
+        <div class="claim-form-actions">
+          <button type="button" class="claim-submit-btn" id="claimSubmitBtn">Submit Claim</button>
+          <button type="button" class="claim-cancel-btn" id="claimCancelBtn">Cancel</button>
+        </div>
+      </div>
+
+      <div class="claims-list" id="claimsList"></div>
+
+      <div class="claims-empty" id="claimsEmpty">
+        <p class="claims-empty-main">You haven't submitted any claim yet.</p>
+        <p class="claims-empty-help"><strong>Need help?</strong> <a href="#" id="firstClaimLink">Submit your first claim</a></p>
+      </div>
+    </div>
+
+    <div class="profile-panel" data-panel="settings" style="display:none">
+      <div class="settings-list">
+        <button type="button" class="settings-row" id="setPasswordBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Set Password
+        </button>
+        <div class="settings-form" id="setPasswordForm" style="display:none">
+          <div class="claim-field ti-field">
+            <label class="ti-field-label">New Password</label>
+            <input type="password" class="ti-input" id="newPassword" placeholder="Enter new password">
+          </div>
+          <div class="claim-field ti-field">
+            <label class="ti-field-label">Confirm Password</label>
+            <input type="password" class="ti-input" id="confirmPassword" placeholder="Re-enter new password">
+          </div>
+          <p class="settings-msg" id="passwordMsg" style="display:none"></p>
+          <div class="claim-form-actions">
+            <button type="button" class="claim-submit-btn" id="savePasswordBtn">Save Password</button>
+            <button type="button" class="claim-cancel-btn" id="cancelPasswordBtn">Cancel</button>
+          </div>
+        </div>
+
+        <button type="button" class="settings-row" id="changeContactBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Change Email/Mobile Number
+        </button>
+        <div class="settings-form" id="changeContactForm" style="display:none">
+          <div class="claim-field ti-field">
+            <label class="ti-field-label">Email</label>
+            <input type="email" class="ti-input" id="settingsEmail" placeholder="Enter email address">
+          </div>
+          <div class="claim-field ti-field">
+            <label class="ti-field-label">Mobile Number</label>
+            <input type="tel" class="ti-input" id="settingsMobile" placeholder="Enter mobile number">
+          </div>
+          <p class="settings-msg" id="contactMsg" style="display:none"></p>
+          <div class="claim-form-actions">
+            <button type="button" class="claim-submit-btn" id="saveContactBtn">Save Changes</button>
+            <button type="button" class="claim-cancel-btn" id="cancelContactBtn">Cancel</button>
+          </div>
+        </div>
+
+        <button type="button" class="settings-logout-btn" id="settingsLogoutBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          Logout
+        </button>
       </div>
     </div>
 
@@ -416,6 +586,333 @@
       });
     });
   });
+
+  // claims
+  (function() {
+    var claims = JSON.parse(localStorage.getItem('upshieldClaims') || '[]');
+    var currentStatusFilter = 'all';
+    var selectedFiles = [];
+
+    var claimFormCard = document.getElementById('claimFormCard');
+    var claimOrderSelect = document.getElementById('claimOrder');
+    var claimTypeSelect = document.getElementById('claimType');
+    var claimDescription = document.getElementById('claimDescription');
+    var claimAmount = document.getElementById('claimAmount');
+    var claimDropzone = document.getElementById('claimDropzone');
+    var claimDropzoneHint = document.getElementById('claimDropzoneHint');
+    var claimFileInput = document.getElementById('claimFileInput');
+    var claimsListEl = document.getElementById('claimsList');
+    var claimsEmptyEl = document.getElementById('claimsEmpty');
+    var claimsEmptyMain = claimsEmptyEl.querySelector('.claims-empty-main');
+    var claimsEmptyHelp = claimsEmptyEl.querySelector('.claims-empty-help');
+
+    // populate related-order options from saved orders
+    var savedOrders = JSON.parse(localStorage.getItem('upshieldOrders') || '[]');
+    savedOrders.forEach(function(o) {
+      var opt = document.createElement('option');
+      opt.value = o.id;
+      opt.textContent = o.plan + ' (' + o.id + ')';
+      claimOrderSelect.appendChild(opt);
+    });
+
+    function resetClaimForm() {
+      claimOrderSelect.value = '';
+      claimTypeSelect.value = '';
+      claimDescription.value = '';
+      claimAmount.value = '';
+      selectedFiles = [];
+      claimFileInput.value = '';
+      claimDropzoneHint.textContent = 'JPG, PNG, PDF, DOC up to 10MB each';
+    }
+
+    function openClaimForm() {
+      claimFormCard.style.display = '';
+      claimFormCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    function closeClaimForm() {
+      claimFormCard.style.display = 'none';
+      resetClaimForm();
+    }
+
+    document.getElementById('newClaimBtn').onclick = openClaimForm;
+    document.getElementById('firstClaimLink').onclick = function(e) { e.preventDefault(); openClaimForm(); };
+    document.getElementById('claimFormClose').onclick = closeClaimForm;
+    document.getElementById('claimCancelBtn').onclick = closeClaimForm;
+
+    document.getElementById('claimBrowse').onclick = function() { claimFileInput.click(); };
+    claimFileInput.addEventListener('change', function() {
+      selectedFiles = Array.from(this.files);
+      claimDropzoneHint.textContent = selectedFiles.length
+        ? selectedFiles.length + ' file(s) selected'
+        : 'JPG, PNG, PDF, DOC up to 10MB each';
+    });
+    claimDropzone.addEventListener('dragover', function(e) { e.preventDefault(); claimDropzone.classList.add('drag'); });
+    claimDropzone.addEventListener('dragleave', function() { claimDropzone.classList.remove('drag'); });
+    claimDropzone.addEventListener('drop', function(e) {
+      e.preventDefault();
+      claimDropzone.classList.remove('drag');
+      selectedFiles = Array.from(e.dataTransfer.files);
+      claimDropzoneHint.textContent = selectedFiles.length
+        ? selectedFiles.length + ' file(s) selected'
+        : 'JPG, PNG, PDF, DOC up to 10MB each';
+    });
+
+    function parseDateInput(val) {
+      if (!val) return null;
+      var parts = val.split('-');
+      return new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
+    }
+    function parseUSDate(val) {
+      var parts = val.split('/');
+      return new Date(parseInt(parts[2], 10), parseInt(parts[0], 10) - 1, parseInt(parts[1], 10));
+    }
+    function statusClass(status) {
+      return 'status-' + status.toLowerCase().replace(/\s+/g, '-');
+    }
+
+    function renderClaims() {
+      claimsListEl.innerHTML = '';
+
+      var searchTerm = document.getElementById('claimsSearch').value.trim().toLowerCase();
+      var fromDate = parseDateInput(document.getElementById('claimFromDate').value);
+      var toDate = parseDateInput(document.getElementById('claimToDate').value);
+
+      var filtered = claims.filter(function(c) {
+        if (currentStatusFilter !== 'all' && c.status !== currentStatusFilter) return false;
+        if (searchTerm) {
+          var hay = (c.type + ' ' + c.description + ' ' + c.id).toLowerCase();
+          if (hay.indexOf(searchTerm) === -1) return false;
+        }
+        if (fromDate || toDate) {
+          var cDate = parseUSDate(c.date);
+          if (fromDate && cDate < fromDate) return false;
+          if (toDate && cDate > toDate) return false;
+        }
+        return true;
+      });
+
+      if (!claims.length) {
+        claimsEmptyEl.style.display = '';
+        claimsEmptyMain.textContent = "You haven't submitted any claim yet.";
+        claimsEmptyHelp.style.display = '';
+      } else if (!filtered.length) {
+        claimsEmptyEl.style.display = '';
+        claimsEmptyMain.textContent = 'No claims match your filters.';
+        claimsEmptyHelp.style.display = 'none';
+      } else {
+        claimsEmptyEl.style.display = 'none';
+      }
+
+      filtered.forEach(function(c) {
+        var card = document.createElement('div');
+        card.className = 'claim-card';
+
+        var left = document.createElement('div');
+        var idEl = document.createElement('div');
+        idEl.className = 'claim-id';
+        idEl.textContent = c.id;
+        var typeEl = document.createElement('div');
+        typeEl.className = 'claim-type-label';
+        typeEl.textContent = c.type;
+        var descEl = document.createElement('div');
+        descEl.className = 'claim-desc';
+        descEl.textContent = c.description;
+        left.appendChild(idEl);
+        left.appendChild(typeEl);
+        left.appendChild(descEl);
+
+        var right = document.createElement('div');
+        right.className = 'claim-right';
+        if (c.amount) {
+          var amountEl = document.createElement('div');
+          amountEl.className = 'claim-amount';
+          amountEl.textContent = '৳' + c.amount;
+          right.appendChild(amountEl);
+        }
+        var statusEl = document.createElement('div');
+        statusEl.className = 'claim-status ' + statusClass(c.status);
+        statusEl.textContent = c.status;
+        var dateEl = document.createElement('div');
+        dateEl.className = 'claim-date';
+        dateEl.textContent = c.date;
+        right.appendChild(statusEl);
+        right.appendChild(dateEl);
+
+        card.appendChild(left);
+        card.appendChild(right);
+        claimsListEl.appendChild(card);
+      });
+    }
+    renderClaims();
+
+    document.getElementById('claimSubmitBtn').onclick = function() {
+      var type = claimTypeSelect.value;
+      var description = claimDescription.value.trim();
+      if (!type || !description) {
+        alert("Please select a claim type and add a description.");
+        return;
+      }
+
+      var now = new Date();
+      var y = now.getFullYear();
+      var m = String(now.getMonth() + 1).padStart(2, '0');
+      var d = String(now.getDate()).padStart(2, '0');
+      var claimId = 'CLM-' + y + m + d + '-' + Math.random().toString(16).slice(2, 8);
+
+      claims.unshift({
+        id: claimId,
+        order: claimOrderSelect.value,
+        type: type,
+        description: description,
+        amount: claimAmount.value,
+        attachments: selectedFiles.length,
+        status: 'Submitted',
+        date: now.toLocaleDateString('en-US')
+      });
+      localStorage.setItem('upshieldClaims', JSON.stringify(claims));
+
+      closeClaimForm();
+      renderClaims();
+    };
+
+    // status filter dropdown
+    var statusFilterBtn = document.getElementById('statusFilterBtn');
+    var statusFilterMenu = document.getElementById('statusFilterMenu');
+    statusFilterBtn.onclick = function(e) {
+      e.stopPropagation();
+      statusFilterMenu.classList.toggle('open');
+    };
+    document.addEventListener('click', function() {
+      statusFilterMenu.classList.remove('open');
+    });
+    statusFilterMenu.addEventListener('click', function(e) { e.stopPropagation(); });
+
+    var statusItems = statusFilterMenu.querySelectorAll('.status-filter-item');
+    statusItems.forEach(function(item) {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        currentStatusFilter = item.getAttribute('data-status');
+        statusItems.forEach(function(i) { i.classList.toggle('active', i === item); });
+        document.getElementById('statusFilterLabel').textContent = item.textContent.trim();
+        statusFilterMenu.classList.remove('open');
+        renderClaims();
+      });
+    });
+
+    // date range filters
+    var fromDateInput = document.getElementById('claimFromDate');
+    var toDateInput = document.getElementById('claimToDate');
+    fromDateInput.addEventListener('change', function() {
+      document.getElementById('fromDateLabel').textContent = this.value
+        ? parseDateInput(this.value).toLocaleDateString('en-US')
+        : 'From';
+      renderClaims();
+    });
+    toDateInput.addEventListener('change', function() {
+      document.getElementById('toDateLabel').textContent = this.value
+        ? parseDateInput(this.value).toLocaleDateString('en-US')
+        : 'To';
+      renderClaims();
+    });
+
+    document.getElementById('claimsSearch').addEventListener('input', renderClaims);
+  })();
+
+  // settings
+  (function() {
+    var setPasswordBtn = document.getElementById('setPasswordBtn');
+    var setPasswordForm = document.getElementById('setPasswordForm');
+    var changeContactBtn = document.getElementById('changeContactBtn');
+    var changeContactForm = document.getElementById('changeContactForm');
+
+    function toggleForm(form, row) {
+      var isOpen = form.style.display !== 'none';
+      setPasswordForm.style.display = 'none';
+      changeContactForm.style.display = 'none';
+      setPasswordBtn.classList.remove('active');
+      changeContactBtn.classList.remove('active');
+      if (!isOpen) {
+        form.style.display = '';
+        row.classList.add('active');
+      }
+    }
+
+    setPasswordBtn.onclick = function() { toggleForm(setPasswordForm, setPasswordBtn); };
+    changeContactBtn.onclick = function() {
+      if (profile) {
+        document.getElementById('settingsEmail').value = profile.email || '';
+        document.getElementById('settingsMobile').value = profile.mobile || '';
+      }
+      toggleForm(changeContactForm, changeContactBtn);
+    };
+
+    document.getElementById('cancelPasswordBtn').onclick = function() {
+      setPasswordForm.style.display = 'none';
+      setPasswordBtn.classList.remove('active');
+      document.getElementById('newPassword').value = '';
+      document.getElementById('confirmPassword').value = '';
+      document.getElementById('passwordMsg').style.display = 'none';
+    };
+    document.getElementById('cancelContactBtn').onclick = function() {
+      changeContactForm.style.display = 'none';
+      changeContactBtn.classList.remove('active');
+      document.getElementById('contactMsg').style.display = 'none';
+    };
+
+    document.getElementById('savePasswordBtn').onclick = function() {
+      var msg = document.getElementById('passwordMsg');
+      var pass = document.getElementById('newPassword').value;
+      var confirm = document.getElementById('confirmPassword').value;
+
+      if (!pass || pass.length < 6) {
+        msg.textContent = 'Password must be at least 6 characters.';
+        msg.className = 'settings-msg error';
+        msg.style.display = '';
+        return;
+      }
+      if (pass !== confirm) {
+        msg.textContent = 'Passwords do not match.';
+        msg.className = 'settings-msg error';
+        msg.style.display = '';
+        return;
+      }
+
+      msg.textContent = 'Password updated successfully.';
+      msg.className = 'settings-msg';
+      msg.style.display = '';
+      document.getElementById('newPassword').value = '';
+      document.getElementById('confirmPassword').value = '';
+    };
+
+    document.getElementById('saveContactBtn').onclick = function() {
+      var msg = document.getElementById('contactMsg');
+      var email = document.getElementById('settingsEmail').value.trim();
+      var mobile = document.getElementById('settingsMobile').value.trim();
+
+      if (!email) {
+        msg.textContent = 'Email is required.';
+        msg.className = 'settings-msg error';
+        msg.style.display = '';
+        return;
+      }
+
+      profile.email = email;
+      profile.mobile = mobile;
+      localStorage.setItem('upshieldProfile', JSON.stringify(profile));
+
+      document.getElementById('infoEmail').textContent = profile.email || '—';
+      document.getElementById('infoMobile').textContent = profile.mobile || '—';
+
+      msg.textContent = 'Contact details updated successfully.';
+      msg.className = 'settings-msg';
+      msg.style.display = '';
+    };
+
+    document.getElementById('settingsLogoutBtn').onclick = function() {
+      localStorage.removeItem('upshieldProfile');
+      window.location.href = 'index.html';
+    };
+  })();
 </script>
 
 </body>
