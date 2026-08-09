@@ -2516,6 +2516,15 @@ img { display: block; max-width: 100%; }
 .ti-see-btn { background: #00A897; }
 .ti-see-btn:hover { background: #009499; }
 
+.ti-next-btn:disabled,
+.ti-see-btn:disabled,
+.hi-see-btn.disabled {
+  background: #E2EAF0;
+  color: #B0BCC9;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .ti-back-btn {
   min-width: 120px;
   background: #fff;
@@ -4889,7 +4898,7 @@ img { display: block; max-width: 100%; }
   border-radius: 14px;
   padding: 36px 40px 40px;
   max-width: 780px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .id-form-title {
@@ -5018,11 +5027,6 @@ img { display: block; max-width: 100%; }
   color: #00A897;
   text-decoration: underline;
   font-weight: 600;
-}
-
-.ti-see-btn:disabled {
-  background: #B7E6E6;
-  cursor: not-allowed;
 }
 
 .id-success { text-align: center; padding: 10px 0; }

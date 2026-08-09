@@ -172,11 +172,11 @@
         <div class="ti-two-col">
           <div class="ti-field">
             <label class="ti-field-label">Your Name <span class="id-req">*</span></label>
-            <input type="text" class="ti-input" id="hidFullName" placeholder="Enter your full name">
+            <input type="text" class="ti-input" id="hidFullName" placeholder="Enter your full name" required>
           </div>
           <div class="ti-field">
             <label class="ti-field-label">Date of Birth <span class="id-req">*</span></label>
-            <input type="date" class="ti-input" id="hidDob">
+            <input type="date" class="ti-input" id="hidDob" required>
           </div>
         </div>
         <div class="ti-field">
@@ -197,7 +197,7 @@
         <div class="ti-two-col">
           <div class="ti-field">
             <label class="ti-field-label">Identification Type <span class="id-req">*</span></label>
-            <select class="hi-select" id="hidType">
+            <select class="hi-select" id="hidType" required>
               <option value="">Select</option>
               <option>National ID (NID)</option>
               <option>Passport</option>
@@ -207,16 +207,16 @@
           </div>
           <div class="ti-field">
             <label class="ti-field-label">Document Number <span class="id-req">*</span></label>
-            <input type="text" class="ti-input" id="hidNumber" placeholder="Enter document number">
+            <input type="text" class="ti-input" id="hidNumber" placeholder="Enter document number" required>
           </div>
         </div>
         <div class="ti-field">
           <label class="ti-field-label">Mobile Number <span class="id-req">*</span></label>
-          <input type="tel" class="ti-input" id="hidMobile" placeholder="Enter mobile number">
+          <input type="tel" class="ti-input" id="hidMobile" placeholder="Enter mobile number" required>
         </div>
 
         <div class="ti-actions" style="justify-content:flex-end">
-          <button class="ti-next-btn" data-next="2">NEXT</button>
+          <button class="ti-next-btn" data-next="2" disabled>NEXT</button>
         </div>
       </div>
 
@@ -225,11 +225,11 @@
         <div class="ti-two-col">
           <div class="ti-field">
             <label class="ti-field-label">Spouse Name <span class="id-req">*</span></label>
-            <input type="text" class="ti-input" id="hidSpouseName" placeholder="Enter spouse's full name">
+            <input type="text" class="ti-input" id="hidSpouseName" placeholder="Enter spouse's full name" required>
           </div>
           <div class="ti-field">
             <label class="ti-field-label">Date of Birth <span class="id-req">*</span></label>
-            <input type="date" class="ti-input" id="hidSpouseDob">
+            <input type="date" class="ti-input" id="hidSpouseDob" required>
           </div>
         </div>
         <div class="ti-field">
@@ -250,7 +250,7 @@
         <div class="ti-two-col">
           <div class="ti-field">
             <label class="ti-field-label">Identification Type <span class="id-req">*</span></label>
-            <select class="hi-select" id="hidSpouseType">
+            <select class="hi-select" id="hidSpouseType" required>
               <option value="">Select</option>
               <option>National ID (NID)</option>
               <option>Passport</option>
@@ -260,17 +260,17 @@
           </div>
           <div class="ti-field">
             <label class="ti-field-label">Document Number <span class="id-req">*</span></label>
-            <input type="text" class="ti-input" id="hidSpouseNumber" placeholder="Enter document number">
+            <input type="text" class="ti-input" id="hidSpouseNumber" placeholder="Enter document number" required>
           </div>
         </div>
         <div class="ti-field">
           <label class="ti-field-label">Mobile Number <span class="id-req">*</span></label>
-          <input type="tel" class="ti-input" id="hidSpouseMobile" placeholder="Enter mobile number">
+          <input type="tel" class="ti-input" id="hidSpouseMobile" placeholder="Enter mobile number" required>
         </div>
 
         <div class="ti-actions">
           <button class="ti-back-btn" data-next="1">← Previous</button>
-          <button class="ti-next-btn" data-next="3">NEXT</button>
+          <button class="ti-next-btn" data-next="3" disabled>NEXT</button>
         </div>
       </div>
 
@@ -279,16 +279,16 @@
         <div class="ti-two-col">
           <div class="ti-field">
             <label class="ti-field-label">Nominee Name <span class="id-req">*</span></label>
-            <input type="text" class="ti-input" id="hidNomineeName" placeholder="Enter nominee's full name">
+            <input type="text" class="ti-input" id="hidNomineeName" placeholder="Enter nominee's full name" required>
           </div>
           <div class="ti-field">
             <label class="ti-field-label">Date of Birth <span class="id-req">*</span></label>
-            <input type="date" class="ti-input" id="hidNomineeDob">
+            <input type="date" class="ti-input" id="hidNomineeDob" required>
           </div>
         </div>
         <div class="ti-field">
           <label class="ti-field-label">Relationship <span class="id-req">*</span></label>
-          <select class="hi-select" id="hidNomineeRelation">
+          <select class="hi-select" id="hidNomineeRelation" required>
             <option value="">Select relationship</option>
             <option>Spouse</option>
             <option>Son</option>
@@ -301,7 +301,7 @@
         <div class="ti-two-col">
           <div class="ti-field">
             <label class="ti-field-label">Identification Type <span class="id-req">*</span></label>
-            <select class="hi-select" id="hidNomineeType">
+            <select class="hi-select" id="hidNomineeType" required>
               <option value="">Select</option>
               <option>National ID (NID)</option>
               <option>Passport</option>
@@ -311,17 +311,17 @@
           </div>
           <div class="ti-field">
             <label class="ti-field-label">Document Number <span class="id-req">*</span></label>
-            <input type="text" class="ti-input" id="hidNomineeNumber" placeholder="Enter document number">
+            <input type="text" class="ti-input" id="hidNomineeNumber" placeholder="Enter document number" required>
           </div>
         </div>
         <div class="ti-field">
           <label class="ti-field-label">Mobile Number <span class="id-req">*</span></label>
-          <input type="tel" class="ti-input" id="hidNomineeMobile" placeholder="Enter mobile number">
+          <input type="tel" class="ti-input" id="hidNomineeMobile" placeholder="Enter mobile number" required>
         </div>
 
         <div class="ti-actions">
           <button class="ti-back-btn" data-next="2">← Previous</button>
-          <button class="ti-next-btn" data-next="4">NEXT</button>
+          <button class="ti-next-btn" data-next="4" disabled>NEXT</button>
         </div>
       </div>
 
@@ -526,6 +526,27 @@
     b.addEventListener('click', function() {
       goToIdStep(parseInt(b.getAttribute('data-next'), 10));
     });
+  });
+
+  // required-field validation: keep each step's NEXT button disabled until
+  // every required field in that step has a value
+  function idPanelIsValid(panel) {
+    var requiredEls = panel.querySelectorAll('[required]');
+    for (var i = 0; i < requiredEls.length; i++) {
+      if (!requiredEls[i].value || !requiredEls[i].value.trim()) return false;
+    }
+    return true;
+  }
+
+  function refreshIdNextButton(panel) {
+    var nextBtn = panel.querySelector('.ti-next-btn[data-next]');
+    if (nextBtn) nextBtn.disabled = !idPanelIsValid(panel);
+  }
+
+  idPanels.forEach(function(panel) {
+    refreshIdNextButton(panel);
+    panel.addEventListener('input', function() { refreshIdNextButton(panel); });
+    panel.addEventListener('change', function() { refreshIdNextButton(panel); });
   });
 
   var idAgree = document.getElementById('idAgree');

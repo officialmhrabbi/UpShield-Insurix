@@ -139,17 +139,17 @@
         <div class="ti-two-col">
           <div class="ti-field">
             <label class="ti-field-label">Full Name <span class="id-req">*</span></label>
-            <input type="text" class="ti-input" id="idFullName" placeholder="Enter your full name">
+            <input type="text" class="ti-input" id="idFullName" placeholder="Enter your full name" required>
           </div>
           <div class="ti-field">
             <label class="ti-field-label">Date of Birth <span class="id-req">*</span></label>
-            <input type="date" class="ti-input" id="idDob">
+            <input type="date" class="ti-input" id="idDob" required>
           </div>
         </div>
         <div class="ti-two-col">
           <div class="ti-field">
             <label class="ti-field-label">ID Type <span class="id-req">*</span></label>
-            <select class="hi-select" id="idType">
+            <select class="hi-select" id="idType" required>
               <option value="">Select</option>
               <option>National ID (NID)</option>
               <option>Passport</option>
@@ -159,16 +159,16 @@
           </div>
           <div class="ti-field">
             <label class="ti-field-label">ID Number <span class="id-req">*</span></label>
-            <input type="text" class="ti-input" id="idNumber" placeholder="Enter ID number">
+            <input type="text" class="ti-input" id="idNumber" placeholder="Enter ID number" required>
           </div>
         </div>
         <div class="ti-field">
           <label class="ti-field-label">Mobile <span class="id-req">*</span></label>
-          <input type="tel" class="ti-input" id="idMobile" placeholder="Enter mobile number">
+          <input type="tel" class="ti-input" id="idMobile" placeholder="Enter mobile number" required>
         </div>
 
         <div class="ti-actions" style="justify-content:flex-end">
-          <button class="ti-next-btn" data-next="2">NEXT</button>
+          <button class="ti-next-btn" data-next="2" disabled>NEXT</button>
         </div>
       </div>
 
@@ -188,11 +188,11 @@
         <div class="ti-two-col">
           <div class="ti-field">
             <label class="ti-field-label">Nominee Full Name <span class="id-req">*</span></label>
-            <input type="text" class="ti-input" id="idNomineeName" placeholder="Enter nominee's full name">
+            <input type="text" class="ti-input" id="idNomineeName" placeholder="Enter nominee's full name" required>
           </div>
           <div class="ti-field">
             <label class="ti-field-label">Relationship with Insured <span class="id-req">*</span></label>
-            <select class="hi-select" id="idNomineeRelation">
+            <select class="hi-select" id="idNomineeRelation" required>
               <option value="">Select</option>
               <option>Spouse</option>
               <option>Son</option>
@@ -206,7 +206,7 @@
         <div class="ti-two-col">
           <div class="ti-field">
             <label class="ti-field-label">Nominee Mobile Number <span class="id-req">*</span></label>
-            <input type="tel" class="ti-input" id="idNomineeMobile" placeholder="Enter nominee's mobile number">
+            <input type="tel" class="ti-input" id="idNomineeMobile" placeholder="Enter nominee's mobile number" required>
           </div>
           <div class="ti-field">
             <label class="ti-field-label">Nominee NID/Birth Certificate No.</label>
@@ -216,7 +216,7 @@
 
         <div class="ti-actions">
           <button class="ti-back-btn" data-next="2">← Previous</button>
-          <button class="ti-next-btn" data-next="4">NEXT</button>
+          <button class="ti-next-btn" data-next="4" disabled>NEXT</button>
         </div>
       </div>
 
@@ -398,6 +398,27 @@
     b.addEventListener('click', function() {
       goToIdStep(parseInt(b.getAttribute('data-next'), 10));
     });
+  });
+
+  // required-field validation: keep each step's NEXT button disabled until
+  // every required field in that step has a value
+  function idPanelIsValid(panel) {
+    var requiredEls = panel.querySelectorAll('[required]');
+    for (var i = 0; i < requiredEls.length; i++) {
+      if (!requiredEls[i].value || !requiredEls[i].value.trim()) return false;
+    }
+    return true;
+  }
+
+  function refreshIdNextButton(panel) {
+    var nextBtn = panel.querySelector('.ti-next-btn[data-next]');
+    if (nextBtn) nextBtn.disabled = !idPanelIsValid(panel);
+  }
+
+  idPanels.forEach(function(panel) {
+    refreshIdNextButton(panel);
+    panel.addEventListener('input', function() { refreshIdNextButton(panel); });
+    panel.addEventListener('change', function() { refreshIdNextButton(panel); });
   });
 
   var idAgree = document.getElementById('idAgree');

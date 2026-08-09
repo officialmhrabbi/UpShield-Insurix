@@ -140,9 +140,9 @@
       </div>
 
       <div class="hi-form-card">
-        <label class="hi-label">Your Age</label>
-        <select class="hi-select">
-          <option>Select</option>
+        <label class="hi-label">Your Age <span class="id-req">*</span></label>
+        <select class="hi-select" id="hiAge" required>
+          <option value="">Select</option>
           <option>18 - 25</option>
           <option>26 - 35</option>
           <option>36 - 45</option>
@@ -159,7 +159,7 @@
           <button class="hi-amount">5 Lac to 10 Lac</button>
         </div>
 
-        <a href="health-insurance-plans.html" class="hi-see-btn">See Plans →</a>
+        <a href="health-insurance-plans.html" class="hi-see-btn disabled" id="hiSeePlans">See Plans →</a>
       </div>
     </div>
 
@@ -367,6 +367,16 @@
   var navToggle = document.getElementById('navToggle');
   var navLinks = document.getElementById('navLinks');
   if (navToggle) { navToggle.onclick = function() { navLinks.classList.toggle('open'); }; }
+
+  // required-field validation: "See Plans" stays disabled until an age is picked
+  var hiAge = document.getElementById('hiAge');
+  var hiSeePlans = document.getElementById('hiSeePlans');
+  hiAge.addEventListener('change', function() {
+    hiSeePlans.classList.toggle('disabled', !hiAge.value);
+  });
+  hiSeePlans.addEventListener('click', function(e) {
+    if (hiSeePlans.classList.contains('disabled')) e.preventDefault();
+  });
 
   document.querySelectorAll('.hi-who-card').forEach(function(c) {
     c.addEventListener('click', function() {

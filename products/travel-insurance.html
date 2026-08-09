@@ -173,13 +173,13 @@
           <div class="ti-dobs" id="tiDobs">
             <div class="ti-dob-row">
               <label>Traveler 1</label>
-              <input type="date" class="ti-input">
+              <input type="date" class="ti-input" required>
             </div>
           </div>
 
           <div class="ti-actions">
             <button class="ti-back-btn" data-next="1">BACK</button>
-            <button class="ti-next-btn" data-next="3">NEXT →</button>
+            <button class="ti-next-btn" data-next="3" disabled>NEXT →</button>
           </div>
         </div>
 
@@ -187,26 +187,26 @@
         <div class="ti-panel" data-panel="3">
           <div class="ti-field">
             <label class="ti-field-label">
-              Country/Countries
+              Country/Countries <span class="id-req">*</span>
               <span class="ti-hint-inline">You can select multiple countries</span>
             </label>
-            <input type="text" class="ti-input" id="tiCountry" placeholder="e.g. UK, Turkey, Thailand">
+            <input type="text" class="ti-input" id="tiCountry" placeholder="e.g. UK, Turkey, Thailand" required>
           </div>
 
           <div class="ti-two-col">
             <div class="ti-field">
-              <label class="ti-field-label">Date of Travel</label>
-              <input type="date" class="ti-input" id="tiTravelDate">
+              <label class="ti-field-label">Date of Travel <span class="id-req">*</span></label>
+              <input type="date" class="ti-input" id="tiTravelDate" required>
             </div>
             <div class="ti-field">
-              <label class="ti-field-label">Policy Duration (Days)</label>
-              <input type="number" min="1" class="ti-input" id="tiDuration" placeholder="Policy Duration (Days)">
+              <label class="ti-field-label">Policy Duration (Days) <span class="id-req">*</span></label>
+              <input type="number" min="1" class="ti-input" id="tiDuration" placeholder="Policy Duration (Days)" required>
             </div>
           </div>
 
           <div class="ti-actions">
             <button class="ti-back-btn" data-next="2">BACK</button>
-            <button class="ti-see-btn" id="tiSeePlans">SEE PLANS →</button>
+            <button class="ti-see-btn" id="tiSeePlans" disabled>SEE PLANS →</button>
           </div>
         </div>
 
@@ -448,6 +448,28 @@
     });
   });
 
+  // required-field validation: keep each step's NEXT/SEE PLANS button
+  // disabled until every required field in that step has a value
+  function tiPanelIsValid(panel) {
+    var requiredEls = panel.querySelectorAll('[required]');
+    for (var i = 0; i < requiredEls.length; i++) {
+      if (!requiredEls[i].value || !requiredEls[i].value.trim()) return false;
+    }
+    return true;
+  }
+
+  function refreshTiNextButton(panel) {
+    var nextBtn = panel.querySelector('.ti-next-btn[data-next], .ti-see-btn');
+    if (nextBtn) nextBtn.disabled = !tiPanelIsValid(panel);
+  }
+
+  var tiPanels = document.querySelectorAll('.ti-panel');
+  tiPanels.forEach(function(panel) {
+    refreshTiNextButton(panel);
+    panel.addEventListener('input', function() { refreshTiNextButton(panel); });
+    panel.addEventListener('change', function() { refreshTiNextButton(panel); });
+  });
+
   var countVal = document.getElementById('tiCountVal');
   var dobsWrap = document.getElementById('tiDobs');
   function renderDobs(n) {
@@ -456,13 +478,14 @@
       for (var i = current + 1; i <= n; i++) {
         var row = document.createElement('div');
         row.className = 'ti-dob-row';
-        row.innerHTML = '<label>Traveler ' + i + '</label><input type="date" class="ti-input">';
+        row.innerHTML = '<label>Traveler ' + i + '</label><input type="date" class="ti-input" required>';
         dobsWrap.appendChild(row);
       }
     } else if (n < current) {
       var rows = dobsWrap.querySelectorAll('.ti-dob-row');
       for (var j = current - 1; j >= n; j--) { rows[j].remove(); }
     }
+    refreshTiNextButton(dobsWrap.closest('.ti-panel'));
   }
 
   document.querySelectorAll('[data-count]').forEach(function(b) {

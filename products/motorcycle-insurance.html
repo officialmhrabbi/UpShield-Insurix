@@ -169,9 +169,9 @@
         <!-- STEP 2 : price + GPS -->
         <div class="ti-panel" data-panel="2">
           <div class="ti-field">
-            <label class="ti-field-label">Provide the price of your motorcycle</label>
+            <label class="ti-field-label">Provide the price of your motorcycle <span class="id-req">*</span></label>
             <p class="ci-seat-hint" style="margin-top:-6px">(as per original purchase invoice)</p>
-            <input type="number" min="0" class="ti-input" id="miPrice" placeholder="Vehicle Price">
+            <input type="number" min="0" class="ti-input" id="miPrice" placeholder="Vehicle Price" required>
           </div>
 
           <div>
@@ -190,7 +190,7 @@
 
           <div class="ti-actions">
             <button class="ti-back-btn" data-next="1">BACK</button>
-            <button class="ti-next-btn" data-next="3">NEXT →</button>
+            <button class="ti-next-btn" data-next="3" disabled>NEXT →</button>
           </div>
         </div>
 
@@ -532,6 +532,27 @@
     b.addEventListener('click', function() {
       goToMiStep(parseInt(b.getAttribute('data-next'), 10));
     });
+  });
+
+  // required-field validation: keep each step's NEXT button disabled until
+  // every required field in that step has a value
+  function miPanelIsValid(panel) {
+    var requiredEls = panel.querySelectorAll('[required]');
+    for (var i = 0; i < requiredEls.length; i++) {
+      if (!requiredEls[i].value || !requiredEls[i].value.trim()) return false;
+    }
+    return true;
+  }
+
+  function refreshMiNextButton(panel) {
+    var nextBtn = panel.querySelector('.ti-next-btn[data-next]');
+    if (nextBtn) nextBtn.disabled = !miPanelIsValid(panel);
+  }
+
+  miWizardComprehensive.querySelectorAll('.ti-panel').forEach(function(panel) {
+    refreshMiNextButton(panel);
+    panel.addEventListener('input', function() { refreshMiNextButton(panel); });
+    panel.addEventListener('change', function() { refreshMiNextButton(panel); });
   });
 
   document.querySelectorAll('.ci-cc-option').forEach(function(c) {
