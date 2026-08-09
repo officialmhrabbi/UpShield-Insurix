@@ -4905,6 +4905,8 @@ img { display: block; max-width: 100%; }
   align-items: flex-start;
   justify-content: center;
   margin: 28px 0 34px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .id-step-wrap {
@@ -5086,11 +5088,18 @@ img { display: block; max-width: 100%; }
 
 @media (max-width: 768px) {
   .id-form-card { padding: 26px 20px 30px; }
+  .id-steps { justify-content: flex-start; }
   .id-step-wrap { width: 90px; }
   .id-step-label { font-size: 10px; }
   .id-step-sublabel { display: none; }
   .id-step-line { margin-top: 18px; max-width: 40px; }
   .id-success-actions { flex-direction: column-reverse; }
+}
+
+@media (max-width: 420px) {
+  .id-step-wrap { width: 72px; }
+  .id-step { width: 30px; height: 30px; font-size: 12px; }
+  .id-step-line { max-width: 24px; margin-top: 15px; }
 }
 
 /* profile page */
