@@ -3452,6 +3452,9 @@ img { display: block; max-width: 100%; }
   font-weight: 700;
   color: #0F2547;
 }
+.td-feature-value.is-good { color: #16A34A; }
+.td-feature-value.is-bad { color: #E5484D; }
+.td-feature-icon.is-negative { background: #FDEAEA; color: #E5484D; }
 
 .td-notcovered-grid {
   display: grid;
@@ -3486,6 +3489,21 @@ img { display: block; max-width: 100%; }
   color: #0F2547;
 }
 .td-waiting-card svg { color: #00A897; flex-shrink: 0; }
+
+.td-more-row { display: flex; justify-content: flex-end; margin-top: 14px; }
+.td-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #0F2547;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 18px;
+  font-size: 12.5px;
+  font-weight: 700;
+}
+.td-more-btn:hover { background: #000; }
 
 .td-bottom-links {
   display: grid;
