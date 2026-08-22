@@ -214,6 +214,67 @@
     </div>
 
     <div class="profile-panel" data-panel="claims" style="display:none">
+      <div class="profile-card">
+
+      <div class="claims-stats-grid" id="claimsStatsGrid">
+        <div class="claims-stat-card">
+          <span class="claims-stat-label">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Total Claims
+          </span>
+          <span class="claims-stat-value" id="statTotalClaims">0</span>
+        </div>
+        <div class="claims-stat-card">
+          <span class="claims-stat-label">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Pending
+          </span>
+          <span class="claims-stat-value" id="statPending">0</span>
+        </div>
+        <div class="claims-stat-card">
+          <span class="claims-stat-label">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Total Claimed
+          </span>
+          <span class="claims-stat-value accent" id="statTotalClaimed">৳0</span>
+        </div>
+        <div class="claims-stat-card">
+          <span class="claims-stat-label">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Approved
+          </span>
+          <span class="claims-stat-value accent" id="statApproved">৳0</span>
+        </div>
+      </div>
+
+      <div class="claims-charts-grid">
+        <div class="claims-chart-card">
+          <h3 class="claims-chart-title">By Claim Type</h3>
+          <p class="claims-chart-sub" id="typeChartSub">0 total claims</p>
+          <div class="claims-donut-wrap"><svg class="claims-donut" id="typeDonut" viewBox="0 0 120 120"></svg></div>
+          <div class="claims-chart-legend" id="typeLegend"></div>
+        </div>
+        <div class="claims-chart-card">
+          <h3 class="claims-chart-title">By Status</h3>
+          <p class="claims-chart-sub">Current distribution</p>
+          <div class="claims-donut-wrap"><svg class="claims-donut" id="statusDonut" viewBox="0 0 120 120"></svg></div>
+          <div class="claims-chart-legend" id="statusLegend"></div>
+        </div>
+      </div>
+
+      <div class="claims-chart-card claims-bar-card">
+        <h3 class="claims-chart-title">Amount Breakdown by Type</h3>
+        <p class="claims-chart-sub">Claimed vs Approved amounts</p>
+        <div class="bar-chart-frame">
+          <div class="bar-gridlines" id="barGridlines"></div>
+          <div class="bar-chart-bars" id="barChartBars"></div>
+        </div>
+        <div class="bar-legend">
+          <span><i class="legend-swatch" style="background:#00A897"></i> Claimed</span>
+          <span><i class="legend-swatch" style="background:#7FD4CE"></i> Approved</span>
+        </div>
+      </div>
+
       <div class="claims-toolbar">
         <span class="orders-chip">Claim History</span>
 
@@ -267,6 +328,15 @@
           <input type="text" id="claimsSearch" placeholder="Search claims...">
         </div>
 
+        <button type="button" class="export-btn" id="exportCsvBtn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          CSV
+        </button>
+        <button type="button" class="export-btn" id="exportPdfBtn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PDF
+        </button>
+
         <button type="button" class="new-claim-btn" id="newClaimBtn">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           Submit a New Claim
@@ -292,6 +362,7 @@
           <label class="ti-field-label">Claim Type <span class="id-req">*</span></label>
           <select class="hi-select" id="claimType">
             <option value="">Select type</option>
+            <option>Property Damage</option>
             <option>Accidental Damage</option>
             <option>Theft</option>
             <option>Medical Expense</option>
@@ -331,6 +402,8 @@
       <div class="claims-empty" id="claimsEmpty">
         <p class="claims-empty-main">You haven't submitted any claim yet.</p>
         <p class="claims-empty-help"><strong>Need help?</strong> <a href="#" id="firstClaimLink">Submit your first claim</a></p>
+      </div>
+
       </div>
     </div>
 
@@ -678,14 +751,12 @@
       return 'status-' + status.toLowerCase().replace(/\s+/g, '-');
     }
 
-    function renderClaims() {
-      claimsListEl.innerHTML = '';
-
+    function getFilteredClaims() {
       var searchTerm = document.getElementById('claimsSearch').value.trim().toLowerCase();
       var fromDate = parseDateInput(document.getElementById('claimFromDate').value);
       var toDate = parseDateInput(document.getElementById('claimToDate').value);
 
-      var filtered = claims.filter(function(c) {
+      return claims.filter(function(c) {
         if (currentStatusFilter !== 'all' && c.status !== currentStatusFilter) return false;
         if (searchTerm) {
           var hay = (c.type + ' ' + c.description + ' ' + c.id).toLowerCase();
@@ -698,6 +769,12 @@
         }
         return true;
       });
+    }
+
+    function renderClaims() {
+      claimsListEl.innerHTML = '';
+
+      var filtered = getFilteredClaims();
 
       if (!claims.length) {
         claimsEmptyEl.style.display = '';
@@ -743,13 +820,41 @@
         var dateEl = document.createElement('div');
         dateEl.className = 'claim-date';
         dateEl.textContent = c.date;
+        var detailToggle = document.createElement('a');
+        detailToggle.href = '#';
+        detailToggle.className = 'claim-detail-toggle';
+        detailToggle.textContent = 'View Details →';
         right.appendChild(statusEl);
         right.appendChild(dateEl);
+        right.appendChild(detailToggle);
 
-        card.appendChild(left);
-        card.appendChild(right);
+        var detailBox = document.createElement('div');
+        detailBox.className = 'claim-detail-expand';
+        detailBox.style.display = 'none';
+        var relatedOrder = savedOrders.find(function(o) { return o.id === c.order; });
+        detailBox.innerHTML =
+          '<div><span>Related Order</span><strong>' + (relatedOrder ? relatedOrder.plan + ' (' + relatedOrder.id + ')' : '—') + '</strong></div>' +
+          '<div><span>Attachments</span><strong>' + (c.attachments ? c.attachments + ' file(s)' : 'None') + '</strong></div>' +
+          '<div><span>Full Description</span><strong>' + (c.description || '—') + '</strong></div>';
+
+        detailToggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          var isOpen = detailBox.style.display !== 'none';
+          detailBox.style.display = isOpen ? 'none' : '';
+          detailToggle.textContent = isOpen ? 'View Details →' : 'Hide Details ↑';
+        });
+
+        var main = document.createElement('div');
+        main.className = 'claim-card-main';
+        main.appendChild(left);
+        main.appendChild(right);
+
+        card.appendChild(main);
+        card.appendChild(detailBox);
         claimsListEl.appendChild(card);
       });
+
+      renderClaimsDashboard();
     }
     renderClaims();
 
@@ -824,6 +929,238 @@
     });
 
     document.getElementById('claimsSearch').addEventListener('input', renderClaims);
+
+    // export
+    function toCSV(rows) {
+      var header = ['Claim ID', 'Type', 'Description', 'Amount', 'Status', 'Date'];
+      var lines = [header.join(',')];
+      rows.forEach(function(c) {
+        var vals = [
+          c.id,
+          c.type,
+          '"' + (c.description || '').replace(/"/g, '""') + '"',
+          c.amount || '',
+          c.status,
+          c.date
+        ];
+        lines.push(vals.join(','));
+      });
+      return lines.join('\n');
+    }
+
+    document.getElementById('exportCsvBtn').onclick = function() {
+      var rows = getFilteredClaims();
+      if (!rows.length) { alert('No claims to export.'); return; }
+      var blob = new Blob([toCSV(rows)], { type: 'text/csv;charset=utf-8;' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'claims-export-' + Date.now() + '.csv';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    };
+
+    document.getElementById('exportPdfBtn').onclick = function() {
+      var rows = getFilteredClaims();
+      if (!rows.length) { alert('No claims to export.'); return; }
+      var w = window.open('', '_blank');
+      if (!w) { alert('Please allow pop-ups to export as PDF.'); return; }
+      var rowsHtml = rows.map(function(c) {
+        return '<tr><td>' + c.id + '</td><td>' + c.type + '</td><td>' + (c.description || '') +
+          '</td><td>' + (c.amount ? '৳' + c.amount : '—') + '</td><td>' + c.status + '</td><td>' + c.date + '</td></tr>';
+      }).join('');
+      w.document.write(
+        '<html><head><title>Claim History — UpShield Insurix</title><style>' +
+        'body{font-family:Arial,Helvetica,sans-serif;padding:32px;color:#0F2547}' +
+        'h1{font-size:18px;margin-bottom:20px}' +
+        'table{width:100%;border-collapse:collapse;font-size:12px}' +
+        'th,td{border:1px solid #ccc;padding:8px 10px;text-align:left}' +
+        'th{background:#F3F6F9}' +
+        '</style></head><body>' +
+        '<h1>UpShield Insurix — Claim History</h1>' +
+        '<table><thead><tr><th>Claim ID</th><th>Type</th><th>Description</th><th>Amount</th><th>Status</th><th>Date</th></tr></thead>' +
+        '<tbody>' + rowsHtml + '</tbody></table>' +
+        '</body></html>'
+      );
+      w.document.close();
+      w.focus();
+      setTimeout(function() { w.print(); }, 300);
+    };
+
+    // dashboard: stats + charts
+    var TYPE_COLORS = ['#00A897', '#F26E37', '#0F2547', '#3B82F6', '#DC2626', '#8A97A8', '#7C3AED'];
+    var STATUS_COLORS = {
+      'Submitted': '#3B82F6',
+      'Under Review': '#D97706',
+      'Approved': '#16A34A',
+      'Rejected': '#DC2626',
+      'Settled': '#7C3AED'
+    };
+
+    function drawDonut(svg, segments) {
+      var svgNS = 'http://www.w3.org/2000/svg';
+      svg.innerHTML = '';
+      var total = segments.reduce(function(s, x) { return s + x.value; }, 0);
+      var cx = 60, cy = 60, r = 42, sw = 16;
+      var circumference = 2 * Math.PI * r;
+
+      var bg = document.createElementNS(svgNS, 'circle');
+      bg.setAttribute('cx', cx); bg.setAttribute('cy', cy); bg.setAttribute('r', r);
+      bg.setAttribute('fill', 'none');
+      bg.setAttribute('stroke', '#EDF2F5');
+      bg.setAttribute('stroke-width', sw);
+      svg.appendChild(bg);
+
+      if (!total) return;
+
+      var cumulative = 0;
+      segments.forEach(function(seg) {
+        if (!seg.value) return;
+        var frac = seg.value / total;
+        var len = circumference * frac;
+        var circle = document.createElementNS(svgNS, 'circle');
+        circle.setAttribute('cx', cx); circle.setAttribute('cy', cy); circle.setAttribute('r', r);
+        circle.setAttribute('fill', 'none');
+        circle.setAttribute('stroke', seg.color);
+        circle.setAttribute('stroke-width', sw);
+        circle.setAttribute('stroke-dasharray', len + ' ' + (circumference - len));
+        circle.setAttribute('stroke-dashoffset', -cumulative);
+        circle.setAttribute('transform', 'rotate(-90 ' + cx + ' ' + cy + ')');
+        svg.appendChild(circle);
+
+        if (frac > 0.06) {
+          var midFrac = (cumulative + len / 2) / circumference;
+          var angle = midFrac * 2 * Math.PI - Math.PI / 2;
+          var lx = cx + r * Math.cos(angle);
+          var ly = cy + r * Math.sin(angle);
+          var text = document.createElementNS(svgNS, 'text');
+          text.setAttribute('x', lx);
+          text.setAttribute('y', ly);
+          text.setAttribute('text-anchor', 'middle');
+          text.setAttribute('dominant-baseline', 'middle');
+          text.setAttribute('fill', '#fff');
+          text.setAttribute('font-size', '11');
+          text.setAttribute('font-weight', '700');
+          text.textContent = Math.round(frac * 100) + '%';
+          svg.appendChild(text);
+        }
+        cumulative += len;
+      });
+    }
+
+    function renderLegend(el, segments, total) {
+      el.innerHTML = '';
+      if (!total) {
+        el.innerHTML = '<p class="claims-chart-empty">No claims yet</p>';
+        return;
+      }
+      segments.forEach(function(seg) {
+        if (!seg.value) return;
+        var item = document.createElement('span');
+        item.className = 'legend-item';
+        var pct = total ? Math.round((seg.value / total) * 100) : 0;
+        item.innerHTML = '<i class="legend-swatch" style="background:' + seg.color + '"></i>' + seg.label + ' (' + pct + '%)';
+        el.appendChild(item);
+      });
+    }
+
+    function formatK(v) {
+      return '৳' + Math.round(v / 1000) + 'k';
+    }
+
+    function renderBarChart(claimedByType, approvedByType) {
+      var types = Object.keys(claimedByType);
+      var barsEl = document.getElementById('barChartBars');
+      var gridEl = document.getElementById('barGridlines');
+      barsEl.innerHTML = '';
+      gridEl.innerHTML = '';
+
+      var max = 0;
+      types.forEach(function(t) {
+        max = Math.max(max, claimedByType[t] || 0, approvedByType[t] || 0);
+      });
+      var niceMax = Math.ceil((max || 1) / 4) * 4 || 1;
+
+      for (var i = 0; i <= 4; i++) {
+        var line = document.createElement('div');
+        line.className = 'bar-gridline';
+        var label = document.createElement('span');
+        label.textContent = formatK(niceMax * i / 4);
+        line.appendChild(label);
+        gridEl.appendChild(line);
+      }
+
+      types.forEach(function(t) {
+        var group = document.createElement('div');
+        group.className = 'bar-group';
+
+        var pair = document.createElement('div');
+        pair.className = 'bar-pair';
+
+        var claimedBar = document.createElement('div');
+        claimedBar.className = 'bar claimed';
+        claimedBar.style.height = ((claimedByType[t] || 0) / niceMax * 100) + '%';
+        claimedBar.title = 'Claimed: ৳' + (claimedByType[t] || 0);
+
+        var approvedBar = document.createElement('div');
+        approvedBar.className = 'bar approved';
+        approvedBar.style.height = ((approvedByType[t] || 0) / niceMax * 100) + '%';
+        approvedBar.title = 'Approved: ৳' + (approvedByType[t] || 0);
+
+        pair.appendChild(claimedBar);
+        pair.appendChild(approvedBar);
+
+        var catLabel = document.createElement('span');
+        catLabel.className = 'bar-cat-label';
+        catLabel.textContent = t;
+
+        group.appendChild(pair);
+        group.appendChild(catLabel);
+        barsEl.appendChild(group);
+      });
+    }
+
+    function renderClaimsDashboard() {
+      var totalClaims = claims.length;
+      var pending = claims.filter(function(c) { return c.status === 'Submitted' || c.status === 'Under Review'; }).length;
+      var totalClaimed = claims.reduce(function(s, c) { return s + (parseFloat(c.amount) || 0); }, 0);
+      var approvedAmount = claims
+        .filter(function(c) { return c.status === 'Approved'; })
+        .reduce(function(s, c) { return s + (parseFloat(c.amount) || 0); }, 0);
+
+      document.getElementById('statTotalClaims').textContent = totalClaims;
+      document.getElementById('statPending').textContent = pending;
+      document.getElementById('statTotalClaimed').textContent = '৳' + totalClaimed.toLocaleString('en-US');
+      document.getElementById('statApproved').textContent = '৳' + approvedAmount.toLocaleString('en-US');
+
+      var typeCounts = {};
+      claims.forEach(function(c) { typeCounts[c.type] = (typeCounts[c.type] || 0) + 1; });
+      var typeSegments = Object.keys(typeCounts).map(function(t, i) {
+        return { label: t, value: typeCounts[t], color: TYPE_COLORS[i % TYPE_COLORS.length] };
+      });
+      document.getElementById('typeChartSub').textContent = totalClaims + ' total claim' + (totalClaims === 1 ? '' : 's');
+      drawDonut(document.getElementById('typeDonut'), typeSegments);
+      renderLegend(document.getElementById('typeLegend'), typeSegments, totalClaims);
+
+      var statusCounts = {};
+      claims.forEach(function(c) { statusCounts[c.status] = (statusCounts[c.status] || 0) + 1; });
+      var statusSegments = Object.keys(statusCounts).map(function(s) {
+        return { label: s, value: statusCounts[s], color: STATUS_COLORS[s] || '#8A97A8' };
+      });
+      drawDonut(document.getElementById('statusDonut'), statusSegments);
+      renderLegend(document.getElementById('statusLegend'), statusSegments, totalClaims);
+
+      var claimedByType = {};
+      var approvedByType = {};
+      claims.forEach(function(c) {
+        var amt = parseFloat(c.amount) || 0;
+        claimedByType[c.type] = (claimedByType[c.type] || 0) + amt;
+        if (c.status === 'Approved') approvedByType[c.type] = (approvedByType[c.type] || 0) + amt;
+      });
+      renderBarChart(claimedByType, approvedByType);
+    }
   })();
 
   // settings
